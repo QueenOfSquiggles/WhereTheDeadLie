@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc0hoftar6x1o"]
+
+[ext_resource type="Script" path="res://Scenes/UI/main_hud.cs" id="1_r61b0"]
+
+[node name="MainHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_r61b0")
+interaction_prompt_path = NodePath("InteractionPrompt")
+
+[node name="InteractionPrompt" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -74.0
+offset_top = -26.0
+offset_right = 74.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 39
+text = "Press 'E' to interact"

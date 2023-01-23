@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://btadwfvd2nona"]
+
+[ext_resource type="PackedScene" uid="uid://dkvhotljq6yj5" path="res://Assets/Models/OGA_LightGameStudio/DSLR_Camera.glb" id="1_eqbeh"]
+
+[node name="DSLR_Camera" instance=ExtResource("1_eqbeh")]
+
+[node name="Cube" parent="." index="0"]
+layers = 2
+
+[node name="Cylinder001" parent="Cube" index="0"]
+layers = 2
+
+[node name="Cylinder002" parent="Cube" index="1"]
+layers = 2

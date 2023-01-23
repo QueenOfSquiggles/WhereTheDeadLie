@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://n1gir2663hb1"]
+
+[ext_resource type="Texture2D" uid="uid://dks1g3hugeuvs" path="res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/fire_01.png" id="1_jwg8v"]
+
+[sub_resource type="Curve" id="Curve_5p750"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_etque"]
+curve = SubResource("Curve_5p750")
+
+[sub_resource type="Curve" id="Curve_b57qd"]
+_data = [Vector2(0, 0.494585), 0.0, 1.64043, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_r25ja"]
+curve = SubResource("Curve_b57qd")
+
+[sub_resource type="Curve" id="Curve_s3fji"]
+_data = [Vector2(0, 0), 0.0, 1.0, 0, 1, Vector2(1, 1), 1.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_6e03y"]
+curve = SubResource("Curve_s3fji")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hsxqy"]
+lifetime_randomness = 0.38
+spread = 73.85
+gravity = Vector3(0, 4, 0)
+damping_min = 1.92
+damping_max = 2.56
+angle_min = -720.0
+angle_max = 720.0
+angle_curve = SubResource("CurveTexture_etque")
+scale_curve = SubResource("CurveTexture_r25ja")
+turbulence_enabled = true
+turbulence_noise_strength = 0.62
+turbulence_noise_scale = 0.58
+turbulence_noise_speed = Vector3(0.417, 0.5, 0.5)
+turbulence_influence_over_life = SubResource("CurveTexture_6e03y")
+attractor_interaction_enabled = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxm7m"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.917647, 0.572549, 0.219608, 1)
+albedo_texture = ExtResource("1_jwg8v")
+emission_enabled = true
+emission = Color(0.509804, 0.298039, 0, 1)
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_ghy8p"]
+material = SubResource("StandardMaterial3D_qxm7m")
+
+[node name="Flame" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+amount = 20
+visibility_aabb = AABB(-1.06824, -0.802675, -0.770057, 2.13647, 2.74573, 1.54011)
+transform_align = 1
+process_material = SubResource("ParticleProcessMaterial_hsxqy")
+draw_pass_1 = SubResource("QuadMesh_ghy8p")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.135988, 0)
+light_color = Color(0.905882, 0.521569, 0.160784, 1)
+shadow_enabled = true
+omni_range = 20.0
+omni_attenuation = 2.0

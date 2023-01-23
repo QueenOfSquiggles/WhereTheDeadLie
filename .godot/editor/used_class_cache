@@ -1,0 +1,161 @@
+res://credits.md::1674257421::ccaa1e911c944d59894bc345de92a17c::
+res://icon.svg::1674232245::5ddad973d6395e772f8dfeaeed15f0a0::CompressedTexture2D
+res://Assets/Materials/cracked_concrete_wall.tres::1674415216::4f7cff4e02a73571107981eef4146cad::
+res://Assets/Materials/rocky_trail.tres::1674415216::bd54bca6099f4cec9635c62506d872fc::
+res://Assets/Materials/slab_tiles.tres::1674415216::3d053cc1204ff77d8ade0c4f448b88a8::
+res://Assets/Models/DungeonPack/barrel.gltf.glb::1605207262::41db70af1213ad6a48594b850269bd90::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/barrelDark.gltf.glb::1605207262::4992084de7f606a329b42b7c00007eed::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/bench.gltf.glb::1605207262::eae1bc4f5aad088a83e2f27da154540d::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/bricks.gltf.glb::1605207264::b1da7362b4ee8ca421ecce44999d64b6::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/bucket.gltf.glb::1605207264::971db0a393fcf16ade159ea7130b8422::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/chair.gltf.glb::1605207264::3c46a18c947131f45138dc666a3a633a::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/chestTop_rare.gltf.glb::1605207264::7e5a468460df4d863395ce9a191d6531::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/chest_rare.gltf.glb::1605207264::3ca80d8ae80919e64486176bd177eb34::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/crate.gltf.glb::1605207266::084ba4b992944183747ccf9105d91e00::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/crateDark.gltf.glb::1605207266::c362f3f68f163fd030ef42e7134f603a::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/tableLarge.gltf.glb::1605207274::4c77b06003f4f1bb4403b336417fb81f::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/tableMedium.gltf.glb::1605207274::9b2263eddf5c9af6d9f0e611bd4d0e93::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/tableSmall.gltf.glb::1605207274::c73bf47f3ff76a903b523d7553c54b0b::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/torch.gltf.glb::1605207276::d4fdd90ef89ae2eab9bb14d12f198be1::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/torchWall.gltf.glb::1605207276::0bf7dbd6b88eb7364aa065a031898a90::StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,PackedScene
+res://Assets/Models/DungeonPack/Imported/flame.tscn::1674258044::4eb0458ce205bf28816303ede1f0cc24::PackedScene,Curve,CurveTexture,ParticleProcessMaterial,StandardMaterial3D,QuadMesh,Node3D,GPUParticles3D,OmniLight3D
+res://Assets/Models/DungeonPack/Imported/torch_ground.tscn::1674258058::ffaad1e6731b1f3c6ee3eab0901a0690::PackedScene
+res://Assets/Models/DungeonPack/Imported/torch_wall.tscn::1674258054::c38727e3d6eefa47b46f02d73d74877e::PackedScene
+res://Assets/Models/Gobot/3DGodotRobot.glb::1674233539::0bfae37b95751f09ebaee57abb2c2eb6::Image,ImageTexture,StandardMaterial3D,ArrayMesh,Skin,Animation,AnimationLibrary,PackedScene
+res://Assets/Models/Gobot/GodotPalette.png::1674232213::f463e8d395afed86dea4dc4c068cbef0::CompressedTexture2D
+res://Assets/Models/LevelMesh/catacombs.glb::1674258970::6bfdc24d5830819e72c5bd03e86a4e31::StandardMaterial3D,ArrayMesh,ConcavePolygonShape3D,NavigationMesh,ArrayOccluder3D,PackedScene
+res://Assets/Models/MyModels/power_generator.glb::1674357176::91165c44080cdd58b1e4f4573e6ed1af::StandardMaterial3D,ArrayMesh,PackedScene
+res://Assets/Models/OGA_LightGameStudio/DSLR_Camera.glb::1674259396::c107a6b0532289dcb145a2d467dae6e2::StandardMaterial3D,ArrayMesh,PackedScene
+res://Assets/Textures/Decals/BloodSplatter/BloodDecalAlbedo.png::1674248181::fd7609352e0895cd81adfcf1e392feda::CompressedTexture2D
+res://Assets/Textures/Decals/BloodSplatter/BloodDecalAlbedoCircle.png::1674248181::76e5563f892f40dd703f21c84c42e47f::CompressedTexture2D
+res://Assets/Textures/Decals/BloodSplatter/BloodDecalAlbedoTile.png::1674248181::aac3c30c23eae1f820e5374ab791424a::CompressedTexture2D
+res://Assets/Textures/Decals/BloodSplatter/BloodDecalNormal.png::1674248181::0315b217b770085c40903d63dbb8f426::CompressedTexture2D
+res://Assets/Textures/Decals/BloodSplatter/BloodDecalNormalCircle.png::1674248181::f828d0c6e5898c96fa0380238cefb370::CompressedTexture2D
+res://Assets/Textures/Decals/BloodSplatter/BloodDecalNormalTile.png::1674248181::ec27d6b09e1a8b4c064a791eadfd4b26::CompressedTexture2D
+res://Assets/Textures/Decals/BloodSplatter/BloodDecalRoughness.png::1674248181::c291f21e74fa920f012834d804537039::CompressedTexture2D
+res://Assets/Textures/Decals/BloodSplatter/BloodDecalRoughnessCircle.png::1674248181::2cccdfb1375007e2e54212f5ec386cb7::CompressedTexture2D
+res://Assets/Textures/Decals/BloodSplatter/BloodDecalRoughnessTile.png::1674248181::6492959b1f15ce7228754d73a69036e5::CompressedTexture2D
+res://Assets/Textures/MaterialTextures/PolyHaven/cracked_concrete_wall_arm_2k.jpg::1674273558::c9c62390a7bb1944e31d0dbd09fd474f::CompressedTexture2D
+res://Assets/Textures/MaterialTextures/PolyHaven/cracked_concrete_wall_diff_2k.jpg::1674273560::a3ccca5dc9d12faefbe5351bc880fb76::CompressedTexture2D
+res://Assets/Textures/MaterialTextures/PolyHaven/cracked_concrete_wall_nor_gl_2k.jpg::1674273560::eb83c996dd4c9de8e70624e22bc94719::CompressedTexture2D
+res://Assets/Textures/MaterialTextures/PolyHaven/rocky_trail_arm_2k.jpg::1674273568::97daa9ca7cc355d7fe3389a1b555a407::CompressedTexture2D
+res://Assets/Textures/MaterialTextures/PolyHaven/rocky_trail_diff_2k.jpg::1674273568::7327bf7d48d33688fb12465222ee3f22::CompressedTexture2D
+res://Assets/Textures/MaterialTextures/PolyHaven/rocky_trail_nor_gl_2k.jpg::1674273570::4642b3c833d526b23c96baa84f5bf429::CompressedTexture2D
+res://Assets/Textures/MaterialTextures/PolyHaven/slab_tiles_arm_2k.jpg::1674273550::dfb2a8dee8a7514beeab455e14bf5dbf::CompressedTexture2D
+res://Assets/Textures/MaterialTextures/PolyHaven/slab_tiles_diff_2k.jpg::1674273550::fe2442b3b43bfeb7f93579e4727e85ca::CompressedTexture2D
+res://Assets/Textures/MaterialTextures/PolyHaven/slab_tiles_nor_gl_2k.jpg::1674273550::63bd6b1968cae4aa12cb272cac89f1dc::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/License.txt::1573720604::20292aaf8695ec5a267a772beeb29288::
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/circle_01.png::1573720550::000edc9fee9f8743ca1da3b9ccef9bc1::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/circle_02.png::1573720550::8634c6d079749e4f2fae9498db4eac8d::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/circle_03.png::1573720550::3fcd5e515b9e406265a1e38e22005c20::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/circle_04.png::1573720550::d96eb5ff64e6393e60588cf88def856e::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/circle_05.png::1573720552::7ad791cc3e634598d98e9e1d24f82092::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/dirt_01.png::1573720552::f76912055c22dbb6ef9954e7ea664a79::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/dirt_02.png::1573720552::4a366003aacb07d0e2b06852f806c558::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/dirt_03.png::1573720552::02562ad8936118257b53d8419f25ac4f::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/fire_01.png::1573720552::b243b2a7b984d4f0e7ee566685ba702d::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/fire_02.png::1573720552::5211951751c1b2ae8a004e8ec7828cb3::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/flame_01.png::1573720554::69215a4ca90085ca18bae73df29e4283::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/flame_02.png::1573720554::5b3cb3f3fb3b019af02bca76b10ec0d7::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/flame_03.png::1573720554::d2fd1ae3ae7301ed8460a6900713e22d::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/flame_04.png::1573720554::5319cb0ffafd2c90442c603a86a98333::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/flame_05.png::1573720554::206857c866dcef31fbb4b9f5bf72e08f::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/flame_06.png::1573720554::18116baf91d5024d4d51eb18b4b7e5e2::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/flare_01.png::1573720556::457e431e618f5aa8cd004c9a573010f4::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/light_01.png::1573720556::f10367c3e79900779d336d235b12f030::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/light_02.png::1573720556::c01fe220fde173a25ef1c32ad4111dc6::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/light_03.png::1573720556::7a97c35c7c5c39b56f43c573e5aadeb5::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/magic_01.png::1573720556::603ece4196619d85311ad21ea1d35122::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/magic_02.png::1573720556::6097eb595e2b1b75e5630bb9ac9af782::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/magic_03.png::1573720558::d95f9545eed91ce3f4f066eaa8b02849::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/magic_04.png::1573720558::829d278b1a54469a63af8fb26106f485::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/magic_05.png::1573720558::31016cfff4f191319f336c7f1ee3cc49::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/muzzle_01.png::1573720558::b30c4712a5b6de65eb0c795e714a6721::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/muzzle_02.png::1573720558::63c0edeb0f4040f2d7173d2a53a2717f::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/muzzle_03.png::1573720560::cee5f3e38d1dc5eb34bb20ebea910a69::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/muzzle_04.png::1573720560::a6b6e97010dd038f4e927a7e65ff7611::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/muzzle_05.png::1573720560::05d174f12d0c29e84081ca6a465a0b41::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/scorch_01.png::1573720560::122c3584f6c09634f5a73bb89c06155d::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/scorch_02.png::1573720560::af398c7e09d9f586f88a5c08ac704846::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/scorch_03.png::1573720560::a17dba75970ef08a463b566d5dc01d61::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/scratch_01.png::1573720562::4c8b419188909c2d4720393830e99630::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/slash_01.png::1573720562::48d4d68fb3c28f95b82895b5882e1679::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/slash_02.png::1573720562::c607742c15830bdc747f45b8f7d75d91::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/slash_03.png::1573720562::9dd9b31b31619b8020d0f3d48f6d5ae2::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/slash_04.png::1573720562::ebd916abc27c60dfeb57ede74903b9e8::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_01.png::1573720564::3f02ce4db3ef3eecbe41005c4e236047::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_02.png::1573720564::e181df1a3db7debdb23d59d93bd5c1db::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_03.png::1573720564::c60033b4978a23975b92038c0496b3f5::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_04.png::1573720564::4af623130313a84d41b17b274dcc9949::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_05.png::1573720564::a7a5fab7af35ff3b6b1242a5560ffd04::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_06.png::1573720564::7eb6604830059b87da98185bb2851ae1::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_07.png::1573720566::31d0c4c2e6c230114341cbeecd8b2bd9::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_08.png::1573720566::8e3dba6fa59bc869b76e9fb5cabbd47c::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_09.png::1573720566::b6eca26c9099a5208cc15c1d0c960e9d::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_10.png::1573720566::159aafceaf0d159e9bfef9d8a7e7cbfe::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/spark_01.png::1573720566::d358b862c592613d11a19944dcfa36e0::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/spark_02.png::1573720566::1b1ecff02d7f7deb38f66d41c60dbd6a::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/spark_03.png::1573720568::ce741ec140133f8e67e07653c102d086::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/spark_04.png::1573720568::20bace1db1efead6ecb3a3d0fae66224::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/spark_05.png::1573720568::cfecee497b331eb6ad0e73bf4231244d::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/spark_06.png::1573720568::d56d2a012e932f73f41a7922ee3f8e76::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/spark_07.png::1573720568::5683d92367a11c55d8f4040d8a4f6bcb::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/star_01.png::1573720568::067f5ac2bf2b824b12d857aa3c7ad227::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/star_02.png::1573720570::077e83cd17d86ca3de561e49ce911f03::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/star_03.png::1573720570::3b63d0db29d052147a3ab28ff48fd714::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/star_04.png::1573720570::ee0b63a59ae155d9159a4a965d4d7c73::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/star_05.png::1573720570::60e60144828da57db124bf1272dcde09::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/star_06.png::1573720570::8ff7491664395f9b3b0ded2959297035::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/star_07.png::1573720570::9ed7cc5146266fcfebbab6b354e8e04c::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/star_08.png::1573720570::1acd4ad894c7b48f8cf2e9455239430c::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/star_09.png::1573720572::79f53e7eaa8ef1573ff4613587cb1582::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/symbol_01.png::1573720572::002d17784c5522279338fe8d283e64cb::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/symbol_02.png::1573720572::4fe64425c7af14c9d3705f30b2f1f571::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/trace_01.png::1573720572::ac6132cf0db3b110e29be16c161d2921::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/trace_02.png::1573720572::3f95d9491e8e678e4c788d89fd23ea18::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/trace_03.png::1573720574::c98b8f1be1c6ced54349e9f3f7fd15b9::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/trace_04.png::1573720574::88fb93d7e54927d66391a058fa77217b::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/trace_05.png::1573720574::d6c33f799d92b3363a61da0d28590107::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/trace_06.png::1573720574::59ff276651030419e5de3d99f62224e7::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/trace_07.png::1573720574::2d9a4b0186d19245912a7049497baded::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/twirl_01.png::1573720574::355c6c910c6ff521a871892f0ee47772::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/twirl_02.png::1573720576::c15ae8b45cc47a6a3b573089dab907fd::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/twirl_03.png::1573720576::b17570abe75d335ae72c20c76b22e35d::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/window_01.png::1573720576::66b2518eb3bc5a61b43a8a528585ef25::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/window_02.png::1573720576::9b0af4489988f2326b2a16dc44b8914a::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/window_03.png::1573720576::dd34e5429dcd3532b65de94d8475557a::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/window_04.png::1573720578::adcb7a7558c6c90f64b53bccd51fc6c3::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/flame_05_rotated.png::1573720578::8aceb1bc1847731d0d551dc51b4bb3b1::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/flame_06_rotated.png::1573720578::6b6da4f870cbd6c21648226f575a0e60::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/muzzle_01_rotated.png::1573720578::4f000b5053f784a4b5457d3a87b9fe3f::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/muzzle_02_rotated.png::1573720578::12afee548b937836bf76d343663338cc::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/muzzle_03_rotated.png::1573720578::f19a2413cb27a8d7a051612e9155f29e::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/muzzle_04_rotated.png::1573720580::63527f3d0ccc71bcd6d42af12e361efa::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/muzzle_05_rotated.png::1573720580::769f1c27505f1f71c8be8583ad98f521::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/spark_05_rotated.png::1573720580::a7bd5f87a70192a16a6837f325588c6d::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/spark_06_rotated.png::1573720580::020b4dbb3fa61d54262104754b0eb74c::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/trace_01_rotated.png::1573720580::e2eefbae41ce6637976be11594dbeade::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/trace_02_rotated.png::1573720582::eb89c6d50e171cc34d1be23c0e218855::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/trace_03_rotated.png::1573720582::9ab8be7ad4717038b90e1317aa8b772a::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/trace_04_rotated.png::1573720582::3bc5ed330d35422dd06e1b57da0db2c2::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/trace_05_rotated.png::1573720582::90342a12558299d5bb88120a503d26ce::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/trace_06_rotated.png::1573720582::749b373711e432069d5ec6a538fbc0c0::CompressedTexture2D
+res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/Rotated/trace_07_rotated.png::1573720584::a26abcddc20d0f805ddbf1a5daf70e3e::CompressedTexture2D
+res://Modules/bridge/NodeExtensions.cs::1674237647::0a568c903b37567184b78cb45dd1f28d::CSharpScript
+res://Modules/data/GameData.cs::1674416582::a230e1bd219dc3311c4e57bea8c1224b::CSharpScript
+res://Modules/data/GameDataManager.cs::1674418123::233a894d577bd9ba74f144b63d08c642::CSharpScript
+res://Modules/interaction/IInteractable.cs::1674417874::24b0ea338ac278af3e9f60921c80be33::CSharpScript
+res://Modules/interaction/InteractionTrigger.cs::1674418728::0c417f7bf8d65d688e5a718ffff5ec48::CSharpScript
+res://Modules/interaction/interaction_trigger.tscn::1674357206::821b2790559434e27829fcba823758b3::PackedScene,BoxShape3D,Area3D,CollisionShape3D
+res://Scenes/Levels/catacombs_level.tscn::1674418631::593d9a525029155ce66300b3aefabfd9::PackedScene,VoxelGIData,Node3D,VoxelGI
+res://Scenes/Levels/catacombs_level.VoxelGI_data.res::1674254235::67b35486ae67e3c6b7c1795b146f34c2::VoxelGIData
+res://Scenes/Levels/main_level.tscn::1674418631::e0998276b301517c827bbce27bd3c4a8::PackedScene,ProceduralSkyMaterial,Sky,Environment,Node3D,WorldEnvironment
+res://Scenes/Levels/main_level.VoxelGI_data.res::1674233626::26537d1cfc94565c1430fa645c8b5aee::VoxelGIData
+res://Scenes/Objects/chest.tscn::1674418631::b2897b7cf2597baa966b2feb4eea4231::PackedScene,Animation,AnimationLibrary,Node3D
+res://Scenes/Objects/power_generator.cs::1674418731::f1f3c4a38aee495383557b2158d19f39::CSharpScript
+res://Scenes/Objects/power_generator.tscn::1674418631::f9903cf0eddb3dcb671931459608f1de::PackedScene,StandardMaterial3D,ArrayMesh,ConvexPolygonShape3D,BoxShape3D,Node3D,StaticBody3D,MeshInstance3D,CollisionShape3D
+res://Scenes/Objects/power_generator_util/power_generator_active_components.tscn::1674418540::f92b66a3ee0a56b0930b0964e1a9a73e::PackedScene,ParticleProcessMaterial,StandardMaterial3D,QuadMesh,Node3D,OmniLight3D,GPUParticles3D
+res://Scenes/Player/player_character.cs::1674418741::6ae6d6fd08ef8f869f7016b0aaf4d038::CSharpScript
+res://Scenes/Player/player_character.tscn::1674418630::42e17e9bb76195843fe39c96def4ce8f::PackedScene,CapsuleShape3D,Animation,AnimationLibrary,AnimationNodeAnimation,AnimationNodeBlendSpace1D,AnimationNodeStateMachineTransition,AnimationNodeStateMachine,AnimationNodeStateMachinePlayback,CharacterBody3D,CollisionShape3D,Node3D,Camera3D,RayCast3D,Marker3D
+res://Scenes/UI/main_hud.tscn::1674418747::7b2df71c9487d99b7c75bd0e5b286893::PackedScene,Control,Label
+res://Scenes/UI/main_hud.cs::1674417354::f453e16bcd7068ad71cef461ce01114f::CSharpScript

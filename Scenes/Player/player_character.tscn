@@ -1,0 +1,280 @@
+[gd_scene load_steps=18 format=3 uid="uid://j2s7mebwb4u"]
+
+[ext_resource type="Script" path="res://Scenes/Player/player_character.cs" id="1_frnes"]
+[ext_resource type="PackedScene" uid="uid://btadwfvd2nona" path="res://Assets/Models/OGA_LightGameStudio/Imported/dslr_camera.tscn" id="3_rf5f6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hmcmo"]
+height = 1.6
+
+[sub_resource type="Animation" id="Animation_1au5c"]
+resource_name = "Idle"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CamSwivel/Hand/DSLR_Camera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 11.5, 12, 12.5, 13, 15, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.028, 0, 0.107), Vector3(-0.028, 0, 0.107), Vector3(-0.028, 0.1, 0.107), Vector3(-0.028, 0.1, 0.107), Vector3(-0.028, 0.1, 0.107), Vector3(-0.028, 0.1, 0.107), Vector3(-0.028, 0, 0.107)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CamSwivel/Hand/DSLR_Camera:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 11.5, 12, 12.5, 13, 14, 14.5, 15, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 1.22348), Vector3(0, 0, 1.22348), Vector3(-0.44855, 0, 1.22348), Vector3(-0.44855, 0, 1.22348), Vector3(0.436332, 0, 1.22348), Vector3(0.436332, 0, 1.22348), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qx4m7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CamSwivel/Hand/DSLR_Camera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.028, 0, 0.107)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CamSwivel/Hand/DSLR_Camera:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CamSwivel/Hand/DSLR_Camera/ShotFlash:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CamSwivel/Hand/DSLR_Camera/ShotFlash:light_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_r5avn"]
+resource_name = "Shoot"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CamSwivel/Hand/DSLR_Camera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.028, 0, 0.107), Vector3(-0.028, -0.08, 0.107), Vector3(-0.028, 0, 0.107)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CamSwivel/Hand/DSLR_Camera:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.235619, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CamSwivel/Hand/DSLR_Camera/ShotFlash:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.05, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CamSwivel/Hand/DSLR_Camera/ShotFlash:light_color")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationTree:parameters/conditions/shoot")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_d26gh"]
+resource_name = "WalkCycle"
+length = 2.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CamSwivel/Hand/DSLR_Camera:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.028, 0, 0.107), Vector3(-0.028, -0.067, 0.107), Vector3(-0.028, 0, 0.107), Vector3(-0.028, -0.067, 0.117), Vector3(-0.028, 0, 0.107)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CamSwivel/Hand/DSLR_Camera:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.116937), Vector3(0, 0, 0), Vector3(0.0872665, 0, -0.116937), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_idfv3"]
+_data = {
+"Idle": SubResource("Animation_1au5c"),
+"RESET": SubResource("Animation_qx4m7"),
+"Shoot": SubResource("Animation_r5avn"),
+"WalkCycle": SubResource("Animation_d26gh")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4jpqj"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_34qii"]
+animation = &"WalkCycle"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_a5epo"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_4jpqj")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_34qii")
+blend_point_1/pos = 1.0
+value_label = "walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fh5ro"]
+animation = &"Shoot"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fyqs0"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ldvud"]
+advance_mode = 2
+advance_condition = &"shoot"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a2whc"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nj0eq"]
+states/MovementCycle/node = SubResource("AnimationNodeBlendSpace1D_a5epo")
+states/MovementCycle/position = Vector2(264, 235.974)
+states/Shoot/node = SubResource("AnimationNodeAnimation_fh5ro")
+states/Shoot/position = Vector2(371.2, 127.6)
+states/Start/position = Vector2(166.4, 94.4)
+transitions = ["Start", "MovementCycle", SubResource("AnimationNodeStateMachineTransition_fyqs0"), "MovementCycle", "Shoot", SubResource("AnimationNodeStateMachineTransition_ldvud"), "Shoot", "MovementCycle", SubResource("AnimationNodeStateMachineTransition_a2whc")]
+graph_offset = Vector2(-173, 82.574)
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_ik63x"]
+
+[node name="PlayerCharacter" type="CharacterBody3D"]
+script = ExtResource("1_frnes")
+cam_arm_path = NodePath("CamSwivel")
+anim_tree_path = NodePath("AnimationTree")
+raycast_path = NodePath("CamSwivel/Camera3D/RayCast3D")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_hmcmo")
+
+[node name="CamSwivel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CamSwivel"]
+current = true
+
+[node name="RayCast3D" type="RayCast3D" parent="CamSwivel/Camera3D"]
+target_position = Vector3(0, 0, -3)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Hand" type="Marker3D" parent="CamSwivel"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.438, -0.331, -0.532)
+
+[node name="DSLR_Camera" parent="CamSwivel/Hand" instance=ExtResource("3_rf5f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028, 0, 0.107)
+
+[node name="ShotFlash" type="OmniLight3D" parent="CamSwivel/Hand/DSLR_Camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.079314, 0.386736, 0.027257)
+visible = false
+light_energy = 0.5
+omni_range = 100.0
+omni_attenuation = 1e-05
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CamSwivel/Hand/DSLR_Camera"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0206271, 0.229127, 0.100851)
+light_color = Color(1, 0, 0, 1)
+light_energy = 0.1
+spot_angle = 10.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_idfv3")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_nj0eq")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_ik63x")
+parameters/conditions/shoot = false
+parameters/MovementCycle/blend_position = 0.00507617

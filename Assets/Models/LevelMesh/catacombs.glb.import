@@ -1,0 +1,58 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://nstkn15gwl0m"
+path="res://.godot/imported/catacombs.glb-72f55cab8380d3930185c496b1693165.scn"
+
+[deps]
+
+source_file="res://Assets/Models/LevelMesh/catacombs.glb"
+dest_files=["res://.godot/imported/catacombs.glb-72f55cab8380d3930185c496b1693165.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=0.5
+meshes/ensure_tangents=true
+meshes/generate_lods=false
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=false
+animation/fps=30
+animation/trimming=false
+import_script/path=""
+_subresources={
+"materials": {
+"Ceiling": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Materials/rocky_trail.tres"
+},
+"Floor": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Materials/slab_tiles.tres"
+},
+"Wall": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Materials/cracked_concrete_wall.tres"
+}
+},
+"meshes": {
+"catacombs_Plane": {
+"save_to_file/path": "res://Assets/Models/LevelMesh/catacomb_mesh.res"
+}
+},
+"nodes": {
+"PATH:Plane": {
+"generate/navmesh": 1,
+"generate/occluder": 1,
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}

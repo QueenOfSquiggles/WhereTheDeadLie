@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1hxd6pkxh5an"]
+
+[ext_resource type="Texture2D" uid="uid://bnbada14yndcl" path="res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_01.png" id="1_o32mw"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wp3cl"]
+direction = Vector3(-1, 0, 0)
+spread = 25.38
+gravity = Vector3(0, 4, 0)
+initial_velocity_min = 0.1
+initial_velocity_max = 1.5
+angle_max = 720.0
+scale_max = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxxig"]
+transparency = 1
+albedo_texture = ExtResource("1_o32mw")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_6tov0"]
+material = SubResource("StandardMaterial3D_kxxig")
+
+[node name="PowerGeneratorActiveComponents" type="Node3D"]
+
+[node name="ActiveLight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999986, 0.00523596, 0, -0.00523596, 0.999986, -0.0953583, 0.396668, -0.35992)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.249996, 0.00130899, 0, -0.00130899, 0.249996, -0.230344, 0.344187, -0.00180218)
+amount = 32
+explosiveness = 0.29
+local_coords = true
+transform_align = 1
+process_material = SubResource("ParticleProcessMaterial_wp3cl")
+draw_pass_1 = SubResource("QuadMesh_6tov0")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+autoplay = true
+bus = &"SoundEffects"

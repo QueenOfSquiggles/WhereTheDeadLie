@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://cscbck15ly7ed"]
+
+[ext_resource type="Texture2D" uid="uid://b6106vonl5se2" path="res://Assets/Textures/PuzzleControlPanel/PuzzlePanelAlbedo.png" id="1_7054e"]
+[ext_resource type="Texture2D" uid="uid://hvusajih2qfp" path="res://Assets/Textures/PuzzleControlPanel/PuzzlePanelGlossy.png" id="2_nt2oe"]
+[ext_resource type="Texture2D" uid="uid://b3qe35vu7rucn" path="res://Assets/Textures/PuzzleControlPanel/PuzzlePanelNormal.png" id="3_g5xsv"]
+[ext_resource type="Texture2D" uid="uid://cotg8vllsu738" path="res://Assets/Textures/PuzzleControlPanel/PuzzlePanelRoughness.png" id="4_wew33"]
+
+[resource]
+albedo_texture = ExtResource("1_7054e")
+metallic = 1.0
+metallic_texture = ExtResource("2_nt2oe")
+roughness_texture = ExtResource("4_wew33")
+normal_enabled = true
+normal_texture = ExtResource("3_g5xsv")

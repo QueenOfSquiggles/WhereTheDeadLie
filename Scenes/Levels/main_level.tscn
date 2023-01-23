@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://kdrivdayaapr"]
+
+[ext_resource type="PackedScene" uid="uid://p3bvspv0qlte" path="res://Scenes/Levels/catacombs_level.tscn" id="2_olcbk"]
+[ext_resource type="PackedScene" uid="uid://dc0hoftar6x1o" path="res://Scenes/UI/main_hud.tscn" id="3_qmw05"]
+[ext_resource type="PackedScene" uid="uid://j2s7mebwb4u" path="res://Scenes/Player/player_character.tscn" id="5_tv4f5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qdifa"]
+
+[sub_resource type="Sky" id="Sky_k1asx"]
+sky_material = SubResource("ProceduralSkyMaterial_qdifa")
+
+[sub_resource type="Environment" id="Environment_2gh7u"]
+background_mode = 1
+sky = SubResource("Sky_k1asx")
+ambient_light_source = 1
+ambient_light_color = Color(0.407843, 0.407843, 0.407843, 1)
+tonemap_mode = 3
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+glow_enabled = true
+glow_blend_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+
+[node name="MainLevel" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="GraphicalElements" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="GraphicalElements"]
+environment = SubResource("Environment_2gh7u")
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("5_tv4f5")]
+transform = Transform3D(-0.957456, 0, -0.28858, 0, 1, 0, 0.28858, 0, -0.957456, 1.04568, 0.8, 1.77915)
+
+[node name="CatacombsLevel" parent="." instance=ExtResource("2_olcbk")]
+
+[node name="MainHUD" parent="." instance=ExtResource("3_qmw05")]
+
+[connection signal="OnInteractionFound" from="PlayerCharacter" to="MainHUD" method="OnInteractionStart"]
+[connection signal="OnInteractionLost" from="PlayerCharacter" to="MainHUD" method="OnInteractionEnd"]

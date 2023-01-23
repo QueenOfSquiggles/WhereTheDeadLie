@@ -1,0 +1,17 @@
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/bin/Debug/DumbJumpscareGame.deps.json
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/bin/Debug/DumbJumpscareGame.runtimeconfig.json
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/bin/Debug/DumbJumpscareGame.dll
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/bin/Debug/ref/DumbJumpscareGame.dll
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/bin/Debug/DumbJumpscareGame.pdb
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/bin/Debug/GodotSharp.dll
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/obj/Debug/DumbJumpscareGame.csproj.AssemblyReference.cache
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/obj/Debug/DumbJumpscareGame.GeneratedMSBuildEditorConfig.editorconfig
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/obj/Debug/DumbJumpscareGame.AssemblyInfoInputs.cache
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/obj/Debug/DumbJumpscareGame.AssemblyInfo.cs
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/obj/Debug/DumbJumpscareGame.csproj.CoreCompileInputs.cache
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/obj/Debug/DumbJumpscareGame.csproj.CopyComplete
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/obj/Debug/DumbJumpscareGame.dll
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/obj/Debug/ref/DumbJumpscareGame.dll
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/obj/Debug/DumbJumpscareGame.pdb
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/.godot/mono/temp/obj/Debug/DumbJumpscareGame.genruntimeconfig.cache

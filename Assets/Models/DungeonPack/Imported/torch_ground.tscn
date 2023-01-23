@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs6djx1wus3vn"]
+
+[ext_resource type="PackedScene" uid="uid://byhqwodvn0s55" path="res://Assets/Models/DungeonPack/torch.gltf.glb" id="1_qgn5k"]
+[ext_resource type="PackedScene" uid="uid://n1gir2663hb1" path="res://Assets/Models/DungeonPack/Imported/flame.tscn" id="2_s0b5y"]
+
+[node name="TorchGround" instance=ExtResource("1_qgn5k")]
+
+[node name="Flame" parent="." index="1" instance=ExtResource("2_s0b5y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58799, 0)

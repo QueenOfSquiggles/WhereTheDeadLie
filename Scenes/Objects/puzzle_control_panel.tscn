@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://e232t775m8ra"]
+
+[ext_resource type="PackedScene" uid="uid://dhr3yn5slrnh" path="res://Assets/Models/MyModels/puzzle_control_panel.glb" id="1_o5du7"]
+[ext_resource type="PackedScene" uid="uid://dlwu7nfjof0g8" path="res://Modules/interaction/interaction_trigger.tscn" id="2_84de8"]
+[ext_resource type="Script" path="res://Scenes/Objects/PuzzleControlPanel.cs" id="2_okcjy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3hkab"]
+size = Vector3(1.13446, 1.36014, 1.07531)
+
+[node name="PuzzleControlPanel" instance=ExtResource("1_o5du7")]
+script = ExtResource("2_okcjy")
+
+[node name="InteractionTrigger" parent="." index="1" instance=ExtResource("2_84de8")]
+active_phase = 1
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="InteractionTrigger" index="1"]
+shape = SubResource("BoxShape3D_3hkab")
+
+[connection signal="Interaction" from="InteractionTrigger" to="." method="OnInteracted"]
