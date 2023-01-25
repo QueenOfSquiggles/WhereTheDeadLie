@@ -4,8 +4,10 @@ using System;
 
 public partial class PuzzleControlPanel : Node3D
 {
+	[Signal] public delegate void DisplayPuzzleEventHandler();
+
 	private void OnInteracted()
 	{
-		GameDataManager.instance.PuzzleSolved = true;	
+		EmitSignal(nameof(DisplayPuzzle));
 	}
 }

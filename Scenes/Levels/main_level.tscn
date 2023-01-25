@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://kdrivdayaapr"]
+[gd_scene load_steps=9 format=3 uid="uid://kdrivdayaapr"]
 
-[ext_resource type="PackedScene" uid="uid://p3bvspv0qlte" path="res://Scenes/Levels/catacombs_level.tscn" id="2_olcbk"]
+[ext_resource type="PackedScene" uid="uid://c4ixvat1ptwp0" path="res://Scenes/Levels/catacombs_level.tscn" id="2_olcbk"]
 [ext_resource type="PackedScene" uid="uid://dc0hoftar6x1o" path="res://Scenes/UI/main_hud.tscn" id="3_qmw05"]
+[ext_resource type="PackedScene" uid="uid://s7xkqjncc31j" path="res://Scenes/Audio/audio_system.tscn" id="4_o5cjc"]
+[ext_resource type="PackedScene" uid="uid://c41c4u6tohw0l" path="res://Scenes/Monsters/the_smeth.tscn" id="5_geahm"]
 [ext_resource type="PackedScene" uid="uid://j2s7mebwb4u" path="res://Scenes/Player/player_character.tscn" id="5_tv4f5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qdifa"]
@@ -32,11 +34,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 environment = SubResource("Environment_2gh7u")
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("5_tv4f5")]
-transform = Transform3D(-0.957456, 0, -0.28858, 0, 1, 0, 0.28858, 0, -0.957456, 1.04568, 0.8, 1.77915)
+transform = Transform3D(-0.957456, 0, -0.28858, 0, 1, 0, 0.28858, 0, -0.957456, -1.05146, 0.8, -10.9094)
 
 [node name="CatacombsLevel" parent="." instance=ExtResource("2_olcbk")]
+path_smeth = NodePath("../TheSmeth")
 
 [node name="MainHUD" parent="." instance=ExtResource("3_qmw05")]
 
+[node name="AudioSystem" parent="." instance=ExtResource("4_o5cjc")]
+
+[node name="TheSmeth" parent="." instance=ExtResource("5_geahm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.571091, 0)
+
 [connection signal="OnInteractionFound" from="PlayerCharacter" to="MainHUD" method="OnInteractionStart"]
 [connection signal="OnInteractionLost" from="PlayerCharacter" to="MainHUD" method="OnInteractionEnd"]
+[connection signal="OpenPuzzlePanel" from="CatacombsLevel" to="MainHUD" method="DisplayPuzzlePanel"]

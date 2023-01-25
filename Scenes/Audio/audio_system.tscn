@@ -1,0 +1,145 @@
+[gd_scene load_steps=7 format=3 uid="uid://s7xkqjncc31j"]
+
+[ext_resource type="Script" path="res://Scenes/Audio/AudioSystem.cs" id="1_im576"]
+[ext_resource type="AudioStream" uid="uid://bdl815iioj1x4" path="res://Assets/SFX/Drones/diswasher_long_machinery_drone.ogg" id="2_gjnj6"]
+[ext_resource type="AudioStream" uid="uid://cu0spcxrih8ah" path="res://Assets/SFX/Drones/horror_drone_smooth_ghostly_wailing.ogg" id="3_gp6qp"]
+[ext_resource type="AudioStream" uid="uid://62qs150724kj" path="res://Assets/SFX/Drones/short_tinny_wind.ogg" id="4_x3i3j"]
+
+[sub_resource type="Animation" id="Animation_a3gwe"]
+resource_name = "MainDroneLoop"
+length = 897.0
+loop_mode = 1
+step = 10.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StreamLong")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_gjnj6")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(10, 20, 50, 100, 120, 170, 210, 240, 270, 320, 370, 400, 440, 480, 530, 550, 600, 620, 680, 690, 720, 760, 790, 820, 850),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [0.5],
+"method": &"PlayWailingChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.5],
+"method": &"PlayWailingChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.5],
+"method": &"PlayWailingChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.5],
+"method": &"PlayWailingChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.5],
+"method": &"PlayWailingChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.5],
+"method": &"PlayWailingChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.5],
+"method": &"PlayWailingChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.5],
+"method": &"PlayWailingChance"
+}, {
+"args": [0.75],
+"method": &"PlayWindChance"
+}, {
+"args": [0.5],
+"method": &"PlayWailingChance"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ehxpt"]
+_data = {
+"MainDroneLoop": SubResource("Animation_a3gwe")
+}
+
+[node name="AudioSystem" type="Node"]
+script = ExtResource("1_im576")
+path_wailing_sfx = NodePath("StreamWailing")
+path_wind_sfx = NodePath("StreamWind")
+
+[node name="StreamLong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_gjnj6")
+mix_target = 1
+bus = &"DronesAndMusic"
+
+[node name="StreamWailing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gp6qp")
+mix_target = 1
+max_polyphony = 3
+bus = &"DronesAndMusic"
+
+[node name="StreamWind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_x3i3j")
+mix_target = 1
+max_polyphony = 3
+bus = &"DronesAndMusic"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "MainDroneLoop"
+libraries = {
+"": SubResource("AnimationLibrary_ehxpt")
+}

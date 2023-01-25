@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bylpnmvctwokv"]
+[gd_scene load_steps=9 format=3 uid="uid://bylpnmvctwokv"]
 
 [ext_resource type="PackedScene" uid="uid://bidg8le1t0qn" path="res://Assets/Models/DungeonPack/chestTop_rare.gltf.glb" id="1_60goc"]
+[ext_resource type="Script" path="res://Scenes/Objects/Chest.cs" id="1_b3xxd"]
 [ext_resource type="PackedScene" uid="uid://cj5c424ydbkpn" path="res://Assets/Models/DungeonPack/chest_rare.gltf.glb" id="2_ew8kw"]
 [ext_resource type="PackedScene" uid="uid://dlwu7nfjof0g8" path="res://Modules/interaction/interaction_trigger.tscn" id="3_8p2fi"]
+[ext_resource type="PackedScene" uid="uid://bh1tlxw3tbsd0" path="res://Scenes/Objects/key.tscn" id="4_bq2mf"]
 
 [sub_resource type="Animation" id="Animation_r382h"]
 resource_name = "Open"
@@ -31,6 +33,32 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(-0.245101, 0, 0), Vector3(-0.378792, 0, 0), Vector3(-2.52528, 0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("KeyPosition:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"SpawnKey"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_6oxkv"]
 length = 0.001
@@ -58,6 +86,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("KeyPosition:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e0h3u"]
 _data = {
@@ -66,6 +106,13 @@ _data = {
 }
 
 [node name="Chest" type="Node3D"]
+script = ExtResource("1_b3xxd")
+key_scene = ExtResource("4_bq2mf")
+key_root_path = NodePath("KeyPosition")
+
+[node name="InteractionTrigger" parent="." instance=ExtResource("3_8p2fi")]
+active_phase = 2
+is_one_shot = true
 
 [node name="chestTop_raregltf" parent="." instance=ExtResource("1_60goc")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.320554, -0.206823)
@@ -79,15 +126,15 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 [node name="chest_rare" parent="chest_raregltf" index="0"]
 layers = 2
 
+[node name="KeyPosition" type="Marker3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 0, 0.36618, 4.93526e-05)
+visible = false
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "RESET"
 libraries = {
 "": SubResource("AnimationLibrary_e0h3u")
 }
-
-[node name="InteractionTrigger" parent="." instance=ExtResource("3_8p2fi")]
-active_phase = 2
-is_one_shot = true
 
 [connection signal="Interaction" from="InteractionTrigger" to="AnimationPlayer" method="play" flags=3 binds= ["Open"]]
 

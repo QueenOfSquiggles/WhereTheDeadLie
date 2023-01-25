@@ -40,6 +40,8 @@ public partial class player_character : CharacterBody3D
 
     public override void _PhysicsProcess(double delta)
     {
+		if (Input.MouseMode != Input.MouseModeEnum.Captured) return;
+
 		var input_dir = Input.GetVector("move_left", "move_right", "move_back", "move_forward");
 		var intent_vec = new Vector3();
 		intent_vec += cam_arm.GlobalTransform.basis.x * input_dir.x;

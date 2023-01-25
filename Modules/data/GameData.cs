@@ -10,17 +10,17 @@ public struct GameData
     
 
     // changing game data
-    public int phase = 0;
+    public int phase = PHASE_KEYS;
     public int aggression_level = 0;
     public int active_generators = 0;
     public bool puzzle_solved = false;
     public int found_keys = 0;
 
     // reference information
-    public int min_aggression = 0;
-    public int max_aggression = 10;
-    public int required_generators = 3;
-    public int required_keys = 3;
+    public const int MIN_AGGRESSION = 0;
+    public const int MAX_AGGRESSION = 10;
+    public const int REQUIRED_GENERATORS = 3;
+    public const int REQUIRED_KEYS = 3;
 
     public GameData(){}
 }

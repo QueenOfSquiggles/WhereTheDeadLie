@@ -102,7 +102,7 @@ public partial class GameDataManager : Node
 
 	private bool CheckPhaseGenerators()
 	{
-		return game_data.active_generators >= game_data.required_generators;
+		return game_data.active_generators >= GameData.REQUIRED_GENERATORS;
 	}
 
 	private bool CheckPhasePuzzle()
@@ -112,7 +112,7 @@ public partial class GameDataManager : Node
 
 	private bool CheckPhaseKeys()
 	{
-		return game_data.found_keys >= game_data.required_keys;
+		return game_data.found_keys >= GameData.REQUIRED_KEYS;
 	}
 
 }

@@ -1,0 +1,200 @@
+[gd_scene load_steps=28 format=3 uid="uid://c41c4u6tohw0l"]
+
+[ext_resource type="PackedScene" uid="uid://4jiuetgnctjm" path="res://Assets/Models/MyModels/the_smeth.glb" id="1_24vo1"]
+[ext_resource type="Script" path="res://Scenes/Monsters/TheSmeth.cs" id="1_mbkiw"]
+[ext_resource type="Script" path="res://Modules/state_machine/StateMachine.cs" id="2_gqgg6"]
+[ext_resource type="PackedScene" uid="uid://clm4gjnlm2dl4" path="res://Scenes/Monsters/VisibilityManagement/visibility_checker.tscn" id="2_kjmyj"]
+[ext_resource type="Script" path="res://Scenes/Monsters/SmethStateMaching/StateIdle.cs" id="3_quvl8"]
+[ext_resource type="Script" path="res://Scenes/Monsters/SmethStateMaching/StateWalkToTarget.cs" id="4_umsi3"]
+[ext_resource type="Script" path="res://Scenes/Monsters/SmethStateMaching/StateChasePlayer.cs" id="5_8uw72"]
+[ext_resource type="Script" path="res://Scenes/Monsters/SmethStateMaching/StateInvestigate.cs" id="8_41hqq"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_uu5jq"]
+height = 0.185711
+radius = 0.4
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ib3wb"]
+animation = &"Attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_s5f2u"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_maefu"]
+animation = &"WalkCycle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lklhl"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_guwgv"]
+xfade_time = 0.3
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_unphg"]
+xfade_time = 1.0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_h7shy"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4usc1"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nn31r"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_eu12t"]
+states/Attack/node = SubResource("AnimationNodeAnimation_ib3wb")
+states/Attack/position = Vector2(534.4, 126.8)
+states/Idle/node = SubResource("AnimationNodeAnimation_s5f2u")
+states/Idle/position = Vector2(329.6, 146.8)
+states/Start/position = Vector2(147.2, 62.4)
+states/WalkCycle/node = SubResource("AnimationNodeAnimation_maefu")
+states/WalkCycle/position = Vector2(388, 68.4)
+transitions = ["Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_lklhl"), "Idle", "WalkCycle", SubResource("AnimationNodeStateMachineTransition_guwgv"), "WalkCycle", "Idle", SubResource("AnimationNodeStateMachineTransition_unphg"), "WalkCycle", "Attack", SubResource("AnimationNodeStateMachineTransition_h7shy"), "Attack", "WalkCycle", SubResource("AnimationNodeStateMachineTransition_4usc1"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_nn31r")]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_frem2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dneoy"]
+height = 0.254281
+radius = 1.59805
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hcw0"]
+no_depth_test = true
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_imke6"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4dct"]
+no_depth_test = true
+emission_enabled = true
+emission = Color(0, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptp6c"]
+no_depth_test = true
+albedo_color = Color(0, 0, 1, 1)
+emission_enabled = true
+emission = Color(0, 0, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mss2g"]
+no_depth_test = true
+albedo_color = Color(1, 0, 1, 1)
+emission_enabled = true
+emission = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lhoso"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="TheSmeth" instance=ExtResource("1_24vo1")]
+script = ExtResource("1_mbkiw")
+path_state_machine = NodePath("StateMachine")
+
+[node name="Armature" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(-0.990629, 0.349605, -0.0770886)
+bones/1/rotation = Quaternion(0.0528009, -0.181964, 0.441129, 0.877215)
+bones/2/rotation = Quaternion(-0.338358, 0.00697935, 0.124327, 0.932742)
+bones/3/rotation = Quaternion(-0.26145, -0.0691486, 0.0296343, 0.962281)
+bones/4/rotation = Quaternion(-0.237812, 0.0167637, 0.923213, 0.301402)
+bones/5/rotation = Quaternion(-0.274786, -0.0121982, -0.194024, 0.941647)
+bones/6/rotation = Quaternion(-0.280971, 0.241948, -0.235841, 0.898274)
+bones/7/rotation = Quaternion(-0.138605, -0.155038, -0.60837, 0.765922)
+bones/8/rotation = Quaternion(-0.221163, -0.190017, 0.271839, 0.917106)
+bones/9/rotation = Quaternion(-0.157115, -0.202961, 0.365171, 0.894859)
+bones/10/rotation = Quaternion(-0.324949, -0.251177, 0.845958, -0.340108)
+bones/11/rotation = Quaternion(-0.175516, 0.16439, -0.189401, 0.951997)
+bones/12/rotation = Quaternion(0.0414764, 0.407046, -0.385445, 0.827058)
+bones/15/rotation = Quaternion(0.0894597, 0.988848, -0.0211293, 0.117178)
+bones/16/rotation = Quaternion(0.141899, 0.0578271, 0.344406, 0.926232)
+bones/17/rotation = Quaternion(0.343249, -0.344233, 0.369612, 0.791878)
+bones/18/rotation = Quaternion(0.236825, -0.629256, -0.392115, 0.627851)
+bones/19/rotation = Quaternion(0.0446019, -0.00958887, -0.544182, 0.837726)
+bones/20/rotation = Quaternion(-0.120898, 0.494726, 0.852542, -0.11748)
+bones/21/rotation = Quaternion(0.0922167, 0.118567, -0.571725, 0.806578)
+bones/22/rotation = Quaternion(-0.593602, -0.0599728, 0.607878, 0.523951)
+bones/23/rotation = Quaternion(0.414229, 0.162036, 0.558864, 0.699878)
+
+[node name="Cube" parent="Armature/Skeleton3D" index="0"]
+layers = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0242126, 0.0684548, 0)
+shape = SubResource("CylinderShape3D_uu5jq")
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="3"]
+tree_root = SubResource("AnimationNodeStateMachine_eu12t")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+process_callback = 0
+root_motion_track = NodePath("Armature/Skeleton3D:Root")
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_frem2")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="4"]
+target_desired_distance = 2.0
+path_metadata_flags = 0
+
+[node name="KillBox" type="Area3D" parent="." index="5"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KillBox" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.859, 0)
+shape = SubResource("CylinderShape3D_dneoy")
+
+[node name="VisibilityChecker" parent="." index="6" instance=ExtResource("2_kjmyj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.398157, -0.753628)
+target_group_name = &"Player"
+
+[node name="StateMachine" type="Node" parent="." index="7"]
+script = ExtResource("2_gqgg6")
+path_char_body = NodePath("..")
+path_nav_agent = NodePath("../NavigationAgent3D")
+path_anim = NodePath("../AnimationTree")
+intended_move_speed = 5.0
+
+[node name="StateIdle" type="Node" parent="StateMachine" index="0"]
+script = ExtResource("3_quvl8")
+min_countdown_time = 5.0
+max_countdown_time = 20.0
+
+[node name="StateWalkToTarget" type="Node" parent="StateMachine" index="1"]
+script = ExtResource("4_umsi3")
+
+[node name="StateChasePlayer" type="Node" parent="StateMachine" index="2"]
+script = ExtResource("5_8uw72")
+min_distance_for_reevaluation = 2.0
+
+[node name="StateInvestigate" type="Node" parent="StateMachine" index="3"]
+script = ExtResource("8_41hqq")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54447, -0.626511)
+
+[node name="MonsterPosDisplay" type="MeshInstance3D" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47761, 0)
+material_override = SubResource("StandardMaterial3D_0hcw0")
+ignore_occlusion_culling = true
+mesh = SubResource("SphereMesh_imke6")
+
+[node name="CurrentTargetLocation" type="MeshInstance3D" parent="." index="10"]
+material_override = SubResource("StandardMaterial3D_r4dct")
+ignore_occlusion_culling = true
+mesh = SubResource("SphereMesh_imke6")
+
+[node name="CurrentWaypoint" type="MeshInstance3D" parent="." index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.346594, 0, 0)
+material_override = SubResource("StandardMaterial3D_ptp6c")
+ignore_occlusion_culling = true
+mesh = SubResource("SphereMesh_imke6")
+
+[node name="CurrentIntentDirection" type="MeshInstance3D" parent="." index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430104, 0, 0)
+material_override = SubResource("StandardMaterial3D_mss2g")
+ignore_occlusion_culling = true
+mesh = SubResource("BoxMesh_lhoso")
+
+[connection signal="velocity_computed" from="NavigationAgent3D" to="StateMachine" method="ApplyNavigationVelocity"]
+[connection signal="OnNoLongerVisible" from="VisibilityChecker" to="StateMachine" method="ForceNewState" binds= [3]]
+[connection signal="OnVisible" from="VisibilityChecker" to="StateMachine" method="ForceNewState" binds= [2]]

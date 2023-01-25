@@ -1,11 +1,6 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://calpe0p0ujyvh"]
-
-[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_a6ttr"]
-resource_name = "Reverb"
+[gd_resource type="AudioBusLayout" format=3 uid="uid://calpe0p0ujyvh"]
 
 [resource]
-bus/0/effect/0/effect = SubResource("AudioEffectReverb_a6ttr")
-bus/0/effect/0/enabled = true
 bus/1/name = &"VoiceOver"
 bus/1/solo = false
 bus/1/mute = false
@@ -24,3 +19,9 @@ bus/3/mute = false
 bus/3/bypass_fx = false
 bus/3/volume_db = 0.0
 bus/3/send = &"Master"
+bus/4/name = &"DronesAndMusic"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = -20.8012
+bus/4/send = &"Master"

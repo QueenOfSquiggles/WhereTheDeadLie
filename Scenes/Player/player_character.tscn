@@ -227,7 +227,7 @@ graph_offset = Vector2(-173, 82.574)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_ik63x"]
 
-[node name="PlayerCharacter" type="CharacterBody3D"]
+[node name="PlayerCharacter" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_frnes")
 cam_arm_path = NodePath("CamSwivel")
 anim_tree_path = NodePath("AnimationTree")
@@ -243,7 +243,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 current = true
 
 [node name="RayCast3D" type="RayCast3D" parent="CamSwivel/Camera3D"]
-target_position = Vector3(0, 0, -3)
+target_position = Vector3(0, 0, -1.5)
 collide_with_areas = true
 collide_with_bodies = false
 

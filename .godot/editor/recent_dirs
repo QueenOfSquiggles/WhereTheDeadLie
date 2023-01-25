@@ -1,9 +1,15 @@
-res://Assets/Models/OGA_LightGameStudio/Imported
+res://Assets/Models/LevelMesh/Import
+res://Scenes/Monsters/SmethStateMaching
+res://Scenes/Monsters
+res://Scenes/Audio
+res://Scenes/Monsters/VisibilityManagement
+res://Modules/state_machine
 res://Scenes/Objects
+res://Scenes/UI/PuzzlePanel
+res://Assets/Models/OGA_LightGameStudio/Imported
 res://Assets/Textures/PuzzleControlPanel
 res://Assets/Textures/PuzzleControlPanel/
 res://Assets/Materials
-res://Assets/Models/LevelMesh/Import
 res://Scenes/Objects/power_generator_util
 res://Scenes/UI
 res://Modules/data

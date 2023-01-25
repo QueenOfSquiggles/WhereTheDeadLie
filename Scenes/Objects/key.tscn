@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh1tlxw3tbsd0"]
+
+[ext_resource type="PackedScene" uid="uid://dejtwynhut1ib" path="res://Assets/Models/MyModels/key.glb" id="1_qdsbw"]
+[ext_resource type="PackedScene" uid="uid://dlwu7nfjof0g8" path="res://Modules/interaction/interaction_trigger.tscn" id="2_1vpyd"]
+[ext_resource type="Script" path="res://Scenes/Objects/Key.cs" id="2_6yuc0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ulp6"]
+size = Vector3(0.0419432, 0.0127805, 0.121066)
+
+[node name="Key" instance=ExtResource("1_qdsbw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+script = ExtResource("2_6yuc0")
+
+[node name="InteractionTrigger" parent="." index="1" instance=ExtResource("2_1vpyd")]
+active_phase = 2
+is_one_shot = true
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="InteractionTrigger" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0308925)
+shape = SubResource("BoxShape3D_5ulp6")
+
+[connection signal="Interaction" from="InteractionTrigger" to="." method="PickupKey"]

@@ -1,0 +1,34 @@
+[gd_scene load_steps=10 format=3 uid="uid://bg27dfd5anqpi"]
+
+[ext_resource type="Script" path="res://Scenes/UI/PuzzlePanel/puzzle_slot.cs" id="1_02omu"]
+[ext_resource type="Texture2D" uid="uid://dwi32ykfi5c6m" path="res://Assets/Textures/PuzzleIcons/puzzle_star.png" id="2_1twfx"]
+[ext_resource type="Texture2D" uid="uid://r0itcg62wla7" path="res://Assets/Textures/PuzzleIcons/puzzle_circle.png" id="3_735bm"]
+[ext_resource type="Texture2D" uid="uid://da7nrg51r8e7w" path="res://Assets/Textures/PuzzleIcons/puzzle_box.png" id="4_8n7xg"]
+[ext_resource type="Texture2D" uid="uid://buwcphawqy804" path="res://Assets/Textures/PuzzleIcons/puzzle_cross.png" id="5_y37s2"]
+[ext_resource type="Texture2D" uid="uid://t7l26e6xrjkk" path="res://Assets/Textures/PuzzleIcons/puzzle_pentagon.png" id="6_s2qs7"]
+[ext_resource type="Texture2D" uid="uid://b3ocerhqvf6xy" path="res://Assets/Textures/PuzzleIcons/puzzle_sad.png" id="7_itidk"]
+[ext_resource type="Texture2D" uid="uid://da0lep2rkasap" path="res://Assets/Textures/PuzzleIcons/puzzle_smile.png" id="8_5o022"]
+[ext_resource type="Texture2D" uid="uid://bjmuivo80r868" path="res://Assets/Textures/PuzzleIcons/puzzle_t.png" id="9_sxd73"]
+
+[node name="PuzzleSlot" type="VBoxContainer"]
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource("1_02omu")
+texture_rect_path = NodePath("DisplaySymbol")
+icons = [ExtResource("2_1twfx"), ExtResource("3_735bm"), ExtResource("4_8n7xg"), ExtResource("5_y37s2"), ExtResource("6_s2qs7"), ExtResource("7_itidk"), ExtResource("8_5o022"), ExtResource("9_sxd73")]
+
+[node name="BtnPrevious" type="Button" parent="."]
+layout_mode = 2
+text = "Previous"
+
+[node name="DisplaySymbol" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_1twfx")
+expand_mode = 4
+
+[node name="BtnNext" type="Button" parent="."]
+layout_mode = 2
+text = "Next"
+
+[connection signal="pressed" from="BtnPrevious" to="." method="SelectPrevious"]
+[connection signal="pressed" from="BtnNext" to="." method="SelectNext"]

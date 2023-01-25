@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://nstkn15gwl0m"
+uid="uid://cso3ijme35ihv"
 path="res://.godot/imported/catacombs.glb-72f55cab8380d3930185c496b1693165.scn"
 
 [deps]
@@ -49,7 +49,6 @@ _subresources={
 },
 "nodes": {
 "PATH:Plane": {
-"generate/navmesh": 1,
 "generate/occluder": 1,
 "generate/physics": true,
 "physics/shape_type": 2

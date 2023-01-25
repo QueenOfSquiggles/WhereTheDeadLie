@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmn18gg6kvxyd"]
+
+[ext_resource type="PackedScene" uid="uid://chaicyf6sm4t" path="res://Assets/Models/MyModels/crawling_monster.glb" id="1_yurit"]
+
+[node name="CrawlingMonster" instance=ExtResource("1_yurit")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/2/rotation = Quaternion(-0.0166211, -0.000263919, -7.12404e-05, 0.999862)
+bones/3/rotation = Quaternion(-0.155369, -0.00133466, -0.0278799, 0.987462)
+bones/4/rotation = Quaternion(-0.239881, 0.00749784, 0.0049354, 0.970761)
+bones/5/rotation = Quaternion(0.0125325, -0.019924, -0.520676, 0.85343)
+bones/8/rotation = Quaternion(0.012378, 0.0211845, 0.520761, 0.85335)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Idle"

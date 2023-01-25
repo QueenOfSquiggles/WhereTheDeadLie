@@ -63,3 +63,9 @@ interact={
 [layer_names]
 
 3d_render/layer_2="DecalExempt"
+3d_physics/layer_1="Standard"
+3d_physics/layer_2="VisibilityCheck"
+
+[rendering]
+
+occlusion_culling/use_occlusion_culling=true
