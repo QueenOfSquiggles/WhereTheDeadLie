@@ -3,18 +3,20 @@ using interaction;
 using System;
 using bridge;
 using data;
+using objects;
 
-public partial class power_generator : Node3D
+public partial class power_generator : Node3D, IHasViability
 {
 
 	[Export] private PackedScene activity_components_scene;
 
-	[Export] private NodePath interaction_trigger_path;
-	private InteractionTrigger interaction_trigger; 
+	[Export] private NodePath anim_player_path;
+	private AnimationPlayer anim;
+	private bool is_viable = true;
 
 	public override void _Ready()
 	{
-		interaction_trigger = this.GetNodeCustom<InteractionTrigger>(interaction_trigger_path);
+		anim = this.GetNodeCustom<AnimationPlayer>(anim_player_path);
 	}
 
 	private void OnGeneratorStarted()
@@ -23,4 +25,13 @@ public partial class power_generator : Node3D
 		var components = activity_components_scene.Instantiate();
 		AddChild(components);
 	}
+
+	public void OnInteract()
+	{
+		if (is_viable) anim.Play("ActivateViable");
+		else anim.Play("ActivateNonViable");
+	}
+
+    public bool GetViability() => is_viable;
+    public void SetViability(bool is_viable) => this.is_viable = is_viable;
 }

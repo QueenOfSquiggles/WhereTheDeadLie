@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://cd31m2v4lc7bf"]
+[gd_scene load_steps=19 format=3 uid="uid://cd31m2v4lc7bf"]
 
 [ext_resource type="Script" path="res://Scenes/Objects/power_generator.cs" id="1_mydb7"]
 [ext_resource type="PackedScene" uid="uid://dlwu7nfjof0g8" path="res://Modules/interaction/interaction_trigger.tscn" id="2_8kxom"]
 [ext_resource type="PackedScene" uid="uid://b1hxd6pkxh5an" path="res://Scenes/Objects/power_generator_util/power_generator_active_components.tscn" id="2_um63k"]
+[ext_resource type="PackedScene" uid="uid://dlt51l5s0fxkp" path="res://Scenes/Objects/util/player_controls_setter.tscn" id="4_0rmmb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_meqo4"]
 resource_name = "BasicMetal"
@@ -191,10 +192,148 @@ points = PackedVector3Array(1.0012, 0.757129, 1.25523, 1.09156, 2.35503, -0.6464
 [sub_resource type="BoxShape3D" id="BoxShape3D_it6v0"]
 size = Vector3(2.56146, 2.69405, 2.90125)
 
+[sub_resource type="Animation" id="Animation_fqxs1"]
+resource_name = "ActivateNonViable"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerControlsSetter")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"SetPlayerCanMove"
+}, {
+"args": [true],
+"method": &"SetPlayerCanMove"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scaler/Cylinder:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9, 1, 1.2, 1.4, 1.6, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.00523598, 0, 0), Vector3(-0.00523599, 0, -0.174533), Vector3(-0.00523599, 0, 0.174533), Vector3(-0.00523599, 0, -0.174533), Vector3(-0.00523599, 0, 0.174533), Vector3(-0.00523599, 0, 0.174533), Vector3(-0.00523599, 0, -0.349066), Vector3(-0.00523599, 0, 0.349066), Vector3(-0.00523599, 0, -0.349066), Vector3(-0.00523599, 0, 0.349066), Vector3(-0.00523599, 0, -0.349066), Vector3(-0.00523598, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scaler/Cylinder:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.9, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.2, 1.2, 1.2), Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_csttg"]
+resource_name = "ActivateViable"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"OnGeneratorStarted"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerControlsSetter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"SetPlayerCanMove"
+}, {
+"args": [true],
+"method": &"SetPlayerCanMove"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scaler/Cylinder:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9, 1, 1.2, 1.4, 1.6, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.00523598, 0, 0), Vector3(-0.00523599, 0, -0.174533), Vector3(-0.00523599, 0, 0.174533), Vector3(-0.00523599, 0, -0.174533), Vector3(-0.00523599, 0, 0.174533), Vector3(-0.00523599, 0, 0.174533), Vector3(-0.00523599, 0, -0.349066), Vector3(-0.00523599, 0, 0.349066), Vector3(-0.00523599, 0, -0.349066), Vector3(-0.00523599, 0, 0.349066), Vector3(-0.00523599, 0, -0.349066), Vector3(-0.00523598, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scaler/Cylinder:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.9, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.2, 1.2, 1.2), Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_necn0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scaler/Cylinder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.00523598, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scaler/Cylinder:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l366t"]
+_data = {
+"ActivateNonViable": SubResource("Animation_fqxs1"),
+"ActivateViable": SubResource("Animation_csttg"),
+"RESET": SubResource("Animation_necn0")
+}
+
 [node name="power_generator" type="Node3D"]
 script = ExtResource("1_mydb7")
 activity_components_scene = ExtResource("2_um63k")
-interaction_trigger_path = NodePath("Scaler/InteractionTrigger")
+anim_player_path = NodePath("AnimationPlayer")
 
 [node name="Scaler" type="StaticBody3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -216,4 +355,13 @@ is_one_shot = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13149, 0)
 shape = SubResource("BoxShape3D_it6v0")
 
-[connection signal="Interaction" from="Scaler/InteractionTrigger" to="." method="OnGeneratorStarted"]
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
+
+[node name="PlayerControlsSetter" parent="." instance=ExtResource("4_0rmmb")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l366t")
+}
+
+[connection signal="Interaction" from="Scaler/InteractionTrigger" to="." method="OnInteract"]

@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj3pujvh7phfp"]
+
+[ext_resource type="PackedScene" uid="uid://ds2e6t58y2njl" path="res://Scenes/Menus/OptionsTabs/gameplay_tab.tscn" id="1_agasg"]
+[ext_resource type="Script" path="res://Scenes/Menus/OptionsMenu.cs" id="1_hipj7"]
+[ext_resource type="PackedScene" uid="uid://b74414wseyp32" path="res://Scenes/Menus/OptionsTabs/audio_tab.tscn" id="2_x8b24"]
+[ext_resource type="PackedScene" uid="uid://dkpkes5d42sfb" path="res://Scenes/Menus/OptionsTabs/accessibility_tab.tscn" id="3_si5nr"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hipj7")
+main_menu_path = "res://Scenes/Menus/main_menu.tscn"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer"]
+layout_mode = 2
+tab_alignment = 1
+
+[node name="Gameplay" parent="MarginContainer/TabContainer" instance=ExtResource("1_agasg")]
+layout_mode = 2
+
+[node name="Audio" parent="MarginContainer/TabContainer" instance=ExtResource("2_x8b24")]
+visible = false
+layout_mode = 2
+
+[node name="Accessibility" parent="MarginContainer/TabContainer" instance=ExtResource("3_si5nr")]
+visible = false
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -69.0
+offset_right = 196.0
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "Return to Main Menu"
+
+[connection signal="pressed" from="PanelContainer/Button" to="." method="OnMenuButtonPressed"]

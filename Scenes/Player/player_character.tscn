@@ -217,21 +217,24 @@ switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nj0eq"]
+states/End/position = Vector2(717.6, 117.6)
 states/MovementCycle/node = SubResource("AnimationNodeBlendSpace1D_a5epo")
 states/MovementCycle/position = Vector2(264, 235.974)
 states/Shoot/node = SubResource("AnimationNodeAnimation_fh5ro")
 states/Shoot/position = Vector2(371.2, 127.6)
 states/Start/position = Vector2(166.4, 94.4)
 transitions = ["Start", "MovementCycle", SubResource("AnimationNodeStateMachineTransition_fyqs0"), "MovementCycle", "Shoot", SubResource("AnimationNodeStateMachineTransition_ldvud"), "Shoot", "MovementCycle", SubResource("AnimationNodeStateMachineTransition_a2whc")]
-graph_offset = Vector2(-173, 82.574)
+graph_offset = Vector2(-29, 94.574)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_ik63x"]
 
 [node name="PlayerCharacter" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_frnes")
+speed = 3.0
 cam_arm_path = NodePath("CamSwivel")
 anim_tree_path = NodePath("AnimationTree")
 raycast_path = NodePath("CamSwivel/Camera3D/RayCast3D")
+accessibility_no_flash_light = NodePath("CamSwivel/Camera3D/AccessNoFlashSpotlight")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_hmcmo")
@@ -246,6 +249,9 @@ current = true
 target_position = Vector3(0, 0, -1.5)
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="AccessNoFlashSpotlight" type="SpotLight3D" parent="CamSwivel/Camera3D"]
+spot_range = 10.0
 
 [node name="Hand" type="Marker3D" parent="CamSwivel"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.438, -0.331, -0.532)

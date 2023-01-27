@@ -44,15 +44,15 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.0.0-beta.14, )"
+              "version": "[4.0.0-beta.15, )"
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.0.0-beta.14, )"
+              "version": "[4.0.0-beta.15, )"
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.0.0-beta.14, )"
+              "version": "[4.0.0-beta.15, )"
             }
           },
           "imports": [

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://chx6k2s8tu3nl"]
 
-[ext_resource type="PackedScene" uid="uid://cso3ijme35ihv" path="res://Assets/Models/LevelMesh/catacombs.glb" id="1_tmptc"]
+[ext_resource type="PackedScene" uid="uid://bfke475xsa54m" path="res://Assets/Models/LevelMesh/catacombs.glb" id="1_tmptc"]
 [ext_resource type="Material" uid="uid://qmtta5p5i176" path="res://Assets/Materials/slab_tiles.tres" id="2_0vi3g"]
 [ext_resource type="Material" uid="uid://bo3iuop1erdf8" path="res://Assets/Materials/cracked_concrete_wall.tres" id="3_irimp"]
 [ext_resource type="Material" uid="uid://bm6cbr6cen61x" path="res://Assets/Materials/rocky_trail.tres" id="4_0hfjd"]

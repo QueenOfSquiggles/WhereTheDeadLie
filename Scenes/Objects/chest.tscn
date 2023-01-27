@@ -1,14 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://bylpnmvctwokv"]
+[gd_scene load_steps=11 format=3 uid="uid://bylpnmvctwokv"]
 
 [ext_resource type="PackedScene" uid="uid://bidg8le1t0qn" path="res://Assets/Models/DungeonPack/chestTop_rare.gltf.glb" id="1_60goc"]
 [ext_resource type="Script" path="res://Scenes/Objects/Chest.cs" id="1_b3xxd"]
 [ext_resource type="PackedScene" uid="uid://cj5c424ydbkpn" path="res://Assets/Models/DungeonPack/chest_rare.gltf.glb" id="2_ew8kw"]
 [ext_resource type="PackedScene" uid="uid://dlwu7nfjof0g8" path="res://Modules/interaction/interaction_trigger.tscn" id="3_8p2fi"]
 [ext_resource type="PackedScene" uid="uid://bh1tlxw3tbsd0" path="res://Scenes/Objects/key.tscn" id="4_bq2mf"]
+[ext_resource type="PackedScene" uid="uid://dlt51l5s0fxkp" path="res://Scenes/Objects/util/player_controls_setter.tscn" id="6_a4nxc"]
 
 [sub_resource type="Animation" id="Animation_r382h"]
 resource_name = "Open"
-length = 4.0
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -16,7 +17,7 @@ tracks/0/path = NodePath("chestTop_raregltf:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.4, 4),
+"times": PackedFloat32Array(0, 1.4, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0.320554, -0.206823), Vector3(0, 0.320554, -0.206823), Vector3(0, 0.320554, -0.206823)]
@@ -28,7 +29,7 @@ tracks/1/path = NodePath("chestTop_raregltf:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 3.4, 4),
+"times": PackedFloat32Array(0, 0.5, 1.4, 2),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(-0.245101, 0, 0), Vector3(-0.378792, 0, 0), Vector3(-2.52528, 0, 0)]
@@ -40,7 +41,7 @@ tracks/2/path = NodePath("KeyPosition:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 4),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -52,11 +53,85 @@ tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(3.7),
+"times": PackedFloat32Array(1.7),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"SpawnKey"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PlayerControlsSetter")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"SetPlayerCanMove"
+}, {
+"args": [true],
+"method": &"SetPlayerCanMove"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_0rdvm"]
+resource_name = "OpenNonViable"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chestTop_raregltf:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.320554, -0.206823), Vector3(0, 0.320554, -0.206823), Vector3(0, 0.320554, -0.206823)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("chestTop_raregltf:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.245101, 0, 0), Vector3(-0.378792, 0, 0), Vector3(-2.52528, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("KeyPosition:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayerControlsSetter")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"SetPlayerCanMove"
+}, {
+"args": [true],
+"method": &"SetPlayerCanMove"
 }]
 }
 
@@ -102,6 +177,7 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e0h3u"]
 _data = {
 "Open": SubResource("Animation_r382h"),
+"OpenNonViable": SubResource("Animation_0rdvm"),
 "RESET": SubResource("Animation_6oxkv")
 }
 
@@ -109,6 +185,7 @@ _data = {
 script = ExtResource("1_b3xxd")
 key_scene = ExtResource("4_bq2mf")
 key_root_path = NodePath("KeyPosition")
+path_anim_player = NodePath("AnimationPlayer")
 
 [node name="InteractionTrigger" parent="." instance=ExtResource("3_8p2fi")]
 active_phase = 2
@@ -136,7 +213,11 @@ libraries = {
 "": SubResource("AnimationLibrary_e0h3u")
 }
 
-[connection signal="Interaction" from="InteractionTrigger" to="AnimationPlayer" method="play" flags=3 binds= ["Open"]]
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
+
+[node name="PlayerControlsSetter" parent="." instance=ExtResource("6_a4nxc")]
+
+[connection signal="Interaction" from="InteractionTrigger" to="." method="OnInteract"]
 
 [editable path="chestTop_raregltf"]
 [editable path="chest_raregltf"]

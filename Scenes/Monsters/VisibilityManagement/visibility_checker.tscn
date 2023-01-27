@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Monsters/VisibilityManagement/VisibilityChecker.cs" id="1_qmqoa"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_odd78"]
+height = 5.0
 radius = 25.0
 
 [node name="VisibilityChecker" type="Node3D"]

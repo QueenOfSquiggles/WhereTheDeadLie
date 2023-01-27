@@ -17,14 +17,14 @@ public partial class StateChasePlayer : State
     public override void OnEnterState(StateData data)
     {
 		target_reached = false;
-		data.nav_agent.TargetReached += OnReachedTarget;
+		data.nav_agent.NavigationFinished += OnReachedTarget;
 		player = GetTree().GetFirstNodeInGroup("Player") as Node3D;
 		data.nav_agent.TargetLocation = player.GlobalPosition;
     }
 
     public override void OnExitState(StateData data)
     {
-		data.nav_agent.TargetReached -= OnReachedTarget;
+		data.nav_agent.NavigationFinished -= OnReachedTarget;
     }
 
     public override int StateMachineTick(StateData data, float delta)

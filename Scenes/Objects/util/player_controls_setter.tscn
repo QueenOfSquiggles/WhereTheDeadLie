@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlt51l5s0fxkp"]
+
+[ext_resource type="Script" path="res://Scenes/Objects/util/PlayerControlsSetter.cs" id="1_x5s7i"]
+
+[node name="PlayerControlsSetter" type="Node"]
+script = ExtResource("1_x5s7i")

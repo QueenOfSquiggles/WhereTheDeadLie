@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://b74414wseyp32"]
+
+[node name="Audio" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Audio Volumes"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(720, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="BusMain" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusMain"]
+layout_mode = 2
+text = "Main (affects all others)"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/BusMain"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Value" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusMain"]
+layout_mode = 2
+text = "%s"
+
+[node name="BusVoiceOver" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusVoiceOver"]
+layout_mode = 2
+text = "Voice Over"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/BusVoiceOver"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Value" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusVoiceOver"]
+layout_mode = 2
+text = "%s"
+
+[node name="BusSoundEffects" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusSoundEffects"]
+layout_mode = 2
+text = "Sound Effects"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/BusSoundEffects"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Value" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusSoundEffects"]
+layout_mode = 2
+text = "%s"
+
+[node name="BusCreatureSounds" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusCreatureSounds"]
+layout_mode = 2
+text = "Creature Sounds"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/BusCreatureSounds"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Value" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusCreatureSounds"]
+layout_mode = 2
+text = "%s"
+
+[node name="BusDronesAndBackground" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusDronesAndBackground"]
+layout_mode = 2
+text = "Drones and Background"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/BusDronesAndBackground"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Value" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusDronesAndBackground"]
+layout_mode = 2
+text = "%s"

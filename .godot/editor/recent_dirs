@@ -1,3 +1,8 @@
+res://Scenes/Menus
+res://Modules/data
+res://Scenes/Deaths
+res://Scenes/Menus/OptionsTabs
+res://Scenes/Objects/util
 res://Assets/Models/LevelMesh/Import
 res://Scenes/Monsters/SmethStateMaching
 res://Scenes/Monsters
@@ -12,11 +17,7 @@ res://Assets/Textures/PuzzleControlPanel/
 res://Assets/Materials
 res://Scenes/Objects/power_generator_util
 res://Scenes/UI
-res://Modules/data
 res://Modules/interaction
 res://Assets/Models/DungeonPack/Imported
 res://Scenes/Levels
-res://Assets/Materials/
-res://Assets/Models/LevelMesh
-res://Scenes/Player
 /home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/

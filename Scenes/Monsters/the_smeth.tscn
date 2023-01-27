@@ -11,7 +11,7 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_uu5jq"]
 height = 0.185711
-radius = 0.4
+radius = 0.698325
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ib3wb"]
 animation = &"Attack"
@@ -87,6 +87,7 @@ emission = Color(1, 0, 1, 1)
 size = Vector3(0.1, 0.1, 0.1)
 
 [node name="TheSmeth" instance=ExtResource("1_24vo1")]
+collision_layer = 0
 script = ExtResource("1_mbkiw")
 path_state_machine = NodePath("StateMachine")
 
@@ -108,14 +109,14 @@ bones/10/rotation = Quaternion(-0.324949, -0.251177, 0.845958, -0.340108)
 bones/11/rotation = Quaternion(-0.175516, 0.16439, -0.189401, 0.951997)
 bones/12/rotation = Quaternion(0.0414764, 0.407046, -0.385445, 0.827058)
 bones/15/rotation = Quaternion(0.0894597, 0.988848, -0.0211293, 0.117178)
-bones/16/rotation = Quaternion(0.141899, 0.0578271, 0.344406, 0.926232)
-bones/17/rotation = Quaternion(0.343249, -0.344233, 0.369612, 0.791878)
-bones/18/rotation = Quaternion(0.236825, -0.629256, -0.392115, 0.627851)
-bones/19/rotation = Quaternion(0.0446019, -0.00958887, -0.544182, 0.837726)
-bones/20/rotation = Quaternion(-0.120898, 0.494726, 0.852542, -0.11748)
-bones/21/rotation = Quaternion(0.0922167, 0.118567, -0.571725, 0.806578)
-bones/22/rotation = Quaternion(-0.593602, -0.0599728, 0.607878, 0.523951)
-bones/23/rotation = Quaternion(0.414229, 0.162036, 0.558864, 0.699878)
+bones/16/rotation = Quaternion(0.182667, 0.011554, 0.390329, 0.902298)
+bones/17/rotation = Quaternion(0.355605, -0.389219, 0.383364, 0.758344)
+bones/18/rotation = Quaternion(0.220344, -0.674289, -0.364123, 0.603488)
+bones/19/rotation = Quaternion(0.0795671, -0.0350467, -0.513424, 0.853719)
+bones/20/rotation = Quaternion(-0.153953, 0.420462, 0.887764, -0.106701)
+bones/21/rotation = Quaternion(0.055014, 0.138376, -0.512917, 0.845424)
+bones/22/rotation = Quaternion(-0.604673, -0.0826149, 0.648357, 0.455168)
+bones/23/rotation = Quaternion(0.331638, 0.159304, 0.487705, 0.791696)
 
 [node name="Cube" parent="Armature/Skeleton3D" index="0"]
 layers = 2
@@ -138,13 +139,14 @@ path_metadata_flags = 0
 
 [node name="KillBox" type="Area3D" parent="." index="5"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="KillBox" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.859, 0)
 shape = SubResource("CylinderShape3D_dneoy")
 
 [node name="VisibilityChecker" parent="." index="6" instance=ExtResource("2_kjmyj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.398157, -0.753628)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24259, -0.753628)
 target_group_name = &"Player"
 
 [node name="StateMachine" type="Node" parent="." index="7"]
@@ -171,30 +173,35 @@ script = ExtResource("8_41hqq")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54447, -0.626511)
+visible = false
 
 [node name="MonsterPosDisplay" type="MeshInstance3D" parent="." index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47761, 0)
+visible = false
 material_override = SubResource("StandardMaterial3D_0hcw0")
 ignore_occlusion_culling = true
 mesh = SubResource("SphereMesh_imke6")
 
 [node name="CurrentTargetLocation" type="MeshInstance3D" parent="." index="10"]
+visible = false
 material_override = SubResource("StandardMaterial3D_r4dct")
 ignore_occlusion_culling = true
 mesh = SubResource("SphereMesh_imke6")
 
 [node name="CurrentWaypoint" type="MeshInstance3D" parent="." index="11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.346594, 0, 0)
+visible = false
 material_override = SubResource("StandardMaterial3D_ptp6c")
 ignore_occlusion_culling = true
 mesh = SubResource("SphereMesh_imke6")
 
 [node name="CurrentIntentDirection" type="MeshInstance3D" parent="." index="12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430104, 0, 0)
+visible = false
 material_override = SubResource("StandardMaterial3D_mss2g")
 ignore_occlusion_culling = true
 mesh = SubResource("BoxMesh_lhoso")
 
-[connection signal="velocity_computed" from="NavigationAgent3D" to="StateMachine" method="ApplyNavigationVelocity"]
+[connection signal="body_entered" from="KillBox" to="." method="OnKillBoxHitBody"]
 [connection signal="OnNoLongerVisible" from="VisibilityChecker" to="StateMachine" method="ForceNewState" binds= [3]]
 [connection signal="OnVisible" from="VisibilityChecker" to="StateMachine" method="ForceNewState" binds= [2]]

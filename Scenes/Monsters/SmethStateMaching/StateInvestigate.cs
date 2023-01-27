@@ -14,12 +14,12 @@ public partial class StateInvestigate : State
     public override void OnEnterState(StateData data)
     {
 		target_reached = false;
-		data.nav_agent.TargetReached += OnReachedTarget;
+		data.nav_agent.NavigationFinished += OnReachedTarget;
     }
 
     public override void OnExitState(StateData data)
     {
-		data.nav_agent.TargetReached -= OnReachedTarget;
+		data.nav_agent.NavigationFinished -= OnReachedTarget;
     }
 
     public override int StateMachineTick(StateData data, float delta)

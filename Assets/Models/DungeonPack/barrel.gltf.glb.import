@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dnqhnbcjx2u2x"
+uid="uid://hy1bhbpa4i4c"
 path="res://.godot/imported/barrel.gltf.glb-90930a2dc12d4c247ee9e413dc09bc53.scn"
 
 [deps]
@@ -30,6 +30,7 @@ import_script/path=""
 _subresources={
 "nodes": {
 "PATH:barrel": {
+"generate/navmesh": 1,
 "generate/physics": true
 }
 }

@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://c47i0ba4ed1ec"]
+
+[ext_resource type="Script" path="res://addons/dynamic-web-content/elements/dynamic_image_button.gd" id="1_0l81w"]
+[ext_resource type="Script" path="res://Scenes/Menus/main_menu.gd" id="1_6h8f7"]
+[ext_resource type="PackedScene" uid="uid://dqen8ad8833i3" path="res://Scenes/Menus/credits_scene.tscn" id="2_7ag1a"]
+[ext_resource type="PackedScene" uid="uid://kdrivdayaapr" path="res://Scenes/Levels/main_level.tscn" id="2_d8ep8"]
+[ext_resource type="PackedScene" uid="uid://dj3pujvh7phfp" path="res://Scenes/Menus/options_menu.tscn" id="2_ujr5m"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6h8f7")
+play_scene = ExtResource("2_d8ep8")
+options_scene = ExtResource("2_ujr5m")
+credits_scene = ExtResource("2_7ag1a")
+
+[node name="DynamicSocialContent" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -585.0
+offset_top = -180.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="SocialButton_Video" type="PanelContainer" parent="DynamicSocialContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("1_0l81w")
+element_id = "special-video"
+
+[node name="SocialButton_Social" type="PanelContainer" parent="DynamicSocialContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("1_0l81w")
+element_id = "social-button"
+
+[node name="ControlButtons" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = -251.0
+offset_right = 249.0
+offset_bottom = -45.0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlButtons"]
+layout_mode = 2
+
+[node name="BtnPlay" type="Button" parent="ControlButtons/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Play"
+
+[node name="BtnOptions" type="Button" parent="ControlButtons/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Options"
+
+[node name="BtnCredits" type="Button" parent="ControlButtons/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Credits
+"
+
+[node name="BtnQuit" type="Button" parent="ControlButtons/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+
+[connection signal="pressed" from="ControlButtons/VBoxContainer/BtnPlay" to="." method="_on_btn_play_pressed"]
+[connection signal="pressed" from="ControlButtons/VBoxContainer/BtnOptions" to="." method="_on_btn_options_pressed"]
+[connection signal="pressed" from="ControlButtons/VBoxContainer/BtnCredits" to="." method="_on_btn_credits_pressed"]
+[connection signal="pressed" from="ControlButtons/VBoxContainer/BtnQuit" to="." method="_on_btn_quit_pressed"]

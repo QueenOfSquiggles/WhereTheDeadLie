@@ -3,6 +3,7 @@ using System;
 using bridge;
 using data;
 using interaction;
+using events;
 
 public partial class player_character : CharacterBody3D
 {
@@ -26,6 +27,8 @@ public partial class player_character : CharacterBody3D
 	[Export] private NodePath raycast_path;
 	private RayCast3D raycast;
 
+	[Export] private NodePath accessibility_no_flash_light;
+
 	[Signal] public delegate void OnInteractionFoundEventHandler();
 	[Signal] public delegate void OnInteractionLostEventHandler();
 
@@ -35,8 +38,18 @@ public partial class player_character : CharacterBody3D
 		cam_arm = this.GetNodeCustom<Node3D>(cam_arm_path);
 		anim_tree = this.GetNodeCustom<AnimationTree>(anim_tree_path);
 		raycast = this.GetNodeCustom<RayCast3D>(raycast_path);
-		
+		EventBus.Instance.SetPlayerCanMove += HandleEventPlayerCanMove;
+		var target = this.GetNodeCustom<Node3D>(accessibility_no_flash_light);
+		target.Visible = Accessibility.NoFlashingLights;
+		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
+
+    public override void _ExitTree()
+    {
+		EventBus.Instance.SetPlayerCanMove -= HandleEventPlayerCanMove;
+    }
+
+	private void HandleEventPlayerCanMove(bool can_move) => SetPhysicsProcess(can_move);
 
     public override void _PhysicsProcess(double delta)
     {
@@ -90,7 +103,7 @@ public partial class player_character : CharacterBody3D
 			handled = handled || InputMouseLook(e);
 			handled = handled || InputInteract(e);
 
-			if (e.IsActionPressed("shoot"))
+			if (e.IsActionPressed("shoot") && !Accessibility.NoFlashingLights)
 			{
 				anim_tree.Set("parameters/conditions/shoot", true);
 				handled = true;

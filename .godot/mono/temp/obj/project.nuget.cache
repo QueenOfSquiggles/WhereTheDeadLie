@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Y0Xg1rGzoYJjbXVadJT1JUAO0OxE+Eb5JGkV3T/mX4/OFQzvjkEKQ8SljjxUWNToJlSVTZS3CAw80nIEl2DPjw==",
+  "dgSpecHash": "oESeoVgTaGFNrlIZXqLgg24c2GgpwujXv0qWWO3PCT52GLiOfGnBoxgCdxNk867ax+bry/YecZM4BGkVxoAh+w==",
   "success": true,
   "projectFilePath": "/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/DumbJumpscareGame.csproj",
   "expectedPackageFiles": [
-    "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godot.sourcegenerators/4.0.0-beta.14/godot.sourcegenerators.4.0.0-beta.14.nupkg.sha512",
-    "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharp/4.0.0-beta.14/godotsharp.4.0.0-beta.14.nupkg.sha512",
-    "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharpeditor/4.0.0-beta.14/godotsharpeditor.4.0.0-beta.14.nupkg.sha512"
+    "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godot.sourcegenerators/4.0.0-beta.15/godot.sourcegenerators.4.0.0-beta.15.nupkg.sha512",
+    "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharp/4.0.0-beta.15/godotsharp.4.0.0-beta.15.nupkg.sha512",
+    "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharpeditor/4.0.0-beta.15/godotsharpeditor.4.0.0-beta.15.nupkg.sha512"
   ],
   "logs": []
 }

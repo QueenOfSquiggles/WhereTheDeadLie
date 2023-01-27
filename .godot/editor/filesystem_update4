@@ -1,8 +1,5 @@
-res://Scenes/Monsters/the_smeth.tscn
-res://Assets/Materials/slab_tiles.tres
-res://Assets/Materials/cracked_concrete_wall.tres
-res://Assets/Materials/rocky_trail.tres
-res://Assets/Textures/PuzzleControlPanel/PuzzleControlPanelMaterial.tres
-res://Scenes/Levels/catacombs_level.tscn
-res://Scenes/Monsters/VisibilityManagement/visibility_checker.tscn
-res://Scenes/Levels/main_level.tscn
+res://Scenes/Menus/OptionsTabs/accessibility_tab.tscn
+res://Scenes/Menus/OptionsTabs/gameplay_tab.tscn
+res://Scenes/Menus/credits_scene.tscn
+res://Scenes/Menus/options_menu.tscn
+res://Scenes/Menus/options_menu.gd

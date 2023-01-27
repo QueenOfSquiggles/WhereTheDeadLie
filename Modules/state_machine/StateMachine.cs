@@ -78,17 +78,15 @@ public partial class StateMachine : Node
 		Vector3 target = data.nav_agent.GetNextLocation();
 		if (target == data.char_body.GlobalPosition) return; // no path yet
 
-		var delta_position = target - data.char_body.GlobalPosition;
 		data.char_body.LookAt(target, Vector3.Up);
 		var rot = data.char_body.GlobalRotation;
-		// rot.x = 0f;
-		// rot.z = 0f;
+		rot.x = 0f;
+		rot.z = 0f;
 		data.char_body.GlobalRotation = rot;
 
 		var delta_motion = data.anim_tree.GetRootMotionPosition() / delta;
 		var localized_motion = data.char_body.GlobalTransform.basis.z * delta_motion.z;
-		data.char_body.Velocity = localized_motion * data.move_speed;
-
+		data.char_body.Velocity = data.char_body.Velocity.MoveToward(localized_motion * data.move_speed, 0.25f);
 		UpdateDebugMarkers(data.nav_agent.TargetLocation, target, data.char_body.GlobalPosition + data.char_body.Velocity);
 	}
 

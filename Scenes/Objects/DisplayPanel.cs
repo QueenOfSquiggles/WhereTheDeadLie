@@ -8,6 +8,7 @@ public partial class DisplayPanel : Node3D
 	[Export] private Texture2D tex_phase_0;
 	[Export] private Texture2D tex_phase_1;
 	[Export] private Texture2D tex_phase_2;
+	[Export] private Texture2D tex_phase_end;
 
 	[Export] private NodePath display_sprite_path;
 	private Sprite3D display_sprite;
@@ -34,6 +35,9 @@ public partial class DisplayPanel : Node3D
 				break;
 			case GameData.PHASE_KEYS:
 				tex = tex_phase_2;
+				break;
+			case GameData.PHASE_END:
+				tex = tex_phase_end;
 				break;
 			// TODO add a game end icon???
 		}

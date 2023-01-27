@@ -1,16 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://bm352yy2mxogl"]
+[gd_scene load_steps=7 format=3 uid="uid://bm352yy2mxogl"]
 
 [ext_resource type="PackedScene" uid="uid://ci7e6wkjda3j1" path="res://Assets/Models/MyModels/display_panel.glb" id="1_k3n5j"]
 [ext_resource type="Script" path="res://Scenes/Objects/DisplayPanel.cs" id="2_in11k"]
 [ext_resource type="Texture2D" uid="uid://coisgd7dfdmyj" path="res://Assets/Textures/PhaseIcons/electrcity_symbol.png" id="2_verms"]
 [ext_resource type="Texture2D" uid="uid://c1gok3uy7mh1i" path="res://Assets/Textures/PhaseIcons/puzzle_symbol.png" id="4_ud7ci"]
 [ext_resource type="Texture2D" uid="uid://2uuw2xw4i7k2" path="res://Assets/Textures/PhaseIcons/key_symbol.png" id="5_xhkpp"]
+[ext_resource type="Texture2D" uid="uid://cp5qb123hat71" path="res://icon.svg" id="6_y07ag"]
 
 [node name="DisplayPanel" instance=ExtResource("1_k3n5j")]
 script = ExtResource("2_in11k")
 tex_phase_0 = ExtResource("2_verms")
 tex_phase_1 = ExtResource("4_ud7ci")
 tex_phase_2 = ExtResource("5_xhkpp")
+tex_phase_end = ExtResource("6_y07ag")
 display_sprite_path = NodePath("Sprite3D")
 
 [node name="Sprite3D" type="Sprite3D" parent="." index="1"]

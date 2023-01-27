@@ -6,9 +6,14 @@ using System;
 public partial class StateWalkToTarget : State
 {
 	[Export] private int idle_state_index = 0;
+
+  // TODO: this value should be determined by the aggression level
+  [Export] private float chance_use_closest_position = 0.25f; 
 	private bool target_reached = false;
 
   private Vector3 current_target;
+
+  private Random random = new();
 
     
   public override string GetStateAnimation()
@@ -18,6 +23,8 @@ public partial class StateWalkToTarget : State
 
   public override void OnEnterState(StateData data)
   {
+    target_reached = false;
+
     var player = GetTree().GetFirstNodeInGroup("Player") as Node3D;
     float closest = float.MaxValue;
     float second = float.MaxValue;
@@ -37,19 +44,23 @@ public partial class StateWalkToTarget : State
         second = distance;      
       }
     }
-        
-    data.nav_agent.TargetLocation = second_target.GlobalPosition;
-    data.nav_agent.TargetReached += OnReachedTarget;
+    // randomly select between the first and second closest positions relative to the player
+    var use_target = (random.NextSingle() < chance_use_closest_position)? close_target : second_target;
+    data.nav_agent.TargetLocation = use_target.GlobalPosition;
+    data.nav_agent.NavigationFinished += OnReachedTarget;
   }
 
   public override void OnExitState(StateData data)
   {
-    data.nav_agent.TargetReached -= OnReachedTarget;
+    data.nav_agent.NavigationFinished -= OnReachedTarget;
   }
 
   public override int StateMachineTick(StateData data, float delta)
   {
-    if (target_reached) return idle_state_index;
+    if (target_reached) 
+    {
+      return idle_state_index;
+    }
     return RESULT_KEEP;
   }
 	private void OnReachedTarget() => target_reached = true;

@@ -11,10 +11,6 @@ public partial class InteractionTrigger : Area3D, IInteractable
 	[Export] private bool is_one_shot = false;
 	private const int PHASE_ALL = 3;
 
-    // public override void _Ready()
-    // {
-	// 	GD.Print($"Interaction Trigger ({this.Owner.Name}) active in phase #{active_phase} and one-shot={is_one_shot}");
-    // }
 
     public void TriggerInteraction()
 	{
@@ -29,4 +25,5 @@ public partial class InteractionTrigger : Area3D, IInteractable
     {
         return (active_phase == PHASE_ALL) || (GameDataManager.instance.GamePhase == active_phase);
     }
+
 }

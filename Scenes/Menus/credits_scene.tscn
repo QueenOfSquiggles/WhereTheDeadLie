@@ -1,0 +1,163 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqen8ad8833i3"]
+
+[ext_resource type="Script" path="res://Scenes/Menus/credits_scene.gd" id="1_hyfy2"]
+
+[node name="CreditsScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hyfy2")
+main_menu_scene = "res://Scenes/Menus/main_menu.tscn"
+
+[node name="CreditsPanel" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CreditsPanel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsPanel/PanelContainer"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
+[node name="HSeparator" type="HSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="KayKit" type="HBoxContainer" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Category" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/KayKit"]
+layout_mode = 2
+text = "Low-Poly Dungeon Assets"
+
+[node name="VSeparator" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/KayKit"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/KayKit"]
+layout_mode = 2
+text = "Kay Lousberg"
+
+[node name="VSeparator2" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/KayKit"]
+layout_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/KayKit"]
+layout_mode = 2
+text = "Link"
+uri = "https://kaylousberg.itch.io/kaykit-dungeon"
+
+[node name="DLSR" type="HBoxContainer" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Category" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/DLSR"]
+layout_mode = 2
+text = "DLSR Camera Model"
+
+[node name="VSeparator" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/DLSR"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/DLSR"]
+layout_mode = 2
+text = "Light Game Studio"
+
+[node name="VSeparator2" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/DLSR"]
+layout_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/DLSR"]
+layout_mode = 2
+text = "Link"
+uri = "https://opengameart.org/content/dslr-camera-blender"
+
+[node name="Godot 3D Robot" type="HBoxContainer" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Category" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/Godot 3D Robot"]
+layout_mode = 2
+text = "Godot Robot"
+
+[node name="VSeparator" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/Godot 3D Robot"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/Godot 3D Robot"]
+layout_mode = 2
+text = "CaptainRipley (Ariana Garcia-Chow)"
+
+[node name="VSeparator2" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/Godot 3D Robot"]
+layout_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/Godot 3D Robot"]
+layout_mode = 2
+text = "Link"
+uri = "https://captainripley.itch.io/godot-3d-robot-character"
+
+[node name="KenneyParticlePack" type="HBoxContainer" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Category" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/KenneyParticlePack"]
+layout_mode = 2
+text = "Particles"
+
+[node name="VSeparator" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/KenneyParticlePack"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/KenneyParticlePack"]
+layout_mode = 2
+text = "Kenney"
+
+[node name="VSeparator2" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/KenneyParticlePack"]
+layout_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/KenneyParticlePack"]
+layout_mode = 2
+text = "Link"
+uri = "https://kenney.nl/assets/particle-pack"
+
+[node name="All Else" type="HBoxContainer" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Category" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/All Else"]
+layout_mode = 2
+text = "All Else"
+
+[node name="VSeparator" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/All Else"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/All Else"]
+layout_mode = 2
+text = "QueenOfSquiggles"
+
+[node name="VSeparator2" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/All Else"]
+layout_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/All Else"]
+layout_mode = 2
+text = "Link"
+
+[node name="ReturnMainMenuPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -76.0
+offset_right = 199.0
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="ReturnMainMenuPanel"]
+layout_mode = 2
+text = "Return to Main Menu"
+
+[connection signal="pressed" from="ReturnMainMenuPanel/Button" to="." method="_on_button_pressed"]
