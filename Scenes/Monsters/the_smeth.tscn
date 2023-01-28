@@ -1,6 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://c41c4u6tohw0l"]
+[gd_scene load_steps=30 format=3 uid="uid://c41c4u6tohw0l"]
 
-[ext_resource type="PackedScene" uid="uid://4jiuetgnctjm" path="res://Assets/Models/MyModels/the_smeth.glb" id="1_24vo1"]
+[ext_resource type="PackedScene" uid="uid://b44w2wptlw4r7" path="res://Assets/Models/MyModels/the_smeth.glb" id="1_24vo1"]
 [ext_resource type="Script" path="res://Scenes/Monsters/TheSmeth.cs" id="1_mbkiw"]
 [ext_resource type="Script" path="res://Modules/state_machine/StateMachine.cs" id="2_gqgg6"]
 [ext_resource type="PackedScene" uid="uid://clm4gjnlm2dl4" path="res://Scenes/Monsters/VisibilityManagement/visibility_checker.tscn" id="2_kjmyj"]
@@ -47,14 +47,26 @@ states/Idle/node = SubResource("AnimationNodeAnimation_s5f2u")
 states/Idle/position = Vector2(329.6, 146.8)
 states/Start/position = Vector2(147.2, 62.4)
 states/WalkCycle/node = SubResource("AnimationNodeAnimation_maefu")
-states/WalkCycle/position = Vector2(388, 68.4)
+states/WalkCycle/position = Vector2(377.6, 55.6)
 transitions = ["Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_lklhl"), "Idle", "WalkCycle", SubResource("AnimationNodeStateMachineTransition_guwgv"), "WalkCycle", "Idle", SubResource("AnimationNodeStateMachineTransition_unphg"), "WalkCycle", "Attack", SubResource("AnimationNodeStateMachineTransition_h7shy"), "Attack", "WalkCycle", SubResource("AnimationNodeStateMachineTransition_4usc1"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_nn31r")]
+graph_offset = Vector2(55, -66)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_frem2"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dneoy"]
 height = 0.254281
 radius = 1.59805
+
+[sub_resource type="Curve" id="Curve_skjnd"]
+max_value = 9.0
+_data = [Vector2(0, 1.81949), 0.0, -1.42903, 0, 0, Vector2(0.337022, 4.77617), 8.86558, 8.86558, 0, 0, Vector2(0.759557, 7.07581), 0.0, 0.0, 0, 0, Vector2(1, 10), 32.692, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_45jes"]
+min_value = 5.0
+max_value = 30.0
+_data = [Vector2(0, 30), 0.0, 0.0, 0, 0, Vector2(0.241211, 22.9603), 20.3118, 20.3118, 0, 0, Vector2(0.567383, 13.213), 17.4375, 17.4375, 0, 0, Vector2(1, 5), 0.0, 0.0, 0, 0]
+point_count = 4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hcw0"]
 no_depth_test = true
@@ -91,32 +103,30 @@ collision_layer = 0
 script = ExtResource("1_mbkiw")
 path_state_machine = NodePath("StateMachine")
 
-[node name="Armature" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
-
 [node name="Skeleton3D" parent="Armature" index="0"]
-bones/0/position = Vector3(-0.990629, 0.349605, -0.0770886)
-bones/1/rotation = Quaternion(0.0528009, -0.181964, 0.441129, 0.877215)
-bones/2/rotation = Quaternion(-0.338358, 0.00697935, 0.124327, 0.932742)
-bones/3/rotation = Quaternion(-0.26145, -0.0691486, 0.0296343, 0.962281)
-bones/4/rotation = Quaternion(-0.237812, 0.0167637, 0.923213, 0.301402)
-bones/5/rotation = Quaternion(-0.274786, -0.0121982, -0.194024, 0.941647)
-bones/6/rotation = Quaternion(-0.280971, 0.241948, -0.235841, 0.898274)
-bones/7/rotation = Quaternion(-0.138605, -0.155038, -0.60837, 0.765922)
-bones/8/rotation = Quaternion(-0.221163, -0.190017, 0.271839, 0.917106)
-bones/9/rotation = Quaternion(-0.157115, -0.202961, 0.365171, 0.894859)
-bones/10/rotation = Quaternion(-0.324949, -0.251177, 0.845958, -0.340108)
-bones/11/rotation = Quaternion(-0.175516, 0.16439, -0.189401, 0.951997)
-bones/12/rotation = Quaternion(0.0414764, 0.407046, -0.385445, 0.827058)
-bones/15/rotation = Quaternion(0.0894597, 0.988848, -0.0211293, 0.117178)
-bones/16/rotation = Quaternion(0.182667, 0.011554, 0.390329, 0.902298)
-bones/17/rotation = Quaternion(0.355605, -0.389219, 0.383364, 0.758344)
-bones/18/rotation = Quaternion(0.220344, -0.674289, -0.364123, 0.603488)
-bones/19/rotation = Quaternion(0.0795671, -0.0350467, -0.513424, 0.853719)
-bones/20/rotation = Quaternion(-0.153953, 0.420462, 0.887764, -0.106701)
-bones/21/rotation = Quaternion(0.055014, 0.138376, -0.512917, 0.845424)
-bones/22/rotation = Quaternion(-0.604673, -0.0826149, 0.648357, 0.455168)
-bones/23/rotation = Quaternion(0.331638, 0.159304, 0.487705, 0.791696)
+bones/0/position = Vector3(-0.0770886, 0.349605, 0.990629)
+bones/1/rotation = Quaternion(0.230132, -0.112356, 0.378646, 0.889406)
+bones/2/rotation = Quaternion(-0.300458, -0.0165428, 0.082959, 0.950036)
+bones/3/rotation = Quaternion(-0.256855, -0.0810992, -0.0048863, 0.963029)
+bones/4/rotation = Quaternion(-0.21664, 0.0699325, 0.924303, 0.306334)
+bones/5/rotation = Quaternion(-0.335767, -0.0170656, -0.236322, 0.911658)
+bones/6/rotation = Quaternion(-0.32974, 0.231606, -0.284495, 0.869881)
+bones/7/rotation = Quaternion(-0.188872, -0.135676, -0.578584, 0.781767)
+bones/8/rotation = Quaternion(-0.177927, -0.199984, 0.176975, 0.947116)
+bones/9/rotation = Quaternion(-0.22647, -0.191922, 0.429711, 0.852776)
+bones/10/rotation = Quaternion(-0.399481, -0.0763739, 0.831503, -0.378398)
+bones/11/rotation = Quaternion(-0.161904, 0.159833, -0.180824, 0.95684)
+bones/12/rotation = Quaternion(0.0496614, 0.395547, -0.432666, 0.808627)
+bones/14/rotation = Quaternion(-0.0905093, 0.918529, 0.0176338, 0.384449)
+bones/15/rotation = Quaternion(-0.00904286, 0.993065, 0.000371151, 0.117218)
+bones/16/rotation = Quaternion(0.124326, -0.0657015, 0.279193, 0.949883)
+bones/17/rotation = Quaternion(0.286778, -0.460682, 0.343339, 0.766583)
+bones/18/rotation = Quaternion(0.247397, -0.69329, -0.36689, 0.568802)
+bones/19/rotation = Quaternion(0.0269641, -0.0425279, -0.206001, 0.977255)
+bones/20/rotation = Quaternion(-0.164584, 0.512843, 0.842547, -0.00442294)
+bones/21/rotation = Quaternion(-0.120526, 0.136843, -0.618197, 0.764578)
+bones/22/rotation = Quaternion(-0.63978, -0.219022, 0.491975, 0.548335)
+bones/23/rotation = Quaternion(-0.193917, 0.25956, 0.617119, 0.717069)
 
 [node name="Cube" parent="Armature/Skeleton3D" index="0"]
 layers = 2
@@ -154,12 +164,12 @@ script = ExtResource("2_gqgg6")
 path_char_body = NodePath("..")
 path_nav_agent = NodePath("../NavigationAgent3D")
 path_anim = NodePath("../AnimationTree")
-intended_move_speed = 5.0
+movement_speed_curve = SubResource("Curve_skjnd")
 
 [node name="StateIdle" type="Node" parent="StateMachine" index="0"]
 script = ExtResource("3_quvl8")
-min_countdown_time = 5.0
-max_countdown_time = 20.0
+curve_range_width = 0.2
+countdown_time_curve = SubResource("Curve_45jes")
 
 [node name="StateWalkToTarget" type="Node" parent="StateMachine" index="1"]
 script = ExtResource("4_umsi3")
@@ -175,27 +185,29 @@ script = ExtResource("8_41hqq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54447, -0.626511)
 visible = false
 
-[node name="MonsterPosDisplay" type="MeshInstance3D" parent="." index="9"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="9"]
+
+[node name="MonsterPosDisplay" type="MeshInstance3D" parent="." index="10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47761, 0)
 visible = false
 material_override = SubResource("StandardMaterial3D_0hcw0")
 ignore_occlusion_culling = true
 mesh = SubResource("SphereMesh_imke6")
 
-[node name="CurrentTargetLocation" type="MeshInstance3D" parent="." index="10"]
+[node name="CurrentTargetLocation" type="MeshInstance3D" parent="." index="11"]
 visible = false
 material_override = SubResource("StandardMaterial3D_r4dct")
 ignore_occlusion_culling = true
 mesh = SubResource("SphereMesh_imke6")
 
-[node name="CurrentWaypoint" type="MeshInstance3D" parent="." index="11"]
+[node name="CurrentWaypoint" type="MeshInstance3D" parent="." index="12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.346594, 0, 0)
 visible = false
 material_override = SubResource("StandardMaterial3D_ptp6c")
 ignore_occlusion_culling = true
 mesh = SubResource("SphereMesh_imke6")
 
-[node name="CurrentIntentDirection" type="MeshInstance3D" parent="." index="12"]
+[node name="CurrentIntentDirection" type="MeshInstance3D" parent="." index="13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430104, 0, 0)
 visible = false
 material_override = SubResource("StandardMaterial3D_mss2g")

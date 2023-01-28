@@ -19,7 +19,7 @@ public partial class StateChasePlayer : State
 		target_reached = false;
 		data.nav_agent.NavigationFinished += OnReachedTarget;
 		player = GetTree().GetFirstNodeInGroup("Player") as Node3D;
-		data.nav_agent.TargetLocation = player.GlobalPosition;
+		data.nav_agent.TargetPosition = player.GlobalPosition;
     }
 
     public override void OnExitState(StateData data)
@@ -31,8 +31,8 @@ public partial class StateChasePlayer : State
     {
 		if (target_reached) return idle_state_index;
 
-		var player_delta = (player.GlobalPosition - data.nav_agent.TargetLocation).Length();
-		if (player_delta > min_distance_for_reevaluation) data.nav_agent.TargetLocation = player.GlobalPosition;
+		var player_delta = (player.GlobalPosition - data.nav_agent.TargetPosition).Length();
+		if (player_delta > min_distance_for_reevaluation) data.nav_agent.TargetPosition = player.GlobalPosition;
 		
 		return RESULT_KEEP;
     }

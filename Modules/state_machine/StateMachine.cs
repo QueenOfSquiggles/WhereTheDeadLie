@@ -1,6 +1,7 @@
 namespace state_machine;
 
 using bridge;
+using data;
 using Godot;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,7 @@ public partial class StateMachine : Node
 
 	[Export] private NodePath path_anim;
 
-	[Export] private float intended_move_speed = 2.0f;
+	[Export] private Curve movement_speed_curve;
 
 	public State.StateData data;
 
@@ -52,7 +53,8 @@ public partial class StateMachine : Node
 		data.nav_agent = this.GetNodeCustom<NavigationAgent3D>(path_nav_agent);
 		data.anim_tree = this.GetNodeCustom<AnimationTree>(path_anim);
 		data.machine = this;
-		data.move_speed = intended_move_speed;
+		var curve_pos = GameDataManager.instance.GameAggression / 10.0f;
+		data.move_speed = movement_speed_curve.SampleBaked(curve_pos);
 		debug_targets.destination = this.GetNodeCustom<Node3D>("../CurrentTargetLocation");
 		debug_targets.waypoint = this.GetNodeCustom<Node3D>("../CurrentWaypoint");
 		debug_targets.direction = this.GetNodeCustom<Node3D>("../CurrentIntentDirection");
@@ -75,19 +77,19 @@ public partial class StateMachine : Node
 
 		// if (data.nav_agent.IsNavigationFinished()) return;
 
-		Vector3 target = data.nav_agent.GetNextLocation();
+		Vector3 target = data.nav_agent.GetNextPathPosition();
 		if (target == data.char_body.GlobalPosition) return; // no path yet
 
 		data.char_body.LookAt(target, Vector3.Up);
 		var rot = data.char_body.GlobalRotation;
-		rot.x = 0f;
-		rot.z = 0f;
+		rot.X = 0f;
+		rot.Z = 0f;
 		data.char_body.GlobalRotation = rot;
 
 		var delta_motion = data.anim_tree.GetRootMotionPosition() / delta;
-		var localized_motion = data.char_body.GlobalTransform.basis.z * delta_motion.z;
+		var localized_motion = data.char_body.GlobalTransform.Basis.Z * delta_motion.Z;
 		data.char_body.Velocity = data.char_body.Velocity.MoveToward(localized_motion * data.move_speed, 0.25f);
-		UpdateDebugMarkers(data.nav_agent.TargetLocation, target, data.char_body.GlobalPosition + data.char_body.Velocity);
+		UpdateDebugMarkers(data.nav_agent.TargetPosition, target, data.char_body.GlobalPosition + data.char_body.Velocity);
 	}
 
 	private void UpdateDebugMarkers(Vector3 destination, Vector3 waypoint, Vector3 direction)

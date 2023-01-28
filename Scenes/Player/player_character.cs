@@ -57,9 +57,9 @@ public partial class player_character : CharacterBody3D
 
 		var input_dir = Input.GetVector("move_left", "move_right", "move_back", "move_forward");
 		var intent_vec = new Vector3();
-		intent_vec += cam_arm.GlobalTransform.basis.x * input_dir.x;
-		intent_vec += cam_arm.GlobalTransform.basis.z * input_dir.y * -1;
-		intent_vec.y = 0f;
+		intent_vec += cam_arm.GlobalTransform.Basis.X * input_dir.X;
+		intent_vec += cam_arm.GlobalTransform.Basis.Z * input_dir.Y * -1;
+		intent_vec.Y = 0f;
 
 		bool actively_moving = intent_vec.LengthSquared() > 0.1f;
 	
@@ -74,7 +74,7 @@ public partial class player_character : CharacterBody3D
 		if (!IsOnFloor())
 		{
 			var vel = Velocity;
-			vel.y = -9.8f;
+			vel.Y = -9.8f;
 			Velocity = vel;
 		} 
 		MoveAndSlide();
@@ -110,13 +110,6 @@ public partial class player_character : CharacterBody3D
 			}
 			
 		}
-
-		if (e.IsActionPressed("ui_cancel"))
-		{
-			Input.MouseMode = (Input.MouseMode == Input.MouseModeEnum.Captured)? Input.MouseModeEnum.Visible : Input.MouseModeEnum.Captured;
-			handled = true;
-		}
-
 		if (handled) GetViewport().SetInputAsHandled();
     }
 
@@ -126,12 +119,12 @@ public partial class player_character : CharacterBody3D
 		{ 
 			var mm = e as InputEventMouseMotion;
 			var delta = mm.Relative * -1;
-			RotateY(delta.x * mouse_sensitivity);
+			RotateY(delta.X * mouse_sensitivity);
 
 			var rot = cam_arm.Rotation;
-			rot.x += delta.y * mouse_sensitivity;
+			rot.X += delta.Y * mouse_sensitivity;
 			var cl = Mathf.DegToRad(89.0f);
-			rot.x = Mathf.Clamp(rot.x, -cl, cl);
+			rot.X = Mathf.Clamp(rot.X, -cl, cl);
 			cam_arm.Rotation = rot;
 			return true;
 		}

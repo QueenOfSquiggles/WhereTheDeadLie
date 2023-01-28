@@ -46,7 +46,7 @@ public partial class StateWalkToTarget : State
     }
     // randomly select between the first and second closest positions relative to the player
     var use_target = (random.NextSingle() < chance_use_closest_position)? close_target : second_target;
-    data.nav_agent.TargetLocation = use_target.GlobalPosition;
+    data.nav_agent.TargetPosition = use_target.GlobalPosition;
     data.nav_agent.NavigationFinished += OnReachedTarget;
   }
 

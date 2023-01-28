@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://4jiuetgnctjm"
+uid="uid://b44w2wptlw4r7"
 path="res://.godot/imported/the_smeth.glb-298cf1806229768a94883d19aa9e05f8.scn"
 
 [deps]
@@ -1830,8 +1830,8 @@ _subresources={
 },
 "WalkCycle": {
 "save_to_file/enabled": false,
-"save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "",
+"save_to_file/keep_custom_tracks": true,
+"save_to_file/path": "res://Assets/Models/MyModels/ImportedAnims/smeth_walk_cycle.res",
 "settings/loop_mode": 1,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
@@ -3629,3 +3629,4 @@ _subresources={
 }
 }
 }
+meshes/handle_gltf_embedded_images=1

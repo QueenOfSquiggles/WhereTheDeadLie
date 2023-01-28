@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dj3pujvh7phfp"]
+[gd_scene load_steps=7 format=3 uid="uid://dj3pujvh7phfp"]
 
 [ext_resource type="PackedScene" uid="uid://ds2e6t58y2njl" path="res://Scenes/Menus/OptionsTabs/gameplay_tab.tscn" id="1_agasg"]
 [ext_resource type="Script" path="res://Scenes/Menus/OptionsMenu.cs" id="1_hipj7"]
+[ext_resource type="Material" uid="uid://b1ehu0o3ymh3v" path="res://Scenes/Menus/menu_panorama_material.tres" id="2_hfgjw"]
 [ext_resource type="PackedScene" uid="uid://b74414wseyp32" path="res://Scenes/Menus/OptionsTabs/audio_tab.tscn" id="2_x8b24"]
+[ext_resource type="Texture2D" uid="uid://bir10mlfjqj3r" path="res://Assets/Textures/Panoramas/panorama_01.jpg" id="3_3vtaq"]
 [ext_resource type="PackedScene" uid="uid://dkpkes5d42sfb" path="res://Scenes/Menus/OptionsTabs/accessibility_tab.tscn" id="3_si5nr"]
 
 [node name="OptionsMenu" type="Control"]
@@ -14,6 +16,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hipj7")
 main_menu_path = "res://Scenes/Menus/main_menu.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+material = ExtResource("2_hfgjw")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3vtaq")
+expand_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ds2e6t58y2njl"]
+[gd_scene load_steps=3 format=3 uid="uid://ds2e6t58y2njl"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/OptionsTabs/GameplayTab.cs" id="1_5c7lq"]
+[ext_resource type="Script" path="res://Scenes/Menus/OptionsTabs/SliderValue.gd" id="2_ewanp"]
 
 [node name="Gameplay" type="PanelContainer"]
 anchors_preset = 15
@@ -10,9 +11,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5c7lq")
 path_difficulty_preset = NodePath("VBoxContainer/Difficulty/VBoxContainer/OptionBtnPresets")
-path_required_generators = NodePath("VBoxContainer/Difficulty/VBoxContainer/DifficultyGenerators/HSlider")
-path_required_keys = NodePath("VBoxContainer/Difficulty/VBoxContainer/DifficultyKeys/HSlider")
-path_aggression = NodePath("VBoxContainer/Difficulty/VBoxContainer/DifficultyKeys2/HSlider")
+path_required_generators = NodePath("VBoxContainer/Difficulty/VBoxContainer/GridContainer/HSlider")
+path_required_keys = NodePath("VBoxContainer/Difficulty/VBoxContainer/GridContainer/HSlider2")
+path_aggression = NodePath("VBoxContainer/Difficulty/VBoxContainer/GridContainer/HSlider3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -35,18 +36,18 @@ horizontal_alignment = 1
 
 [node name="OptionBtnPresets" type="OptionButton" parent="VBoxContainer/Difficulty/VBoxContainer"]
 layout_mode = 2
-selected = 0
 
-[node name="DifficultyGenerators" type="HBoxContainer" parent="VBoxContainer/Difficulty/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/Difficulty/VBoxContainer"]
 layout_mode = 2
+columns = 3
 
-[node name="Label" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/DifficultyGenerators"]
+[node name="Label" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
 text = "Required Generators"
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/Difficulty/VBoxContainer/DifficultyGenerators"]
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Difficulty/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 min_value = 1.0
@@ -55,23 +56,21 @@ value = 1.0
 tick_count = 10
 ticks_on_borders = true
 
-[node name="SliderValue" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/DifficultyGenerators"]
+[node name="SliderValue" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
-text = "%s"
+text = "1"
+script = ExtResource("2_ewanp")
 
-[node name="DifficultyKeys" type="HBoxContainer" parent="VBoxContainer/Difficulty/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/DifficultyKeys"]
+[node name="Label2" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
 text = "Required Keys
 "
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/Difficulty/VBoxContainer/DifficultyKeys"]
+[node name="HSlider2" type="HSlider" parent="VBoxContainer/Difficulty/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 min_value = 1.0
@@ -80,22 +79,20 @@ value = 1.0
 tick_count = 10
 ticks_on_borders = true
 
-[node name="SliderValue" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/DifficultyKeys"]
+[node name="SliderValue2" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
-text = "%s"
+text = "1"
+script = ExtResource("2_ewanp")
 
-[node name="DifficultyKeys2" type="HBoxContainer" parent="VBoxContainer/Difficulty/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/DifficultyKeys2"]
+[node name="Label3" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
 text = "Aggression Level"
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/Difficulty/VBoxContainer/DifficultyKeys2"]
+[node name="HSlider3" type="HSlider" parent="VBoxContainer/Difficulty/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 min_value = 1.0
@@ -104,8 +101,14 @@ value = 1.0
 tick_count = 10
 ticks_on_borders = true
 
-[node name="SliderValue" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/DifficultyKeys2"]
+[node name="SliderValue3" type="Label" parent="VBoxContainer/Difficulty/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
-text = "%s"
+text = "1"
+script = ExtResource("2_ewanp")
+
+[connection signal="item_selected" from="VBoxContainer/Difficulty/VBoxContainer/OptionBtnPresets" to="." method="OnDifficultySelected"]
+[connection signal="value_changed" from="VBoxContainer/Difficulty/VBoxContainer/GridContainer/HSlider" to="VBoxContainer/Difficulty/VBoxContainer/GridContainer/SliderValue" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/Difficulty/VBoxContainer/GridContainer/HSlider2" to="VBoxContainer/Difficulty/VBoxContainer/GridContainer/SliderValue2" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/Difficulty/VBoxContainer/GridContainer/HSlider3" to="VBoxContainer/Difficulty/VBoxContainer/GridContainer/SliderValue3" method="_on_h_slider_value_changed"]

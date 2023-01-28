@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqen8ad8833i3"]
+[gd_scene load_steps=4 format=3 uid="uid://dqen8ad8833i3"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/credits_scene.gd" id="1_hyfy2"]
+[ext_resource type="Material" uid="uid://b1ehu0o3ymh3v" path="res://Scenes/Menus/menu_panorama_material.tres" id="2_k7ri6"]
+[ext_resource type="Texture2D" uid="uid://bir10mlfjqj3r" path="res://Assets/Textures/Panoramas/panorama_01.jpg" id="3_y1x3p"]
 
 [node name="CreditsScene" type="Control"]
 layout_mode = 3
@@ -11,6 +13,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hyfy2")
 main_menu_scene = "res://Scenes/Menus/main_menu.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+material = ExtResource("2_k7ri6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_y1x3p")
+expand_mode = 2
 
 [node name="CreditsPanel" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -29,121 +43,106 @@ layout_mode = 2
 [node name="Header" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer"]
 layout_mode = 2
 text = "Credits"
+horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="KayKit" type="HBoxContainer" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="CreditsPanel/PanelContainer/VBoxContainer"]
 layout_mode = 2
-alignment = 2
+columns = 5
 
-[node name="Category" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/KayKit"]
+[node name="Category" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Low-Poly Dungeon Assets"
 
-[node name="VSeparator" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/KayKit"]
+[node name="VSeparator" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/KayKit"]
+[node name="Name" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Kay Lousberg"
 
-[node name="VSeparator2" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/KayKit"]
+[node name="VSeparator2" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
-[node name="LinkButton" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/KayKit"]
+[node name="LinkButton" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Link"
 uri = "https://kaylousberg.itch.io/kaykit-dungeon"
 
-[node name="DLSR" type="HBoxContainer" parent="CreditsPanel/PanelContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 2
-
-[node name="Category" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/DLSR"]
+[node name="Category2" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "DLSR Camera Model"
 
-[node name="VSeparator" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/DLSR"]
+[node name="VSeparator4" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/DLSR"]
+[node name="Name2" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Light Game Studio"
 
-[node name="VSeparator2" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/DLSR"]
+[node name="VSeparator5" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
-[node name="LinkButton" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/DLSR"]
+[node name="LinkButton2" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Link"
 uri = "https://opengameart.org/content/dslr-camera-blender"
 
-[node name="Godot 3D Robot" type="HBoxContainer" parent="CreditsPanel/PanelContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 2
-
-[node name="Category" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/Godot 3D Robot"]
+[node name="Category3" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Godot Robot"
 
-[node name="VSeparator" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/Godot 3D Robot"]
+[node name="VSeparator7" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/Godot 3D Robot"]
+[node name="Name3" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "CaptainRipley (Ariana Garcia-Chow)"
 
-[node name="VSeparator2" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/Godot 3D Robot"]
+[node name="VSeparator9" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
-[node name="LinkButton" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/Godot 3D Robot"]
+[node name="LinkButton3" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Link"
 uri = "https://captainripley.itch.io/godot-3d-robot-character"
 
-[node name="KenneyParticlePack" type="HBoxContainer" parent="CreditsPanel/PanelContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 2
-
-[node name="Category" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/KenneyParticlePack"]
+[node name="Category4" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Particles"
 
-[node name="VSeparator" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/KenneyParticlePack"]
+[node name="VSeparator11" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/KenneyParticlePack"]
+[node name="Name4" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Kenney"
 
-[node name="VSeparator2" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/KenneyParticlePack"]
+[node name="VSeparator12" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
-[node name="LinkButton" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/KenneyParticlePack"]
+[node name="LinkButton4" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Link"
 uri = "https://kenney.nl/assets/particle-pack"
 
-[node name="All Else" type="HBoxContainer" parent="CreditsPanel/PanelContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 2
-
-[node name="Category" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/All Else"]
+[node name="Category5" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "All Else"
 
-[node name="VSeparator" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/All Else"]
+[node name="VSeparator14" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/All Else"]
+[node name="Name5" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "QueenOfSquiggles"
 
-[node name="VSeparator2" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/All Else"]
+[node name="VSeparator15" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
-[node name="LinkButton" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/All Else"]
+[node name="LinkButton5" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Link"
 

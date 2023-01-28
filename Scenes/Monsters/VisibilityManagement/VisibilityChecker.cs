@@ -89,7 +89,7 @@ public partial class VisibilityChecker : Node3D
 			if (closest == null) {
 				closest = t as Node3D;
 			} else if(t is Node3D node) {
-				var delta = raycast.GlobalTransform.origin - node.GlobalTransform.origin;
+				var delta = raycast.GlobalTransform.Origin - node.GlobalTransform.Origin;
 				if (delta.Length() < distance)
 				{
 					closest = node;

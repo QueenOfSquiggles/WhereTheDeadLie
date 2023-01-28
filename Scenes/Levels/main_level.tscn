@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://kdrivdayaapr"]
+[gd_scene load_steps=10 format=3 uid="uid://kdrivdayaapr"]
 
 [ext_resource type="PackedScene" uid="uid://c4ixvat1ptwp0" path="res://Scenes/Levels/catacombs_level.tscn" id="2_olcbk"]
 [ext_resource type="PackedScene" uid="uid://dc0hoftar6x1o" path="res://Scenes/UI/main_hud.tscn" id="3_qmw05"]
 [ext_resource type="PackedScene" uid="uid://s7xkqjncc31j" path="res://Scenes/Audio/audio_system.tscn" id="4_o5cjc"]
+[ext_resource type="PackedScene" uid="uid://dhljk1iotos8" path="res://Scenes/Menus/pause_menu_controller.tscn" id="5_jbjxr"]
 [ext_resource type="PackedScene" uid="uid://j2s7mebwb4u" path="res://Scenes/Player/player_character.tscn" id="5_tv4f5"]
+[ext_resource type="PackedScene" uid="uid://cc2rm25l14tf3" path="res://Scenes/Deaths/jumpscare_manager.tscn" id="6_eyt18"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qdifa"]
 
@@ -40,6 +42,10 @@ transform = Transform3D(-0.957456, 0, -0.28858, 0, 1, 0, 0.28858, 0, -0.957456, 
 [node name="MainHUD" parent="." instance=ExtResource("3_qmw05")]
 
 [node name="AudioSystem" parent="." instance=ExtResource("4_o5cjc")]
+
+[node name="PauseMenuController" parent="." instance=ExtResource("5_jbjxr")]
+
+[node name="JumpscareManager" parent="." instance=ExtResource("6_eyt18")]
 
 [connection signal="OnInteractionFound" from="PlayerCharacter" to="MainHUD" method="OnInteractionStart"]
 [connection signal="OnInteractionLost" from="PlayerCharacter" to="MainHUD" method="OnInteractionEnd"]

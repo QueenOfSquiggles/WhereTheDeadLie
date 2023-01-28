@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc2rm25l14tf3"]
+
+[ext_resource type="Script" path="res://Scenes/Deaths/JumpscareManager.cs" id="1_6k7kr"]
+[ext_resource type="PackedScene" uid="uid://citgnxpbdr0ta" path="res://Scenes/Deaths/jumpscare_scene.tscn" id="2_6v4gk"]
+
+[node name="JumpscareManager" type="Node"]
+script = ExtResource("1_6k7kr")
+jumpscare_scene = ExtResource("2_6v4gk")

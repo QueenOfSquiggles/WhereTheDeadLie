@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://c47i0ba4ed1ec"]
+[gd_scene load_steps=9 format=3 uid="uid://c47i0ba4ed1ec"]
 
 [ext_resource type="Script" path="res://addons/dynamic-web-content/elements/dynamic_image_button.gd" id="1_0l81w"]
 [ext_resource type="Script" path="res://Scenes/Menus/main_menu.gd" id="1_6h8f7"]
 [ext_resource type="PackedScene" uid="uid://dqen8ad8833i3" path="res://Scenes/Menus/credits_scene.tscn" id="2_7ag1a"]
 [ext_resource type="PackedScene" uid="uid://kdrivdayaapr" path="res://Scenes/Levels/main_level.tscn" id="2_d8ep8"]
 [ext_resource type="PackedScene" uid="uid://dj3pujvh7phfp" path="res://Scenes/Menus/options_menu.tscn" id="2_ujr5m"]
+[ext_resource type="Texture2D" uid="uid://decttsnv8vjfl" path="res://Assets/Textures/Panoramas/panorama_02.png" id="5_1bbjn"]
+[ext_resource type="Material" uid="uid://b1ehu0o3ymh3v" path="res://Scenes/Menus/menu_panorama_material.tres" id="5_82qgo"]
+[ext_resource type="Texture2D" uid="uid://d1bxy4lr2k0sw" path="res://Assets/Textures/Menu/title_graphic.png" id="8_wbwmi"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -17,6 +20,18 @@ script = ExtResource("1_6h8f7")
 play_scene = ExtResource("2_d8ep8")
 options_scene = ExtResource("2_ujr5m")
 credits_scene = ExtResource("2_7ag1a")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+material = ExtResource("5_82qgo")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_1bbjn")
+expand_mode = 2
 
 [node name="DynamicSocialContent" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -76,6 +91,21 @@ text = "Credits
 layout_mode = 2
 size_flags_vertical = 3
 text = "Quit"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 61.0
+offset_right = 550.0
+offset_bottom = 146.0
+texture = ExtResource("8_wbwmi")
+expand_mode = 2
+
+[node name="PirateDialog" type="ConfirmationDialog" parent="."]
+initial_position = 1
+title = "Pirate Edition"
+dialog_text = "Hello! It appears you are using the \"Pirate Edition\" of this game. I completely understand if you are unable to pay right now, but if you are enjoying the game and/or would like to support me so I can keep making more games, I would really appreciate a donation or whatever you can give!"
+dialog_autowrap = true
 
 [connection signal="pressed" from="ControlButtons/VBoxContainer/BtnPlay" to="." method="_on_btn_play_pressed"]
 [connection signal="pressed" from="ControlButtons/VBoxContainer/BtnOptions" to="." method="_on_btn_options_pressed"]

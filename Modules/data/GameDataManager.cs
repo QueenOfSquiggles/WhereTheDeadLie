@@ -101,7 +101,6 @@ public partial class GameDataManager : Node
     {
 		if (instance != null) QueueFree();
 		else instance = this;
-		EventBus.Instance.OnPlayerDie += OnEventPlayerDies;
 		Deserialize();
 		Reset();
     }
@@ -150,36 +149,55 @@ public partial class GameDataManager : Node
 		game_data.puzzle_solved = false;
 		game_data.found_keys = 0;
 		game_data.phase = GameData.PHASE_GENERATORS;
-		Serialize();
 	}
 
-	// Event Callbacks
-
-	private void OnEventPlayerDies()
-	{
-		GD.Print("Player has died!");
-	}
 
 	// IO
 
 	public void Serialize()
 	{
+		// pull data from AudioServer
+		game_data.VolumeMain = AudioServer.GetBusVolumeDb(0);
+		game_data.VolumeVO = AudioServer.GetBusVolumeDb(1);
+		game_data.VolumeSFX = AudioServer.GetBusVolumeDb(2);
+		game_data.VolumeCreature = AudioServer.GetBusVolumeDb(3);
+		game_data.VolumeDrones = AudioServer.GetBusVolumeDb(4);
+
+		// convert to JSON
 		var ops = new JsonSerializerOptions { WriteIndented = true };
 		var content = JsonSerializer.Serialize(game_data, ops);
 		var file = FileAccess.Open(FILE_PATH, FileAccess.ModeFlags.Write);
 		file.StoreString(content);
+		file.Flush(); // maybe forcing a flush will ensure we don't have degenerate data loaded from disk??
 	}
 
 	public void Deserialize()
 	{
         var file = FileAccess.Open(FILE_PATH, FileAccess.ModeFlags.Read);
 		if (file == null) return;
-		try {
+        try
+        {
 			var loaded_data = JsonSerializer.Deserialize<GameData>(file.GetAsText());
 			game_data = loaded_data;
-		}catch (Exception e) {
-			GD.PushError($"Error loading GameData from JSON : {e.Message}");
+		}catch (Exception) {
+			// I actually don't care? 99% of the time this is going to error from the file not existing, or the file being messed with. The next serialization will correct the issue.
+			//GD.PushError($"Error loading GameData from JSON : {e.Message}");
+
+			// if anything goes wrong, assign default values
+			game_data = new GameData();
+			var preset = GamePreset.DEFAULT;
+			RequiredGenerators = preset.required_generators;
+			RequiredKeys = preset.required_keys;
+			GameAggression = preset.aggression_level;
+			// Audio volumes already have default values
 		}
+
+		// Push loaded data to AudioServer
+		AudioServer.SetBusVolumeDb(0, game_data.VolumeMain);
+		AudioServer.SetBusVolumeDb(1, game_data.VolumeVO);
+		AudioServer.SetBusVolumeDb(2, game_data.VolumeSFX);
+		AudioServer.SetBusVolumeDb(3, game_data.VolumeCreature);
+		AudioServer.SetBusVolumeDb(4, game_data.VolumeDrones);
 	}
 
 }

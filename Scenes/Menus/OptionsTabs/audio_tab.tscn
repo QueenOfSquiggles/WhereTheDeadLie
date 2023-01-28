@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://b74414wseyp32"]
+[gd_scene load_steps=3 format=3 uid="uid://b74414wseyp32"]
+
+[ext_resource type="Script" path="res://Scenes/Menus/OptionsTabs/SliderValue.gd" id="1_bxmbq"]
+[ext_resource type="Script" path="res://Scenes/Menus/OptionsTabs/audio_tab.gd" id="1_d6p8e"]
 
 [node name="Audio" type="PanelContainer"]
 anchors_preset = 15
@@ -6,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_d6p8e")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -18,86 +22,127 @@ horizontal_alignment = 1
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
 
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Note: values are in decibels"
+horizontal_alignment = 1
+
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(720, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer"]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/PanelContainer"]
 layout_mode = 2
-alignment = 1
+columns = 3
 
-[node name="BusMain" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusMain"]
+[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 text = "Main (affects all others)"
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/BusMain"]
+[node name="SliderMain" type="HSlider" parent="VBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+min_value = -30.0
+max_value = 0.0
+step = 0.01
+tick_count = 10
+ticks_on_borders = true
 
-[node name="Value" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusMain"]
+[node name="Value" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-text = "%s"
+text = "0
+"
+script = ExtResource("1_bxmbq")
 
-[node name="BusVoiceOver" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusVoiceOver"]
+[node name="Name2" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 text = "Voice Over"
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/BusVoiceOver"]
+[node name="SliderVoiceOver" type="HSlider" parent="VBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+min_value = -30.0
+max_value = 0.0
+step = 0.01
+tick_count = 10
+ticks_on_borders = true
 
-[node name="Value" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusVoiceOver"]
+[node name="Value2" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-text = "%s"
+text = "0
+"
+script = ExtResource("1_bxmbq")
 
-[node name="BusSoundEffects" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusSoundEffects"]
+[node name="Name3" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 text = "Sound Effects"
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/BusSoundEffects"]
+[node name="SliderSFX" type="HSlider" parent="VBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+min_value = -30.0
+max_value = 0.0
+step = 0.01
+tick_count = 10
+ticks_on_borders = true
 
-[node name="Value" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusSoundEffects"]
+[node name="Value3" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-text = "%s"
+text = "0
+"
+script = ExtResource("1_bxmbq")
 
-[node name="BusCreatureSounds" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusCreatureSounds"]
+[node name="Name4" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 text = "Creature Sounds"
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/BusCreatureSounds"]
+[node name="SliderCreature" type="HSlider" parent="VBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+min_value = -30.0
+max_value = 0.0
+step = 0.01
+tick_count = 10
+ticks_on_borders = true
 
-[node name="Value" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusCreatureSounds"]
+[node name="Value4" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-text = "%s"
+text = "0
+"
+script = ExtResource("1_bxmbq")
 
-[node name="BusDronesAndBackground" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusDronesAndBackground"]
+[node name="Name5" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 text = "Drones and Background"
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/PanelContainer/VBoxContainer/BusDronesAndBackground"]
+[node name="SliderDrones" type="HSlider" parent="VBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+min_value = -30.0
+max_value = 0.0
+step = 0.01
+tick_count = 10
+ticks_on_borders = true
 
-[node name="Value" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/BusDronesAndBackground"]
+[node name="Value5" type="Label" parent="VBoxContainer/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-text = "%s"
+text = "0
+"
+script = ExtResource("1_bxmbq")
+
+[connection signal="drag_ended" from="VBoxContainer/PanelContainer/GridContainer/SliderMain" to="." method="_on_slider_main_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/PanelContainer/GridContainer/SliderMain" to="VBoxContainer/PanelContainer/GridContainer/Value" method="_on_h_slider_value_changed"]
+[connection signal="drag_ended" from="VBoxContainer/PanelContainer/GridContainer/SliderVoiceOver" to="." method="_on_slider_voice_over_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/PanelContainer/GridContainer/SliderVoiceOver" to="VBoxContainer/PanelContainer/GridContainer/Value2" method="_on_h_slider_value_changed"]
+[connection signal="drag_ended" from="VBoxContainer/PanelContainer/GridContainer/SliderSFX" to="." method="_on_slider_sfx_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/PanelContainer/GridContainer/SliderSFX" to="VBoxContainer/PanelContainer/GridContainer/Value3" method="_on_h_slider_value_changed"]
+[connection signal="drag_ended" from="VBoxContainer/PanelContainer/GridContainer/SliderCreature" to="." method="_on_slider_creature_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/PanelContainer/GridContainer/SliderCreature" to="VBoxContainer/PanelContainer/GridContainer/Value4" method="_on_h_slider_value_changed"]
+[connection signal="drag_ended" from="VBoxContainer/PanelContainer/GridContainer/SliderDrones" to="." method="_on_slider_drones_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/PanelContainer/GridContainer/SliderDrones" to="VBoxContainer/PanelContainer/GridContainer/Value5" method="_on_h_slider_value_changed"]

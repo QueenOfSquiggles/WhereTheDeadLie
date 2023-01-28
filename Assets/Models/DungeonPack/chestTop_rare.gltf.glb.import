@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bidg8le1t0qn"
+uid="uid://bu04shd08nhtf"
 path="res://.godot/imported/chestTop_rare.gltf.glb-ef2bf72b51349d0a74ffc6b06d8e911b.scn"
 
 [deps]
@@ -27,10 +27,5 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:chestTop_rare": {
-"generate/physics": true
-}
-}
-}
+_subresources={}
+meshes/handle_gltf_embedded_images=1

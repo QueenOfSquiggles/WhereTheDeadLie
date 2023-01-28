@@ -8,16 +8,16 @@
     ".NETCoreApp,Version=v6.0": {
       "DumbJumpscareGame/1.0.0": {
         "dependencies": {
-          "Godot.SourceGenerators": "4.0.0-beta.15",
-          "GodotSharp": "4.0.0-beta.15",
-          "GodotSharpEditor": "4.0.0-beta.15"
+          "Godot.SourceGenerators": "4.0.0-beta.16",
+          "GodotSharp": "4.0.0-beta.16",
+          "GodotSharpEditor": "4.0.0-beta.16"
         },
         "runtime": {
           "DumbJumpscareGame.dll": {}
         }
       },
-      "Godot.SourceGenerators/4.0.0-beta.15": {},
-      "GodotSharp/4.0.0-beta.15": {
+      "Godot.SourceGenerators/4.0.0-beta.16": {},
+      "GodotSharp/4.0.0-beta.16": {
         "runtime": {
           "lib/net6.0/GodotSharp.dll": {
             "assemblyVersion": "4.0.0.0",
@@ -25,9 +25,9 @@
           }
         }
       },
-      "GodotSharpEditor/4.0.0-beta.15": {
+      "GodotSharpEditor/4.0.0-beta.16": {
         "dependencies": {
-          "GodotSharp": "4.0.0-beta.15"
+          "GodotSharp": "4.0.0-beta.16"
         },
         "runtime": {
           "lib/net6.0/GodotSharpEditor.dll": {
@@ -44,26 +44,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Godot.SourceGenerators/4.0.0-beta.15": {
+    "Godot.SourceGenerators/4.0.0-beta.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FKjnou2lwgLqs/hP8fN0cSeVM/ilGWY/K8MZlgC7oJM3UsIMzE3Mw60tbQFgMIoTOBYR+xCVStNp/wNnTXiB0Q==",
-      "path": "godot.sourcegenerators/4.0.0-beta.15",
-      "hashPath": "godot.sourcegenerators.4.0.0-beta.15.nupkg.sha512"
+      "sha512": "sha512-D+SD1MRFoq8ZPyKZHRQ5kw5BXDsdJq4sdMpwOmtV0WIqekvDaW/VxnS/wR98ylFHW3Md7IGVqbRWziF4zI5lKg==",
+      "path": "godot.sourcegenerators/4.0.0-beta.16",
+      "hashPath": "godot.sourcegenerators.4.0.0-beta.16.nupkg.sha512"
     },
-    "GodotSharp/4.0.0-beta.15": {
+    "GodotSharp/4.0.0-beta.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+4KjnvPVm61KpZNioC0vJ2uwKdVILQ1wDOv2Vv9+sRhFrIipy458X9k/6AyIZeNPn64qYy1ktli3kz5bJgOV1g==",
-      "path": "godotsharp/4.0.0-beta.15",
-      "hashPath": "godotsharp.4.0.0-beta.15.nupkg.sha512"
+      "sha512": "sha512-Tt1Fq/xXaeSqCJvHfAgwax+TNLXvbNzAf/upzXtqaLAw06kIn/2p1rX1kp56g5diS66H/YrHBL//cDShakBydw==",
+      "path": "godotsharp/4.0.0-beta.16",
+      "hashPath": "godotsharp.4.0.0-beta.16.nupkg.sha512"
     },
-    "GodotSharpEditor/4.0.0-beta.15": {
+    "GodotSharpEditor/4.0.0-beta.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cA9WwMkEknjZvdIcSXgLvtMorUP8DC7VnQuMs/DtikxYjFscdRQ1TUq2p2OMteskTAWEBYj/XeFJ8TbYisgrfw==",
-      "path": "godotsharpeditor/4.0.0-beta.15",
-      "hashPath": "godotsharpeditor.4.0.0-beta.15.nupkg.sha512"
+      "sha512": "sha512-FOQZfyoF/FijfqQvtGrVHixOh3SNNjEMiXjmXGBzB6Lwq+KCBBA6NcYaA9Ar4PMu90j1I79NmSurLQr+LdyhVQ==",
+      "path": "godotsharpeditor/4.0.0-beta.16",
+      "hashPath": "godotsharpeditor.4.0.0-beta.16.nupkg.sha512"
     }
   }
 }
