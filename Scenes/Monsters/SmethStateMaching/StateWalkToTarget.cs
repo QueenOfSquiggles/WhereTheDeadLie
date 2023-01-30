@@ -1,4 +1,5 @@
 using bridge;
+using data;
 using Godot;
 using state_machine;
 using System;
@@ -8,14 +9,20 @@ public partial class StateWalkToTarget : State
 	[Export] private int idle_state_index = 0;
 
   // TODO: this value should be determined by the aggression level
-  [Export] private float chance_use_closest_position = 0.25f; 
+  [Export] private Curve chance_exact_targeting_curve;
+  private float chance_use_closest_position = 0.25f; 
 	private bool target_reached = false;
 
   private Vector3 current_target;
 
-  private Random random = new();
+  private readonly Random random = new();
 
-    
+
+  public override void _Ready()
+  {
+      var sample_pos = GameDataManager.instance.GameAggression / 10.0f;
+      chance_use_closest_position = chance_exact_targeting_curve.SampleBaked(sample_pos);
+  }
   public override string GetStateAnimation()
   {
       return "WalkCycle";

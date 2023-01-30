@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfke475xsa54m"
+uid="uid://0oylijx18psv"
 path="res://.godot/imported/catacombs.glb-72f55cab8380d3930185c496b1693165.scn"
 
 [deps]
@@ -55,3 +55,4 @@ _subresources={
 }
 }
 }
+meshes/handle_gltf_embedded_images=1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c41c4u6tohw0l"]
+[gd_scene load_steps=32 format=3 uid="uid://c41c4u6tohw0l"]
 
 [ext_resource type="PackedScene" uid="uid://b44w2wptlw4r7" path="res://Assets/Models/MyModels/the_smeth.glb" id="1_24vo1"]
 [ext_resource type="Script" path="res://Scenes/Monsters/TheSmeth.cs" id="1_mbkiw"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Scenes/Monsters/SmethStateMaching/StateWalkToTarget.cs" id="4_umsi3"]
 [ext_resource type="Script" path="res://Scenes/Monsters/SmethStateMaching/StateChasePlayer.cs" id="5_8uw72"]
 [ext_resource type="Script" path="res://Scenes/Monsters/SmethStateMaching/StateInvestigate.cs" id="8_41hqq"]
+[ext_resource type="AudioStream" uid="uid://cqmvh8lqf45x0" path="res://Assets/SFX/Smeth/SmethBreath.ogg" id="9_0fdw8"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_uu5jq"]
 height = 0.185711
@@ -68,6 +69,10 @@ max_value = 30.0
 _data = [Vector2(0, 30), 0.0, 0.0, 0, 0, Vector2(0.241211, 22.9603), 20.3118, 20.3118, 0, 0, Vector2(0.567383, 13.213), 17.4375, 17.4375, 0, 0, Vector2(1, 5), 0.0, 0.0, 0, 0]
 point_count = 4
 
+[sub_resource type="Curve" id="Curve_bj7jb"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 1.48037, 0.0, 0, 0]
+point_count = 2
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hcw0"]
 no_depth_test = true
 albedo_color = Color(1, 0, 0, 1)
@@ -105,28 +110,28 @@ path_state_machine = NodePath("StateMachine")
 
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/0/position = Vector3(-0.0770886, 0.349605, 0.990629)
-bones/1/rotation = Quaternion(0.230132, -0.112356, 0.378646, 0.889406)
-bones/2/rotation = Quaternion(-0.300458, -0.0165428, 0.082959, 0.950036)
-bones/3/rotation = Quaternion(-0.256855, -0.0810992, -0.0048863, 0.963029)
-bones/4/rotation = Quaternion(-0.21664, 0.0699325, 0.924303, 0.306334)
-bones/5/rotation = Quaternion(-0.335767, -0.0170656, -0.236322, 0.911658)
-bones/6/rotation = Quaternion(-0.32974, 0.231606, -0.284495, 0.869881)
-bones/7/rotation = Quaternion(-0.188872, -0.135676, -0.578584, 0.781767)
-bones/8/rotation = Quaternion(-0.177927, -0.199984, 0.176975, 0.947116)
-bones/9/rotation = Quaternion(-0.22647, -0.191922, 0.429711, 0.852776)
-bones/10/rotation = Quaternion(-0.399481, -0.0763739, 0.831503, -0.378398)
-bones/11/rotation = Quaternion(-0.161904, 0.159833, -0.180824, 0.95684)
-bones/12/rotation = Quaternion(0.0496614, 0.395547, -0.432666, 0.808627)
-bones/14/rotation = Quaternion(-0.0905093, 0.918529, 0.0176338, 0.384449)
-bones/15/rotation = Quaternion(-0.00904286, 0.993065, 0.000371151, 0.117218)
-bones/16/rotation = Quaternion(0.124326, -0.0657015, 0.279193, 0.949883)
-bones/17/rotation = Quaternion(0.286778, -0.460682, 0.343339, 0.766583)
-bones/18/rotation = Quaternion(0.247397, -0.69329, -0.36689, 0.568802)
-bones/19/rotation = Quaternion(0.0269641, -0.0425279, -0.206001, 0.977255)
-bones/20/rotation = Quaternion(-0.164584, 0.512843, 0.842547, -0.00442294)
-bones/21/rotation = Quaternion(-0.120526, 0.136843, -0.618197, 0.764578)
-bones/22/rotation = Quaternion(-0.63978, -0.219022, 0.491975, 0.548335)
-bones/23/rotation = Quaternion(-0.193917, 0.25956, 0.617119, 0.717069)
+bones/1/rotation = Quaternion(0.0528009, -0.181964, 0.441129, 0.877215)
+bones/2/rotation = Quaternion(-0.338358, 0.00697935, 0.124327, 0.932742)
+bones/3/rotation = Quaternion(-0.26145, -0.0691485, 0.0296344, 0.962281)
+bones/4/rotation = Quaternion(-0.237812, 0.0167638, 0.923213, 0.301402)
+bones/5/rotation = Quaternion(-0.274786, -0.0121982, -0.194024, 0.941647)
+bones/6/rotation = Quaternion(-0.280971, 0.241948, -0.235842, 0.898274)
+bones/7/rotation = Quaternion(-0.138605, -0.155038, -0.608371, 0.765922)
+bones/8/rotation = Quaternion(-0.221163, -0.190017, 0.271839, 0.917106)
+bones/9/rotation = Quaternion(-0.157115, -0.202961, 0.365171, 0.894859)
+bones/10/rotation = Quaternion(-0.32495, -0.251177, 0.845958, -0.340108)
+bones/11/rotation = Quaternion(-0.175516, 0.16439, -0.189402, 0.951997)
+bones/12/rotation = Quaternion(0.0414765, 0.407046, -0.385445, 0.827058)
+bones/14/rotation = Quaternion(-0.246555, 0.918791, -0.0513942, 0.30396)
+bones/15/rotation = Quaternion(0.0894597, 0.988848, -0.0211293, 0.117178)
+bones/16/rotation = Quaternion(0.161774, -0.0559437, 0.375658, 0.910813)
+bones/17/rotation = Quaternion(0.325025, -0.448906, 0.37919, 0.740984)
+bones/18/rotation = Quaternion(0.229327, -0.702176, -0.358939, 0.570545)
+bones/19/rotation = Quaternion(0.109952, -0.0549852, -0.52822, 0.840161)
+bones/20/rotation = Quaternion(-0.129651, 0.480507, 0.86234, -0.0931286)
+bones/21/rotation = Quaternion(0.0930571, 0.102924, -0.63331, 0.761358)
+bones/22/rotation = Quaternion(-0.609617, -0.096651, 0.67015, 0.412219)
+bones/23/rotation = Quaternion(0.278407, 0.156827, 0.439453, 0.83951)
 
 [node name="Cube" parent="Armature/Skeleton3D" index="0"]
 layers = 2
@@ -173,6 +178,7 @@ countdown_time_curve = SubResource("Curve_45jes")
 
 [node name="StateWalkToTarget" type="Node" parent="StateMachine" index="1"]
 script = ExtResource("4_umsi3")
+chance_exact_targeting_curve = SubResource("Curve_bj7jb")
 
 [node name="StateChasePlayer" type="Node" parent="StateMachine" index="2"]
 script = ExtResource("5_8uw72")
@@ -186,6 +192,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54447, -0.626511)
 visible = false
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="9"]
+stream = ExtResource("9_0fdw8")
+volume_db = -20.0
+autoplay = true
+panning_strength = 2.0
+bus = &"CreatureSounds"
+attenuation_filter_cutoff_hz = 20500.0
 
 [node name="MonsterPosDisplay" type="MeshInstance3D" parent="." index="10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47761, 0)

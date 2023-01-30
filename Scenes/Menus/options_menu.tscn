@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dj3pujvh7phfp"]
+[gd_scene load_steps=8 format=3 uid="uid://dj3pujvh7phfp"]
 
 [ext_resource type="PackedScene" uid="uid://ds2e6t58y2njl" path="res://Scenes/Menus/OptionsTabs/gameplay_tab.tscn" id="1_agasg"]
 [ext_resource type="Script" path="res://Scenes/Menus/OptionsMenu.cs" id="1_hipj7"]
+[ext_resource type="Theme" uid="uid://c405edsef4bx1" path="res://Assets/UITheme/main_theme.tres" id="1_qpoh1"]
 [ext_resource type="Material" uid="uid://b1ehu0o3ymh3v" path="res://Scenes/Menus/menu_panorama_material.tres" id="2_hfgjw"]
 [ext_resource type="PackedScene" uid="uid://b74414wseyp32" path="res://Scenes/Menus/OptionsTabs/audio_tab.tscn" id="2_x8b24"]
 [ext_resource type="Texture2D" uid="uid://bir10mlfjqj3r" path="res://Assets/Textures/Panoramas/panorama_01.jpg" id="3_3vtaq"]
@@ -14,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_qpoh1")
 script = ExtResource("1_hipj7")
 main_menu_path = "res://Scenes/Menus/main_menu.tscn"
 

@@ -1,0 +1,225 @@
+[gd_scene load_steps=11 format=3 uid="uid://p4qwq8trl2ac"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/VictorySection.cs" id="1_4ogfm"]
+[ext_resource type="PackedScene" uid="uid://blgnvgte7ik1a" path="res://Assets/Models/MyModels/metal_gate.glb" id="1_8tgoo"]
+
+[sub_resource type="Animation" id="Animation_gpsnr"]
+resource_name = "GateOpen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("metal_gate:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.0303321, 6.77932), Vector3(0, 1.20053, 6.77932), Vector3(0, 3.30099, 6.77932)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("metal_gate/GateSFX")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+}],
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_lyjrs"]
+resource_name = "GateShut"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("metal_gate:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.3, 1.6, 1.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 3.30099, 6.77932), Vector3(0, 0.0248739, 6.77932), Vector3(0, 0.0248739, 6.77932), Vector3(0, 0.63332, 6.77932), Vector3(0, 0.63332, 6.77932), Vector3(0, 0.0303321, 6.77932)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("metal_gate/GateSFX")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioVO")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+}],
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_oer83"]
+resource_name = "IntroSequence"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("metal_gate:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.0303321, 6.77932), Vector3(0, 0.0303321, 6.77932), Vector3(0, 3.30099, 6.77932)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioVO")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+
+[sub_resource type="Animation" id="Animation_alfvr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("metal_gate:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.0303321, 6.77932)]
+}
+
+[sub_resource type="Animation" id="Animation_fwylg"]
+resource_name = "EndSequence"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"ReturnToMainMenu"
+}]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioVO")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+}],
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7bgx7"]
+_data = {
+"EndSequence": SubResource("Animation_fwylg"),
+"GateOpen": SubResource("Animation_gpsnr"),
+"GateShut": SubResource("Animation_lyjrs"),
+"IntroSequence": SubResource("Animation_oer83"),
+"RESET": SubResource("Animation_alfvr")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_863dg"]
+size = Vector3(4.07398, 7.58614, 2.47341)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4m54p"]
+size = Vector3(19.1846, 6.05601, 1)
+
+[node name="GateSection" type="Node3D"]
+script = ExtResource("1_4ogfm")
+path_anim_player = NodePath("AnimationPlayer")
+path_area_trigger = NodePath("GameEndTrigger")
+path_intro_area = NodePath("StartGameTrigger")
+main_menu_file = "res://Scenes/Menus/main_menu.tscn"
+
+[node name="metal_gate" parent="." instance=ExtResource("1_8tgoo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0303321, 6.77932)
+
+[node name="GateSFX" type="AudioStreamPlayer3D" parent="metal_gate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.61815, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "IntroSequence"
+libraries = {
+"": SubResource("AnimationLibrary_7bgx7")
+}
+
+[node name="GameEndTrigger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.89758, 10.7596)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameEndTrigger"]
+shape = SubResource("BoxShape3D_863dg")
+
+[node name="StartGameTrigger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03557, 4.76844)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StartGameTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0923166)
+shape = SubResource("BoxShape3D_4m54p")
+
+[node name="BeginnerTutorialStuff" type="Node3D" parent="StartGameTrigger"]
+
+[node name="MouseLook" type="Label3D" parent="StartGameTrigger/BeginnerTutorialStuff"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.639745, -0.61818, 6.43067)
+visibility_range_end = 6.0
+visibility_range_end_margin = 1.0
+visibility_range_fade_mode = 1
+billboard = 2
+text = "Use Mouse to look"
+
+[node name="MoveWASD" type="Label3D" parent="StartGameTrigger/BeginnerTutorialStuff"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.810146, 0.165464, 5.12402)
+visibility_range_end = 6.0
+visibility_range_end_margin = 1.0
+visibility_range_fade_mode = 1
+billboard = 2
+text = "WASD to move"
+
+[node name="Label3D3" type="Label3D" parent="StartGameTrigger/BeginnerTutorialStuff"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10696, -0.61818, 0.715391)
+visibility_range_end = 6.0
+visibility_range_end_margin = 1.0
+visibility_range_fade_mode = 1
+billboard = 2
+text = "Left Mouse to flash camera"
+
+[node name="AudioVO" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3898, 12.3875)

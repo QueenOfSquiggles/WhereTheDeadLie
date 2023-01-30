@@ -13,7 +13,18 @@ public partial class TheSmeth : CharacterBody3D
     public override void _Ready()
     {
 		state_machine = this.GetNodeCustom<StateMachine>(path_state_machine);
+		EventBus.Instance.OnGameStart += StartGame;
+		// effectively pauses The Smeth
+		SetPhysicsProcess(false);
+		SetProcess(false);
     }
+
+	private void StartGame()
+	{
+		// Player is out of the gate and ready to play now, get moving and hunting.
+		SetPhysicsProcess(true);
+		SetProcess(true);
+	}
 
 
 	public void LoadPatrolPoints(List<Marker3D> markers)
@@ -26,6 +37,7 @@ public partial class TheSmeth : CharacterBody3D
 		if (body.IsInGroup("Player"))
 		{
 			EventBus.Instance.TriggerOnPlayerDie();
+			QueueFree(); // juse jumpscare controlled model
 		}
 	}
 

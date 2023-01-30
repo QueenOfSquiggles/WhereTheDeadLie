@@ -107,6 +107,6 @@ public partial class StateMachine : Node
 		// anim.Play(states[index].GetStateAnimation());
 		var anim_machine = (AnimationNodeStateMachinePlayback)data.anim_tree.Get("parameters/playback");
 		anim_machine.Travel(states[index].GetStateAnimation());
-		GD.Print($"Active State: {states[index].Name}");
+		// GD.Print($"Active State: {states[index].Name}");
 	}
 }

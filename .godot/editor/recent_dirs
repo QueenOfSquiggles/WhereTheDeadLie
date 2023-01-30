@@ -1,3 +1,8 @@
+res://Scenes/Menus
+res://Scenes/Levels
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/standard
+res://Assets/UITheme
+res://Assets/UITheme/
 res://Scenes/Deaths
 res://Scenes/Menus/OptionsTabs
 res://Assets/Models/MyModels/ImportedAnims/
@@ -5,8 +10,6 @@ res://Assets/Models/MyModels/ImportedAnims
 res://Assets/SFX/Footsteps/
 /home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/
 /home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/pirate
-/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/standard
-res://Scenes/Menus
 /home/nessa/Documents/blender/Games/DumbJumpscare/GodotGLTFExports
 res://Modules/data
 res://Scenes/Objects/util
@@ -17,6 +20,3 @@ res://Scenes/Audio
 res://Scenes/Monsters/VisibilityManagement
 res://Modules/state_machine
 res://Scenes/Objects
-res://Scenes/UI/PuzzlePanel
-res://Assets/Models/OGA_LightGameStudio/Imported
-res://Assets/Textures/PuzzleControlPanel

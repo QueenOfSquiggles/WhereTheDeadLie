@@ -12,7 +12,7 @@ public partial class power_generator : Node3D, IHasViability
 
 	[Export] private NodePath anim_player_path;
 	private AnimationPlayer anim;
-	private bool is_viable = true;
+	private bool is_viable = false;
 
 	public override void _Ready()
 	{
@@ -28,8 +28,19 @@ public partial class power_generator : Node3D, IHasViability
 
 	public void OnInteract()
 	{
-		if (is_viable) anim.Play("ActivateViable");
-		else anim.Play("ActivateNonViable");
+		if (is_viable) 
+		{
+			anim.Play("ActivateViable");
+			anim.AnimationFinished += OnAnimFinish;
+		} else {
+			anim.Play("ActivateNonViable");
+		} 
+	}
+
+	private void OnAnimFinish(StringName anim_name)
+	{
+		anim.AnimationFinished -= OnAnimFinish;
+		anim.Play("ActiveLoop");
 	}
 
     public bool GetViability() => is_viable;

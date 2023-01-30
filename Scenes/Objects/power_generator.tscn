@@ -1,9 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://cd31m2v4lc7bf"]
+[gd_scene load_steps=23 format=3 uid="uid://cd31m2v4lc7bf"]
 
 [ext_resource type="Script" path="res://Scenes/Objects/power_generator.cs" id="1_mydb7"]
 [ext_resource type="PackedScene" uid="uid://dlwu7nfjof0g8" path="res://Modules/interaction/interaction_trigger.tscn" id="2_8kxom"]
 [ext_resource type="PackedScene" uid="uid://b1hxd6pkxh5an" path="res://Scenes/Objects/power_generator_util/power_generator_active_components.tscn" id="2_um63k"]
 [ext_resource type="PackedScene" uid="uid://dlt51l5s0fxkp" path="res://Scenes/Objects/util/player_controls_setter.tscn" id="4_0rmmb"]
+[ext_resource type="AudioStream" uid="uid://7jk08i0cag3v" path="res://Assets/SFX/Generator/GeneratorStartupFail.ogg" id="5_n6ql3"]
+[ext_resource type="AudioStream" uid="uid://d3acb0lcoc85a" path="res://Assets/SFX/Generator/GeneratorPowerUp.ogg" id="6_jc0g5"]
+[ext_resource type="AudioStream" uid="uid://btsfm05v6jj73" path="res://Assets/SFX/Generator/GeneratorOnLoop.ogg" id="7_siuye"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_meqo4"]
 resource_name = "BasicMetal"
@@ -194,7 +197,7 @@ size = Vector3(2.56146, 2.69405, 2.90125)
 
 [sub_resource type="Animation" id="Animation_fqxs1"]
 resource_name = "ActivateNonViable"
-length = 2.0
+length = 10.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -235,6 +238,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(1, 1, 1), Vector3(1.2, 1.2, 1.2), Vector3(1, 1, 1)]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer3D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_n6ql3")
+}],
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="Animation" id="Animation_csttg"]
@@ -295,6 +312,64 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector3(1, 1, 1), Vector3(1.2, 1.2, 1.2), Vector3(1, 1, 1)]
 }
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer3D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_jc0g5")
+}],
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_e303r"]
+resource_name = "ActiveLoop"
+length = 8.5
+loop_mode = 1
+step = 0.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0189,
+"start_offset": 0.0,
+"stream": ExtResource("7_siuye")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scaler/Cylinder:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.759033, 1.75903, 2.25903, 2.75903, 3.75903, 4.25903, 4.75903, 5.75903, 6.25903, 6.75903, 7.75903, 8.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.261799), Vector3(0, 0, -0.261799), Vector3(0, 0, 0), Vector3(0, 0, 0.261799), Vector3(0, 0, -0.261799), Vector3(0, 0, 0), Vector3(0, 0, 0.261799), Vector3(0, 0, -0.261799), Vector3(0, 0, 0), Vector3(0, 0, 0.261799), Vector3(0, 0, -0.261799), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scaler/Cylinder:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.25903, 2.25903, 3.25903, 4.25903, 5.25903, 6.25903, 7.25903, 8.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.374, 0), Vector3(0, 0, 0), Vector3(0, -0.374, 0), Vector3(0, 0, 0), Vector3(0, -0.374, 0), Vector3(0, 0, 0), Vector3(0, -0.374, 0), Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_necn0"]
 length = 0.001
@@ -322,11 +397,24 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(1, 1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scaler/Cylinder:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l366t"]
 _data = {
 "ActivateNonViable": SubResource("Animation_fqxs1"),
 "ActivateViable": SubResource("Animation_csttg"),
+"ActiveLoop": SubResource("Animation_e303r"),
 "RESET": SubResource("Animation_necn0")
 }
 
@@ -355,13 +443,19 @@ is_one_shot = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13149, 0)
 shape = SubResource("BoxShape3D_it6v0")
 
-[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
-
 [node name="PlayerControlsSetter" parent="." instance=ExtResource("4_0rmmb")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_l366t")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.319757, 0)
+stream = ExtResource("7_siuye")
+attenuation_model = 2
+volume_db = -15.0
+max_db = -5.0
+bus = &"SoundEffects"
 
 [connection signal="Interaction" from="Scaler/InteractionTrigger" to="." method="OnInteract"]

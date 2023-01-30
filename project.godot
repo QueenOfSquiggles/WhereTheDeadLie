@@ -28,6 +28,7 @@ config/icon="res://icon.svg"
 GameDataManager="*res://Modules/data/GameDataManager.cs"
 DynamicContentManager="*res://addons/dynamic-web-content/autoload/dynamic_content_manager.gd"
 Accessibility="*res://Modules/data/Accessibility.cs"
+SceneManager="*res://Scenes/Levels/scene_manager.tscn"
 
 [dotnet]
 
@@ -40,6 +41,10 @@ enabled=PackedStringArray("res://addons/dynamic-web-content/plugin.cfg")
 [filesystem]
 
 import/blender/enabled=false
+
+[gui]
+
+theme/custom="res://Assets/UITheme/main_theme.tres"
 
 [input]
 

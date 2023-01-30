@@ -2,7 +2,7 @@ using events;
 using Godot;
 using System;
 
-public partial class JumpscareManager : Node
+public partial class JumpscareManager : Node3D
 {
 
     [Export] private PackedScene jumpscare_scene;
@@ -15,6 +15,8 @@ public partial class JumpscareManager : Node
     private void HandleOnPlayerDie()
     {
         EventBus.Instance.OnPlayerDie -= HandleOnPlayerDie;
-        GetTree().ChangeSceneToPacked(jumpscare_scene);
-    }
+        var node = jumpscare_scene.Instantiate();
+        AddChild(node);
+        Input.MouseMode = Input.MouseModeEnum.Visible;
+    } 
 }

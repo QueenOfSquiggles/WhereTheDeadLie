@@ -19,8 +19,8 @@ public partial class StateIdle : State
       var h_width = curve_range_width / 2.0f;
       var sample_pos = GameDataManager.instance.GameAggression / 10.0f;
       // basically we sample upper and lower relative to curve position. the width determines how wildly the min/max vary
-      min_countdown_time = countdown_time_curve.SampleBaked(Mathf.Clamp(sample_pos - h_width, 0.0f, 1.0f));
-      max_countdown_time = countdown_time_curve.SampleBaked(Mathf.Clamp(sample_pos + h_width, 0.0f, 1.0f));
+      min_countdown_time = countdown_time_curve.SampleBaked(Mathf.Clamp(sample_pos + h_width, 0.0f, 1.0f));
+      max_countdown_time = countdown_time_curve.SampleBaked(Mathf.Clamp(sample_pos - h_width, 0.0f, 1.0f));
 
       if (max_countdown_time < min_countdown_time)
       { 

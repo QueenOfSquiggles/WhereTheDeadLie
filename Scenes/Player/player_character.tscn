@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://j2s7mebwb4u"]
+[gd_scene load_steps=20 format=3 uid="uid://j2s7mebwb4u"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player_character.cs" id="1_frnes"]
+[ext_resource type="PackedScene" uid="uid://cc2rm25l14tf3" path="res://Scenes/Deaths/jumpscare_manager.tscn" id="2_ojesa"]
 [ext_resource type="AudioStream" uid="uid://dss7klnt7xjpq" path="res://Assets/SFX/Footsteps/random_footstep.tres" id="3_mqak5"]
 [ext_resource type="PackedScene" uid="uid://btadwfvd2nona" path="res://Assets/Models/OGA_LightGameStudio/Imported/dslr_camera.tscn" id="3_rf5f6"]
 
@@ -271,6 +272,8 @@ collide_with_bodies = false
 
 [node name="AccessNoFlashSpotlight" type="SpotLight3D" parent="CamSwivel/Camera3D"]
 spot_range = 10.0
+
+[node name="JumpscareManager" parent="CamSwivel/Camera3D" instance=ExtResource("2_ojesa")]
 
 [node name="Hand" type="Marker3D" parent="CamSwivel"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.438, -0.331, -0.532)

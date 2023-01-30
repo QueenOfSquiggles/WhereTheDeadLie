@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://84ieh2q27cct"]
+[gd_scene load_steps=4 format=3 uid="uid://84ieh2q27cct"]
 
-[ext_resource type="Script" path="res://Scenes/Menus/pause_menu.gd" id="1_3kwb5"]
+[ext_resource type="Theme" uid="uid://c405edsef4bx1" path="res://Assets/UITheme/main_theme.tres" id="1_8aycw"]
+[ext_resource type="Script" path="res://Scenes/Menus/PauseMenu.cs" id="2_u13u6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rp5ep"]
 font_size = 40
@@ -15,7 +16,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3kwb5")
+theme = ExtResource("1_8aycw")
+script = ExtResource("2_u13u6")
 main_menu_file = "res://Scenes/Menus/main_menu.tscn"
 
 [node name="CenterContainer" type="CenterContainer" parent="."]

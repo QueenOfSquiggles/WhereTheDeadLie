@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqen8ad8833i3"]
+[gd_scene load_steps=5 format=3 uid="uid://dqen8ad8833i3"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/credits_scene.gd" id="1_hyfy2"]
+[ext_resource type="Theme" uid="uid://c405edsef4bx1" path="res://Assets/UITheme/main_theme.tres" id="1_q7v15"]
 [ext_resource type="Material" uid="uid://b1ehu0o3ymh3v" path="res://Scenes/Menus/menu_panorama_material.tres" id="2_k7ri6"]
 [ext_resource type="Texture2D" uid="uid://bir10mlfjqj3r" path="res://Assets/Textures/Panoramas/panorama_01.jpg" id="3_y1x3p"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_q7v15")
 script = ExtResource("1_hyfy2")
 main_menu_scene = "res://Scenes/Menus/main_menu.tscn"
 
@@ -130,19 +132,57 @@ uri = "https://kenney.nl/assets/particle-pack"
 
 [node name="Category5" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "All Else"
+text = "Level PBR Materials"
 
 [node name="VSeparator14" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
 [node name="Name5" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "QueenOfSquiggles"
+text = "PolyHaven"
 
 [node name="VSeparator15" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
 [node name="LinkButton5" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Link"
+uri = "https://polyhaven.com/"
+
+[node name="Category7" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Generator SFX (Modified)"
+
+[node name="VSeparator18" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Name7" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Astounded"
+
+[node name="VSeparator19" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="LinkButton7" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Link"
+uri = "https://freesound.org/people/Astounded/sounds/478118/"
+
+[node name="Category6" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "All Else"
+
+[node name="VSeparator16" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Name6" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "QueenOfSquiggles"
+
+[node name="VSeparator17" type="VSeparator" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="LinkButton6" type="LinkButton" parent="CreditsPanel/PanelContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Link"
 

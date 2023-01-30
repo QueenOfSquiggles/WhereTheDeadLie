@@ -23,6 +23,8 @@ public class EventBus
 	public event Action OnPlayerDie;
 	public event Action OnPlayerWin;
 
+	public event Action OnGameStart;
+
 	public void TriggerSetPlayerCanMove(bool can_move)
 	{
 		SetPlayerCanMove?.Invoke(can_move);
@@ -34,5 +36,10 @@ public class EventBus
 	public void TriggerOnPlayerWin()
 	{
 		OnPlayerWin?.Invoke();
+	}
+
+	public void TriggerOnGameStart()
+	{
+		OnGameStart?.Invoke();
 	}
 }

@@ -97,6 +97,9 @@ func _http_request_data(result: int, response_code: int, headers: PackedStringAr
 func _load_from_data(data : Dictionary) -> void:
 	link = _get_safe(data, "link", "https://youtu.be/2DFmUk1-Q7k") # we have fun here :)
 	button.tooltip_text = link
+	if (link == "null"):
+		queue_free()
+		
 	var img := _get_safe(data, "img", "null") as String
 
 	if img != "null":

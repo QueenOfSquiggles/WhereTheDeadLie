@@ -200,4 +200,34 @@ public partial class GameDataManager : Node
 		AudioServer.SetBusVolumeDb(4, game_data.VolumeDrones);
 	}
 
+#if DEBUG
+	// Should only be available in Debug builds (in editor and exports with debug enabled). Not accessible in release
+    public override void _Input(InputEvent e)
+    {
+		if (e is InputEventKey key_event && e.IsPressed())
+		{
+			var text = key_event.AsText();
+			if (text.StartsWith("Kp"))
+			{
+				var numpad = text.Substr(3, 3);
+				switch (numpad)
+				{
+					case "0":
+						GamePhase = 0;
+						break;
+					case "1":
+						GamePhase = 1;
+						break;
+					case "2":
+						GamePhase = 2;
+						break;
+					case "3":
+						GamePhase = 3;
+						break;
+				}
+			}
+		}
+		
+    }
+#endif
 }

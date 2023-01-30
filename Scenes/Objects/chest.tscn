@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bylpnmvctwokv"]
+[gd_scene load_steps=12 format=3 uid="uid://bylpnmvctwokv"]
 
-[ext_resource type="PackedScene" uid="uid://bidg8le1t0qn" path="res://Assets/Models/DungeonPack/chestTop_rare.gltf.glb" id="1_60goc"]
+[ext_resource type="PackedScene" uid="uid://bu04shd08nhtf" path="res://Assets/Models/DungeonPack/chestTop_rare.gltf.glb" id="1_60goc"]
 [ext_resource type="Script" path="res://Scenes/Objects/Chest.cs" id="1_b3xxd"]
 [ext_resource type="PackedScene" uid="uid://cj5c424ydbkpn" path="res://Assets/Models/DungeonPack/chest_rare.gltf.glb" id="2_ew8kw"]
 [ext_resource type="PackedScene" uid="uid://dlwu7nfjof0g8" path="res://Modules/interaction/interaction_trigger.tscn" id="3_8p2fi"]
 [ext_resource type="PackedScene" uid="uid://bh1tlxw3tbsd0" path="res://Scenes/Objects/key.tscn" id="4_bq2mf"]
+[ext_resource type="AudioStream" uid="uid://cyu2urkco1410" path="res://Assets/SFX/Chest/chest_squeak.ogg" id="6_0sleg"]
 [ext_resource type="PackedScene" uid="uid://dlt51l5s0fxkp" path="res://Scenes/Objects/util/player_controls_setter.tscn" id="6_a4nxc"]
 
 [sub_resource type="Animation" id="Animation_r382h"]
@@ -76,6 +77,20 @@ tracks/4/keys = {
 "args": [true],
 "method": &"SetPlayerCanMove"
 }]
+}
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer3D")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_0sleg")
+}],
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="Animation" id="Animation_0rdvm"]
@@ -216,6 +231,12 @@ libraries = {
 [node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
 
 [node name="PlayerControlsSetter" parent="." instance=ExtResource("6_a4nxc")]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.331759, 0)
+stream = ExtResource("6_0sleg")
+volume_db = 2.0
+bus = &"SoundEffects"
 
 [connection signal="Interaction" from="InteractionTrigger" to="." method="OnInteract"]
 
