@@ -34,7 +34,7 @@ public partial class GameplayTab : PanelContainer
         available_presets.Add(KeyValuePair.Create("Default", GamePreset.DEFAULT));
         available_presets.Add(KeyValuePair.Create("Max Utility", GamePreset.MAX_UTILIZATION));
         available_presets.Add(KeyValuePair.Create("RNG Hell", GamePreset.RNG_HELL));
-        available_presets.Add(KeyValuePair.Create("Max Difficulty", GamePreset.MAX_DIFFICULTY));
+        available_presets.Add(KeyValuePair.Create("Queen's Challenge (Incredibly Difficult)", GamePreset.MAX_DIFFICULTY));
         available_presets.Add(KeyValuePair.Create("Incredibly Easy", GamePreset.INCREDIBLY_EASY));
         available_presets.Add(KeyValuePair.Create("Frustration Station (tm)", GamePreset.FRUSTRATION_STATION));
 

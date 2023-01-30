@@ -57,5 +57,5 @@ layout_mode = 2
 tooltip_text = "Warning!: You will lose all progress"
 text = "Return to Main Menu"
 
-[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/BtnContinue" to="." method="_on_btn_continue_pressed"]
-[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/BtnMainMenu" to="." method="_on_btn_main_menu_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/BtnContinue" to="." method="ReturnToPlay"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/BtnMainMenu" to="." method="ExitToMainMenu"]

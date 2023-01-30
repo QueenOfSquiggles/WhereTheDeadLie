@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://tkempq68xwno"]
+
+[ext_resource type="Script" path="res://Scenes/UI/SubtitleEmitter.cs" id="1_6v6uy"]
+
+[node name="SubtitleEmitter" type="Node"]
+script = ExtResource("1_6v6uy")

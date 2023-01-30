@@ -1,3 +1,11 @@
+res://
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/pirate/windows
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/pirate/mac
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/pirate/linux
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/standard/windows
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/standard/mac
+/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/standard/linux
+res://Scenes/UI
 res://Scenes/Menus
 res://Scenes/Levels
 /home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/standard
@@ -12,11 +20,3 @@ res://Assets/SFX/Footsteps/
 /home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/export/pirate
 /home/nessa/Documents/blender/Games/DumbJumpscare/GodotGLTFExports
 res://Modules/data
-res://Scenes/Objects/util
-res://Assets/Models/LevelMesh/Import
-res://Scenes/Monsters/SmethStateMaching
-res://Scenes/Monsters
-res://Scenes/Audio
-res://Scenes/Monsters/VisibilityManagement
-res://Modules/state_machine
-res://Scenes/Objects

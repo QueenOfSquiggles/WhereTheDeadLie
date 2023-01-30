@@ -15,15 +15,15 @@ public partial class TheSmeth : CharacterBody3D
 		state_machine = this.GetNodeCustom<StateMachine>(path_state_machine);
 		EventBus.Instance.OnGameStart += StartGame;
 		// effectively pauses The Smeth
-		SetPhysicsProcess(false);
-		SetProcess(false);
+		state_machine.SetPhysicsProcess(false);
+		state_machine.SetProcess(false);
     }
 
 	private void StartGame()
 	{
 		// Player is out of the gate and ready to play now, get moving and hunting.
-		SetPhysicsProcess(true);
-		SetProcess(true);
+		state_machine.SetPhysicsProcess(true);
+		state_machine.SetProcess(true);
 	}
 
 

@@ -69,6 +69,7 @@ draw_pass_1 = SubResource("QuadMesh_ghy8p")
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.135988, 0)
 light_color = Color(0.905882, 0.521569, 0.160784, 1)
+light_bake_mode = 1
 shadow_enabled = true
 omni_range = 20.0
 omni_attenuation = 2.0

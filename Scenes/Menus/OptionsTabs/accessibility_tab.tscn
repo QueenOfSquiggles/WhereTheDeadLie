@@ -1,58 +1,68 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkpkes5d42sfb"]
+[gd_scene load_steps=3 format=3 uid="uid://dkpkes5d42sfb"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/OptionsTabs/accessibility_tab.cs" id="1_fyoyl"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0mgl"]
+bg_color = Color(0.25098, 0.188235, 0.313726, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
 [node name="Accessibility" type="PanelContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+custom_minimum_size = Vector2(720, 320)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -364.0
+offset_right = 364.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fyoyl")
-path_checkbox_no_flashing_lights = NodePath("PanelContainer2/ScrollContainer/VBoxContainer/CheckBox_NoFlashingLights")
+path_checkbox_no_flashing_lights = NodePath("ScrollContainer/VBoxContainer/CheckBox_NoFlashingLights")
 
-[node name="PanelContainer2" type="PanelContainer" parent="."]
-layout_mode = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer2"]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_q0mgl")
 follow_focus = true
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2/ScrollContainer"]
-custom_minimum_size = Vector2(720, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(720, 320)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer2/ScrollContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 text = "Accessibility Options"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer2/ScrollContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="CheckBox_NoFlashingLights" type="CheckBox" parent="PanelContainer2/ScrollContainer/VBoxContainer"]
+[node name="CheckBox_NoFlashingLights" type="CheckBox" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 text = "Less Flashing Lights"
 
-[node name="Label2" type="Label" parent="PanelContainer2/ScrollContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 text = "With \"Less Flashing Lights\" enabled, the camera will emit a constant light instead of needing to be flashed repeatedly to see. This does affect the difficulty of the game and alters the intended play experience. However if you are prone to seziures or simply would like to be kind to your eyes, enable this option
 "
 autowrap_mode = 3
 
-[node name="HSeparator2" type="HSeparator" parent="PanelContainer2/ScrollContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label3" type="Label" parent="PanelContainer2/ScrollContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 text = "If you have a request for an accessibility option to be implemented, let me know! I can do my best to add it in!"
 autowrap_mode = 3
 
-[node name="LinkButton" type="LinkButton" parent="PanelContainer2/ScrollContainer/VBoxContainer"]
+[node name="LinkButton" type="LinkButton" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 text = "[Contact Me (this is a button)]"
 uri = "https://tech.lgbt/@queenofsquiggles"
 
-[connection signal="toggled" from="PanelContainer2/ScrollContainer/VBoxContainer/CheckBox_NoFlashingLights" to="." method="OnNoFlashingLightsChanged"]
+[connection signal="toggled" from="ScrollContainer/VBoxContainer/CheckBox_NoFlashingLights" to="." method="OnNoFlashingLightsChanged"]

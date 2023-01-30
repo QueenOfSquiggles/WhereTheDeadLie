@@ -13,17 +13,24 @@ sky_material = SubResource("ProceduralSkyMaterial_qdifa")
 
 [sub_resource type="Environment" id="Environment_2gh7u"]
 background_mode = 1
+background_energy_multiplier = 0.0
 sky = SubResource("Sky_k1asx")
 ambient_light_source = 1
 ambient_light_color = Color(0.407843, 0.407843, 0.407843, 1)
+ambient_light_energy = 0.0
 tonemap_mode = 3
+tonemap_exposure = 1.5
 ssao_enabled = true
-ssil_enabled = true
 sdfgi_enabled = true
 sdfgi_use_occlusion = true
+sdfgi_read_sky_light = false
 glow_enabled = true
 glow_blend_mode = 1
 fog_light_color = Color(0, 0, 0, 1)
+volumetric_fog_density = 0.0947
+volumetric_fog_albedo = Color(0.752941, 0.356863, 0, 1)
+adjustment_brightness = 1.53
+adjustment_saturation = 0.76
 
 [node name="MainLevel" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)

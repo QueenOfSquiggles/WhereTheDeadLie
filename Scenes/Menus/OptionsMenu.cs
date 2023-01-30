@@ -10,7 +10,7 @@ public partial class OptionsMenu : Control
     {
         Accessibility.Serialize();
         GameDataManager.instance.Serialize();
-        GetTree().ChangeSceneToFile(main_menu_path);
+        SceneManager.LoadSceneFile(main_menu_path);
     }
 
 }

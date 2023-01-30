@@ -1,7 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://dc0hoftar6x1o"]
+[gd_scene load_steps=7 format=3 uid="uid://dc0hoftar6x1o"]
 
+[ext_resource type="Theme" uid="uid://c405edsef4bx1" path="res://Assets/UITheme/main_theme.tres" id="1_d4y7v"]
 [ext_resource type="Script" path="res://Scenes/UI/main_hud.cs" id="1_r61b0"]
 [ext_resource type="PackedScene" uid="uid://c7y6a6er2ppf2" path="res://Scenes/UI/PuzzlePanel/puzzle_panel.tscn" id="2_eo8e7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vrm28"]
+font_size = 32
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k34o8"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 0.427451)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_ctbd8"]
+font_size = 32
+outline_size = 10
+outline_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
 
 [node name="MainHUD" type="Control"]
 layout_mode = 3
@@ -11,25 +33,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme = ExtResource("1_d4y7v")
 script = ExtResource("1_r61b0")
 interaction_prompt_path = NodePath("InteractionPrompt")
 puzzle_panel_path = NodePath("PuzzlePanel")
+path_subtitles = NodePath("PanelContainer/Subtitles")
+path_subtitles_panel = NodePath("PanelContainer")
 
 [node name="InteractionPrompt" type="Label" parent="."]
-visible = false
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -74.0
-offset_top = -26.0
-offset_right = 74.0
+anchor_bottom = 0.5
+offset_left = -173.0
+offset_top = 50.0
+offset_right = 173.0
+offset_bottom = 108.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_font_sizes/font_size = 39
 text = "Press 'E' to interact"
+label_settings = SubResource("LabelSettings_vrm28")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PuzzlePanel" parent="." instance=ExtResource("2_eo8e7")]
 visible = false
@@ -43,5 +71,29 @@ offset_left = -465.5
 offset_top = -295.0
 offset_right = 465.5
 offset_bottom = 295.0
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -88.0
+offset_right = 360.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k34o8")
+
+[node name="Subtitles" type="Label" parent="PanelContainer"]
+custom_minimum_size = Vector2(720, 32)
+layout_mode = 2
+text = "Lorem Ipsum Dolor Sit Amet"
+label_settings = SubResource("LabelSettings_ctbd8")
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
 
 [connection signal="PanelCloseRequest" from="PuzzlePanel" to="." method="HidePuzzlePanel"]

@@ -21,7 +21,7 @@ config/name="Where The Dead Lie"
 config/description="A horror game about an inmate forced into the catacombs as punishment for their crimes. Something creeps around the dead halls, and you can only get out if you can do a few tasks first.s"
 run/main_scene="res://Scenes/Menus/main_menu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://program_icon.png"
 
 [autoload]
 

@@ -22,8 +22,9 @@ public class EventBus
 	public event Action<bool> SetPlayerCanMove;
 	public event Action OnPlayerDie;
 	public event Action OnPlayerWin;
-
 	public event Action OnGameStart;
+
+	public event Action<string> RequestSubtitle;
 
 	public void TriggerSetPlayerCanMove(bool can_move)
 	{
@@ -41,5 +42,10 @@ public class EventBus
 	public void TriggerOnGameStart()
 	{
 		OnGameStart?.Invoke();
+	}
+
+	public void TriggerRequestSubtitle(string sub_text)
+	{
+		RequestSubtitle?.Invoke(sub_text);
 	}
 }

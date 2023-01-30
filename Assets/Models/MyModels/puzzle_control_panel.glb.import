@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dhr3yn5slrnh"
+uid="uid://b7sokml22hh2k"
 path="res://.godot/imported/puzzle_control_panel.glb-2f66baa27cbb97472f269b760ab0a204.scn"
 
 [deps]
@@ -30,7 +30,7 @@ import_script/path=""
 _subresources={
 "materials": {
 "BaseMetal": {
-"use_external/enabled": true,
+"use_external/enabled": false,
 "use_external/path": "res://Assets/Textures/PuzzleControlPanel/PuzzleControlPanelMaterial.tres"
 }
 },
@@ -40,3 +40,4 @@ _subresources={
 }
 }
 }
+meshes/handle_gltf_embedded_images=1

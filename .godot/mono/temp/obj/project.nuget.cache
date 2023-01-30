@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "euSG1tfNz60IouEIsJxGl5M1YPBkng0AKt9tjmm0TDmghzFMpZos+r9Rrkji89jqUgVq4FTkTFA372wVA6zPjA==",
+  "dgSpecHash": "VnAy2XG2F0RXI61Exwb/ztKWoInrONRKncxpRTlzcSQMu2eQtevnWbiC49Uoc2E9nobhuDPtL1GSa6RVJqyTng==",
   "success": true,
   "projectFilePath": "/home/nessa/Documents/programming/godot/projects/repos/DumbJumpscareGame/DumbJumpscareGame.csproj",
   "expectedPackageFiles": [
     "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godot.sourcegenerators/4.0.0-beta.16/godot.sourcegenerators.4.0.0-beta.16.nupkg.sha512",
     "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharp/4.0.0-beta.16/godotsharp.4.0.0-beta.16.nupkg.sha512",
-    "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharpeditor/4.0.0-beta.16/godotsharpeditor.4.0.0-beta.16.nupkg.sha512"
+    "/home/nessa/.nuget/packages/microsoft.netcore.app.runtime.win-x64/6.0.13/microsoft.netcore.app.runtime.win-x64.6.0.13.nupkg.sha512",
+    "/home/nessa/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/6.0.13/microsoft.aspnetcore.app.runtime.win-x64.6.0.13.nupkg.sha512"
   ],
   "logs": []
 }

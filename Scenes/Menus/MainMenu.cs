@@ -18,12 +18,11 @@ public partial class MainMenu : Control
         if (OS.HasFeature("pirate") || test_pirate)
         {
             pirate_popup.PopupCenteredRatio(0.8f);
-            OS.Alert("You are currently using the pirate edition of my game. Please donate if/when you are able", "Message from QueenOfSquiggles");
             OS.ShellOpen("https://ko-fi.com/queenofsquiggles");
+            OS.ShellOpen("https://queenofsquiggles.itch.io/where-the-dead-lie");
         }
         Input.MouseMode = Input.MouseModeEnum.Visible;
     }
-
     private void OnBtnPlay() => SceneManager.LoadScenePacked(play_scene);
 
     private void OnBtnOptions() => SceneManager.LoadScenePacked(options_scene);

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqen8ad8833i3"]
 
-[ext_resource type="Script" path="res://Scenes/Menus/credits_scene.gd" id="1_hyfy2"]
 [ext_resource type="Theme" uid="uid://c405edsef4bx1" path="res://Assets/UITheme/main_theme.tres" id="1_q7v15"]
+[ext_resource type="Script" path="res://Scenes/Menus/CreditsScene.cs" id="2_0eafv"]
 [ext_resource type="Material" uid="uid://b1ehu0o3ymh3v" path="res://Scenes/Menus/menu_panorama_material.tres" id="2_k7ri6"]
 [ext_resource type="Texture2D" uid="uid://bir10mlfjqj3r" path="res://Assets/Textures/Panoramas/panorama_01.jpg" id="3_y1x3p"]
 
@@ -13,8 +13,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_q7v15")
-script = ExtResource("1_hyfy2")
-main_menu_scene = "res://Scenes/Menus/main_menu.tscn"
+script = ExtResource("2_0eafv")
+main_menu_path = "res://Scenes/Menus/main_menu.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_repeat = 2
@@ -199,4 +199,4 @@ grow_vertical = 0
 layout_mode = 2
 text = "Return to Main Menu"
 
-[connection signal="pressed" from="ReturnMainMenuPanel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ReturnMainMenuPanel/Button" to="." method="OnMenuButtonPressed"]

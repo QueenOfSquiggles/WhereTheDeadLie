@@ -47,15 +47,24 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 tab_alignment = 1
 
-[node name="Gameplay" parent="MarginContainer/TabContainer" instance=ExtResource("1_agasg")]
+[node name="Gameplay" type="CenterContainer" parent="MarginContainer/TabContainer"]
 layout_mode = 2
 
-[node name="Audio" parent="MarginContainer/TabContainer" instance=ExtResource("2_x8b24")]
+[node name="Gameplay" parent="MarginContainer/TabContainer/Gameplay" instance=ExtResource("1_agasg")]
+layout_mode = 2
+
+[node name="Audio" type="CenterContainer" parent="MarginContainer/TabContainer"]
 visible = false
 layout_mode = 2
 
-[node name="Accessibility" parent="MarginContainer/TabContainer" instance=ExtResource("3_si5nr")]
+[node name="Audio" parent="MarginContainer/TabContainer/Audio" instance=ExtResource("2_x8b24")]
+layout_mode = 2
+
+[node name="Accessibility" type="CenterContainer" parent="MarginContainer/TabContainer"]
 visible = false
+layout_mode = 2
+
+[node name="Accessibility" parent="MarginContainer/TabContainer/Accessibility" instance=ExtResource("3_si5nr")]
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
