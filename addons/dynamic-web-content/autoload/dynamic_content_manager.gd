@@ -13,9 +13,11 @@ const STG_USE_CACHE_NAME = "DynamicContentLoading/cache/use_cache"
 const STG_AUTO_REFRESH = "DynamicContentLoading/cache/content_auto_refresh"
 
 func _ready() -> void:
-	DirAccess.make_dir_recursive_absolute(CACHE_PATH)
+	var glob_path := ProjectSettings.globalize_path(CACHE_PATH)
+	DirAccess.make_dir_recursive_absolute(glob_path)
 	auto_refresh_on_ready = ProjectSettings.get_setting(STG_AUTO_REFRESH, false) as bool
 	cache_enabled = ProjectSettings.get_setting(STG_USE_CACHE_NAME, false) as bool
+	print("Dynamic content manager loaded")
 
 # Creates an event that will cause all currently active dynamic content to refresh their information and 
 func refresh_dynamic_content() -> void:

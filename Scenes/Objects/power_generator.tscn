@@ -253,6 +253,7 @@ tracks/3/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/3/use_blend = true
 
 [sub_resource type="Animation" id="Animation_csttg"]
 resource_name = "ActivateViable"
@@ -326,6 +327,7 @@ tracks/4/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/4/use_blend = true
 
 [sub_resource type="Animation" id="Animation_e303r"]
 resource_name = "ActiveLoop"
@@ -346,6 +348,7 @@ tracks/0/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/0/use_blend = true
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true

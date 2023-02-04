@@ -26,7 +26,9 @@ public partial class Accessibility : Node
             return;
         }
         instance = this;
+        GD.Print("Loading -> Accessibility");
         Deserialize();
+        GD.Print("Loading -> Accessibility: Completed");
     }
 
     public override void _ExitTree()

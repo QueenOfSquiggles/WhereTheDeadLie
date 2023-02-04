@@ -41,6 +41,7 @@ tracks/1/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/1/use_blend = true
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
@@ -79,6 +80,7 @@ tracks/0/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/0/use_blend = true
 tracks/1/type = "method"
 tracks/1/imported = false
 tracks/1/enabled = true
@@ -125,6 +127,7 @@ tracks/1/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_lyjrs"]
 resource_name = "GateShut"
@@ -155,6 +158,7 @@ tracks/1/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/1/use_blend = true
 tracks/2/type = "audio"
 tracks/2/imported = false
 tracks/2/enabled = true
@@ -169,6 +173,7 @@ tracks/2/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/2/use_blend = true
 
 [sub_resource type="Animation" id="Animation_7jymf"]
 resource_name = "GeneratorPrompt"
@@ -187,6 +192,7 @@ tracks/0/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/0/use_blend = true
 tracks/1/type = "method"
 tracks/1/imported = false
 tracks/1/enabled = true
@@ -240,6 +246,7 @@ tracks/1/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/1/use_blend = true
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
@@ -305,6 +312,7 @@ tracks/0/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/0/use_blend = true
 tracks/1/type = "method"
 tracks/1/imported = false
 tracks/1/enabled = true
@@ -346,6 +354,7 @@ tracks/0/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/0/use_blend = true
 tracks/1/type = "method"
 tracks/1/imported = false
 tracks/1/enabled = true

@@ -14,6 +14,7 @@ public partial class MainMenu : Control
 
     public override void _Ready()
     {
+        GD.Print("Loaded main menu scene");
         pirate_popup = this.GetNodeCustom<AcceptDialog>(path_pirate_popup);
         if (OS.HasFeature("pirate") || test_pirate)
         {

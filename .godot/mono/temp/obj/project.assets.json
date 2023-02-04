@@ -2,13 +2,13 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Godot.SourceGenerators/4.0.0-beta.16": {
+      "Godot.SourceGenerators/4.0.0-beta.17": {
         "type": "package",
         "build": {
           "build/Godot.SourceGenerators.props": {}
         }
       },
-      "GodotSharp/4.0.0-beta.16": {
+      "GodotSharp/4.0.0-beta.17": {
         "type": "package",
         "compile": {
           "lib/net6.0/GodotSharp.dll": {}
@@ -19,13 +19,13 @@
       }
     },
     "net6.0/win-x64": {
-      "Godot.SourceGenerators/4.0.0-beta.16": {
+      "Godot.SourceGenerators/4.0.0-beta.17": {
         "type": "package",
         "build": {
           "build/Godot.SourceGenerators.props": {}
         }
       },
-      "GodotSharp/4.0.0-beta.16": {
+      "GodotSharp/4.0.0-beta.17": {
         "type": "package",
         "compile": {
           "lib/net6.0/GodotSharp.dll": {}
@@ -37,25 +37,27 @@
     }
   },
   "libraries": {
-    "Godot.SourceGenerators/4.0.0-beta.16": {
-      "sha512": "D+SD1MRFoq8ZPyKZHRQ5kw5BXDsdJq4sdMpwOmtV0WIqekvDaW/VxnS/wR98ylFHW3Md7IGVqbRWziF4zI5lKg==",
+    "Godot.SourceGenerators/4.0.0-beta.17": {
+      "sha512": "T49IEOrqBp2x5XEZqAC1t9yAJ9kJKGerNrVkzTkyXEz2CYuE+QdaxIsdujkIIvWovRfFWiCSf7BcdNXPpYOP0w==",
       "type": "package",
-      "path": "godot.sourcegenerators/4.0.0-beta.16",
+      "path": "godot.sourcegenerators/4.0.0-beta.17",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "analyzers/dotnet/cs/Godot.SourceGenerators.dll",
         "build/Godot.SourceGenerators.props",
-        "godot.sourcegenerators.4.0.0-beta.16.nupkg.sha512",
+        "godot.sourcegenerators.4.0.0-beta.17.nupkg.sha512",
         "godot.sourcegenerators.nuspec"
       ]
     },
-    "GodotSharp/4.0.0-beta.16": {
-      "sha512": "Tt1Fq/xXaeSqCJvHfAgwax+TNLXvbNzAf/upzXtqaLAw06kIn/2p1rX1kp56g5diS66H/YrHBL//cDShakBydw==",
+    "GodotSharp/4.0.0-beta.17": {
+      "sha512": "ypBbHFcvRgDolLW6JkBu9NvirvxFCrg1kkgbadDstWwomtH5JBwsUSTW9Ge/al21u5bNQfwjXOhnCa66Q21GfA==",
       "type": "package",
-      "path": "godotsharp/4.0.0-beta.16",
+      "path": "godotsharp/4.0.0-beta.17",
       "files": [
         ".nupkg.metadata",
-        "godotsharp.4.0.0-beta.16.nupkg.sha512",
+        ".signature.p7s",
+        "godotsharp.4.0.0-beta.17.nupkg.sha512",
         "godotsharp.nuspec",
         "lib/net6.0/GodotSharp.dll",
         "lib/net6.0/GodotSharp.xml"
@@ -64,8 +66,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Godot.SourceGenerators >= 4.0.0-beta.16",
-      "GodotSharp >= 4.0.0-beta.16"
+      "Godot.SourceGenerators >= 4.0.0-beta.17",
+      "GodotSharp >= 4.0.0-beta.17"
     ]
   },
   "packageFolders": {
@@ -112,11 +114,11 @@
         "dependencies": {
           "Godot.SourceGenerators": {
             "target": "Package",
-            "version": "[4.0.0-beta.16, )"
+            "version": "[4.0.0-beta.17, )"
           },
           "GodotSharp": {
             "target": "Package",
-            "version": "[4.0.0-beta.16, )"
+            "version": "[4.0.0-beta.17, )"
           }
         },
         "imports": [

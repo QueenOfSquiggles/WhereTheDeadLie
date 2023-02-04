@@ -14,6 +14,6 @@
     <SourceRoot Include="/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godot.sourcegenerators/4.0.0-beta.16/build/Godot.SourceGenerators.props" Condition="Exists('/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godot.sourcegenerators/4.0.0-beta.16/build/Godot.SourceGenerators.props')" />
+    <Import Project="$(NuGetPackageRoot)godot.sourcegenerators/4.0.0-beta.17/build/Godot.SourceGenerators.props" Condition="Exists('$(NuGetPackageRoot)godot.sourcegenerators/4.0.0-beta.17/build/Godot.SourceGenerators.props')" />
   </ImportGroup>
 </Project>

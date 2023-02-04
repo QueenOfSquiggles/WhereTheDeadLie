@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://kdrivdayaapr" path="res://Scenes/Levels/main_level.tscn" id="2_d8ep8"]
 [ext_resource type="Script" path="res://Scenes/Menus/MainMenu.cs" id="2_pr43d"]
 [ext_resource type="PackedScene" uid="uid://dj3pujvh7phfp" path="res://Scenes/Menus/options_menu.tscn" id="2_ujr5m"]
-[ext_resource type="Texture2D" uid="uid://decttsnv8vjfl" path="res://Assets/Textures/Panoramas/panorama_02.png" id="5_1bbjn"]
 [ext_resource type="Material" uid="uid://b1ehu0o3ymh3v" path="res://Scenes/Menus/menu_panorama_material.tres" id="5_82qgo"]
+[ext_resource type="Texture2D" uid="uid://bu3wrlracn1y8" path="res://Assets/Textures/Panoramas/panorama_02.jpg" id="7_aanrg"]
 [ext_resource type="Texture2D" uid="uid://d1bxy4lr2k0sw" path="res://Assets/Textures/Menu/title_graphic.png" id="8_wbwmi"]
 
 [node name="MainMenu" type="Control"]
@@ -33,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_1bbjn")
+texture = ExtResource("7_aanrg")
 expand_mode = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="."]

@@ -18,6 +18,7 @@ public partial class SceneManager : Node
             return;
         }
         _instance = this;
+        GD.Print("Testing -> SceneManager has been loaded");
         anim = this.GetNodeCustom<AnimationPlayer>(path_anim_player);
     }
 

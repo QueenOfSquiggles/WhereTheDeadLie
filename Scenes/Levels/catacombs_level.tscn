@@ -75,7 +75,7 @@ path_smeth = NodePath("TheSmeth")
 [node name="VoxelGI" type="VoxelGI" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6591, 3.6791, -6.39092)
 subdiv = 0
-extents = Vector3(36.377, 5.18968, 30.3768)
+size = Vector3(72.754, 10.3794, 60.7536)
 data = SubResource("VoxelGIData_qwvoo")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
@@ -159,7 +159,7 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5.6700
 
 [node name="Blood" type="Decal" parent="Decals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82025, 0.10495, -0.328835)
-extents = Vector3(1, 0.127833, 1)
+size = Vector3(2, 0.255666, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -167,7 +167,7 @@ cull_mask = 1048573
 
 [node name="No1Star" type="Decal" parent="Decals"]
 transform = Transform3D(3.11638e-15, 0, 2.33916, 2.33916, 6.97122e-08, -3.11638e-15, -6.97122e-08, 2.33916, 9.28753e-23, 4.19695, 3.32413, -23.0154)
-extents = Vector3(1, 0.0479786, 1)
+size = Vector3(2, 0.0959572, 2)
 texture_albedo = ExtResource("23_firah")
 texture_normal = ExtResource("24_2ukge")
 texture_orm = ExtResource("25_a7kkr")
@@ -175,7 +175,7 @@ cull_mask = 1048573
 
 [node name="Penis" type="Decal" parent="Decals"]
 transform = Transform3D(6.97122e-08, -2.33916, 3.06744e-07, -0.605419, -3.14335e-07, -2.25945, 2.25945, -1.20543e-08, -0.605419, 25.1194, 3.32413, -10.2603)
-extents = Vector3(1, 0.108471, 1)
+size = Vector3(2, 0.216942, 2)
 texture_albedo = ExtResource("23_vo3p0")
 texture_normal = ExtResource("24_mlrwp")
 texture_orm = ExtResource("25_aprha")
@@ -183,7 +183,7 @@ cull_mask = 1048573
 
 [node name="ACAB" type="Decal" parent="Decals"]
 transform = Transform3D(6.97122e-08, -2.33916, -1.02248e-07, 1.65404, 1.21594e-07, -1.65404, 1.65404, -2.30062e-08, 1.65404, 45.191, 3.32413, -0.121053)
-extents = Vector3(1, 0.0718973, 1)
+size = Vector3(2, 0.143795, 2)
 texture_albedo = ExtResource("29_4ws67")
 texture_normal = ExtResource("30_ku2x2")
 texture_orm = ExtResource("31_7a7ft")
@@ -191,7 +191,7 @@ cull_mask = 1048573
 
 [node name="NiCircle" type="Decal" parent="Decals"]
 transform = Transform3D(-3.21773, 0, -3.21773, 0, 4.09738, 0, 3.21773, 0, -3.21773, 34.4175, 0.07033, 16.8925)
-extents = Vector3(1, 0.049214, 1)
+size = Vector3(2, 0.098428, 2)
 texture_albedo = ExtResource("32_8gthi")
 texture_normal = ExtResource("33_keuy1")
 texture_orm = ExtResource("34_l3fsr")
@@ -199,7 +199,7 @@ cull_mask = 1048573
 
 [node name="Tin" type="Decal" parent="Decals"]
 transform = Transform3D(0.759124, 0, 0, 0, -3.31824e-08, -0.759124, 0, 0.759124, -3.31824e-08, 37.2881, 1.6983, 3.52436)
-extents = Vector3(1, 0.246277, 1)
+size = Vector3(2, 0.492554, 2)
 texture_albedo = ExtResource("32_x71mg")
 texture_normal = ExtResource("33_y1uun")
 texture_orm = ExtResource("34_s6a4p")
@@ -207,7 +207,7 @@ cull_mask = 1048573
 
 [node name="Blood2" type="Decal" parent="Decals"]
 transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -13.1416, 0.0830141, -10.3853)
-extents = Vector3(1, 0.651863, 1)
+size = Vector3(2, 1.30373, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -215,7 +215,7 @@ cull_mask = 1048573
 
 [node name="Blood3" type="Decal" parent="Decals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00189018, 0.10495, -11.5425)
-extents = Vector3(1, 0.127833, 1)
+size = Vector3(2, 0.255666, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -223,7 +223,7 @@ cull_mask = 1048573
 
 [node name="Blood4" type="Decal" parent="Decals"]
 transform = Transform3D(0.847483, 0.375348, 0.375348, 0, 0.707107, -0.707107, -0.530822, 0.599261, 0.599261, 3.50615, 0.10495, -16.9558)
-extents = Vector3(1, 0.367892, 1)
+size = Vector3(2, 0.735784, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -231,7 +231,7 @@ cull_mask = 1048573
 
 [node name="Blood5" type="Decal" parent="Decals"]
 transform = Transform3D(0.794902, 0.56847, 0.212067, -0.606738, 0.744766, 0.277835, -3.69465e-09, -0.349521, 0.936929, -1.26382, -0.0883205, -23.8074)
-extents = Vector3(1, 1.21428, 1)
+size = Vector3(2, 2.42856, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -239,7 +239,7 @@ cull_mask = 1048573
 
 [node name="Blood6" type="Decal" parent="Decals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0916, -1.27636, -28.0047)
-extents = Vector3(1, 0.127833, 1)
+size = Vector3(2, 0.255666, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -247,7 +247,7 @@ cull_mask = 1048573
 
 [node name="Blood7" type="Decal" parent="Decals"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 19.1877, -0.458933, -23.0189)
-extents = Vector3(1, 0.345968, 1)
+size = Vector3(2, 0.691936, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -255,7 +255,7 @@ cull_mask = 1048573
 
 [node name="Blood8" type="Decal" parent="Decals"]
 transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 20.9876, 0.453141, -15.2219)
-extents = Vector3(1, 1.16011, 1)
+size = Vector3(2, 2.32022, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -263,7 +263,7 @@ cull_mask = 1048573
 
 [node name="Blood9" type="Decal" parent="Decals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9548, -0.39153, -4.53395)
-extents = Vector3(1, 0.127833, 1)
+size = Vector3(2, 0.255666, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -271,7 +271,7 @@ cull_mask = 1048573
 
 [node name="Blood10" type="Decal" parent="Decals"]
 transform = Transform3D(0.873585, 0, -0.486671, 0, 1, 0, 0.486671, 0, 0.873585, 8.54421, -0.26717, -8.73906)
-extents = Vector3(1, 0.306209, 1)
+size = Vector3(2, 0.612418, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -279,7 +279,7 @@ cull_mask = 1048573
 
 [node name="Blood11" type="Decal" parent="Decals"]
 transform = Transform3D(0.619204, 0, 0.78523, 0, 1, 0, -0.78523, 0, 0.619204, 10.2518, -0.490864, -6.19847)
-extents = Vector3(1, 0.127833, 1)
+size = Vector3(2, 0.255666, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -287,7 +287,7 @@ cull_mask = 1048573
 
 [node name="Blood12" type="Decal" parent="Decals"]
 transform = Transform3D(-0.288163, 0, 0.957581, 0, 1, 0, -0.957581, 0, -0.288163, 10.2518, 0.0256164, 1.80153)
-extents = Vector3(1, 0.312506, 1)
+size = Vector3(2, 0.625012, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -295,7 +295,7 @@ cull_mask = 1048573
 
 [node name="Blood13" type="Decal" parent="Decals"]
 transform = Transform3D(0.901953, 0, 0.431834, 0, 1, 0, -0.431834, 0, 0.901953, 23.2176, 0.045825, 2.94042)
-extents = Vector3(1, 0.470733, 1)
+size = Vector3(2, 0.941466, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -303,7 +303,7 @@ cull_mask = 1048573
 
 [node name="Blood14" type="Decal" parent="Decals"]
 transform = Transform3D(0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0, 1, 28.7832, 0.10495, 0.0572703)
-extents = Vector3(1, 1.07622, 1)
+size = Vector3(2, 2.15244, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -311,7 +311,7 @@ cull_mask = 1048573
 
 [node name="Blood15" type="Decal" parent="Decals"]
 transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, 26.0517, 0.10495, -1.17709)
-extents = Vector3(1, 1.91316, 1)
+size = Vector3(2, 3.82632, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -319,7 +319,7 @@ cull_mask = 1048573
 
 [node name="Blood16" type="Decal" parent="Decals"]
 transform = Transform3D(0.824393, 0, -0.566018, 0, 1, 0, 0.566018, 0, 0.824393, 31.8095, 0.0476394, 10.0768)
-extents = Vector3(1, 0.127833, 1)
+size = Vector3(2, 0.255666, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -327,7 +327,7 @@ cull_mask = 1048573
 
 [node name="Blood17" type="Decal" parent="Decals"]
 transform = Transform3D(0.121973, 0, 0.992533, 0.992533, -4.37114e-08, -0.121973, 4.3385e-08, 1, -5.33162e-09, 38.8095, 1.29165, 8.88499)
-extents = Vector3(1, 0.127833, 1)
+size = Vector3(2, 0.255666, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -335,7 +335,7 @@ cull_mask = 1048573
 
 [node name="Blood18" type="Decal" parent="Decals"]
 transform = Transform3D(0.883994, 0, 0.467498, 0, 1, 0, -0.467498, 0, 0.883994, 50.7667, 0.10495, 10.59)
-extents = Vector3(1, 0.127833, 1)
+size = Vector3(2, 0.255666, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -343,7 +343,7 @@ cull_mask = 1048573
 
 [node name="Blood19" type="Decal" parent="Decals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.4697, 0.10495, -1.65355)
-extents = Vector3(0.803697, 0.127833, 1)
+size = Vector3(1.60739, 0.255666, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -351,7 +351,7 @@ cull_mask = 1048573
 
 [node name="Blood20" type="Decal" parent="Decals"]
 transform = Transform3D(1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 47.83, 0.10495, -6.56806)
-extents = Vector3(1, 2.38762, 1.43945)
+size = Vector3(2, 4.77524, 2.8789)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -359,7 +359,7 @@ cull_mask = 1048573
 
 [node name="Blood21" type="Decal" parent="Decals"]
 transform = Transform3D(0.600364, 0, 0.799727, 0, 1, 0, -0.799727, 0, 0.600364, 39.4375, 0.10495, -5.24945)
-extents = Vector3(1, 0.302522, 1.7029)
+size = Vector3(2, 0.605044, 3.4058)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -367,7 +367,7 @@ cull_mask = 1048573
 
 [node name="Blood22" type="Decal" parent="Decals"]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 37.1189, 0.10495, -0.0741513)
-extents = Vector3(1.96187, 1.60596, 2.25287)
+size = Vector3(3.92374, 3.21192, 4.50574)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -375,7 +375,7 @@ cull_mask = 1048573
 
 [node name="Blood23" type="Decal" parent="Decals"]
 transform = Transform3D(0.616162, 0.707107, 0.346906, -0.616162, 0.707107, -0.346906, -0.4906, 0, 0.871385, 40.6935, 0.10495, 2.55626)
-extents = Vector3(1.54365, 0.960442, 1.18369)
+size = Vector3(3.0873, 1.92088, 2.36738)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -383,7 +383,7 @@ cull_mask = 1048573
 
 [node name="Blood24" type="Decal" parent="Decals"]
 transform = Transform3D(0.93257, 0, 0.36099, 0, 1, 0, -0.36099, 0, 0.93257, 42.9359, 0.10495, 0.0341885)
-extents = Vector3(1.6465, 0.127833, 1.36147)
+size = Vector3(3.293, 0.255666, 2.72294)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -391,7 +391,7 @@ cull_mask = 1048573
 
 [node name="Blood25" type="Decal" parent="Decals"]
 transform = Transform3D(0.977467, 0.211086, 0, -0.211086, 0.977467, 0, 0, 0, 1, 47.6428, 0.183031, -19.0146)
-extents = Vector3(2.60586, 0.413181, 1)
+size = Vector3(5.21172, 0.826362, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -399,7 +399,7 @@ cull_mask = 1048573
 
 [node name="Blood26" type="Decal" parent="Decals"]
 transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 49.6881, 0.834877, -26.7239)
-extents = Vector3(1.86609, 1.85283, 1.77472)
+size = Vector3(3.73218, 3.70566, 3.54944)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -407,7 +407,7 @@ cull_mask = 1048573
 
 [node name="Blood27" type="Decal" parent="Decals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.8417, 2.01485, -19.3446)
-extents = Vector3(2.27316, 0.675359, 1)
+size = Vector3(4.54632, 1.35072, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")
@@ -415,7 +415,7 @@ cull_mask = 1048573
 
 [node name="Blood28" type="Decal" parent="Decals"]
 transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 25.2155, 0.915453, -19.6278)
-extents = Vector3(2.20223, 0.409028, 1)
+size = Vector3(4.40446, 0.818056, 2)
 texture_albedo = ExtResource("17_kp2hv")
 texture_normal = ExtResource("18_7nixy")
 texture_orm = ExtResource("19_csfyo")

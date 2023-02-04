@@ -101,8 +101,11 @@ public partial class GameDataManager : Node
     {
 		if (instance != null) QueueFree();
 		else instance = this;
+		GD.Print("Loading -> GameDataManager:");
 		Deserialize();
+		GD.Print("Loading -> GameDataManager: Deserialized");
 		Reset();
+		GD.Print("Loading -> GameDataManager: Complete");
     }
 
 	private void CheckGamePhase() 

@@ -1,11 +1,5 @@
-res://Scenes/Levels/victory_section.tscn
+res://Scenes/Levels/scene_manager.tscn
 res://Assets/UITheme/main_theme.tres
-res://Scenes/UI/main_hud.tscn
-res://Scenes/UI/subtitle_emitter.tscn
-res://Scenes/Objects/power_generator.tscn
-res://Scenes/Objects/power_generator_util/power_generator_active_components.tscn
-res://Assets/Models/DungeonPack/Imported/torch_wall.tscn
-res://Assets/Models/DungeonPack/Imported/flame.tscn
-res://Scenes/Levels/catacombs_level.tscn
-res://Scenes/Monsters/the_smeth.tscn
-res://Scenes/Menus/OptionsTabs/gameplay_tab.tscn
+res://Scenes/Menus/menu_panorama_material.tres
+res://Assets/SFX/Footsteps/random_footstep.tres
+res://Scenes/Menus/main_menu.tscn
