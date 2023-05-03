@@ -16,12 +16,10 @@ public partial class VisibilityChecker : Node3D
 	private bool visible_in_area = false;
 
 
-	public override void _Ready()
-	{
+    public override void _Ready() => 
 		raycast = this.GetNodeCustom<RayCast3D>(path_raycast);
-	}
 
-	private void OnBodyEnterArea(Node3D body){
+    private void OnBodyEnterArea(Node3D body){
 		if (body.IsInGroup(target_group_name)) 
 		{
 			is_in_area = true;

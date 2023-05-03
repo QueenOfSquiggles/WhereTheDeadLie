@@ -11,12 +11,10 @@ public partial class power_generator : Node3D, IHasViability
 	private AnimationPlayer anim;
 	private bool is_viable = false;
 
-	public override void _Ready()
-	{
+    public override void _Ready() => 
 		anim = this.GetNodeCustom<AnimationPlayer>(anim_player_path);
-	}
 
-	private void OnGeneratorStarted()
+    private void OnGeneratorStarted()
 	{
 		GameDataManager.instance.ActiveGenerators += 1;
 		var components = activity_components_scene.Instantiate();

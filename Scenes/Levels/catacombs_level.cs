@@ -75,9 +75,6 @@ public partial class catacombs_level : Node3D
 		the_smeth.LoadPatrolPoints(markers);
 	}
 
-	public void TriggerOpenPanel()
-	{
-		EmitSignal(nameof(OpenPuzzlePanel));
-	}
+    public void TriggerOpenPanel() => EmitSignal(nameof(OpenPuzzlePanel));
 
 }

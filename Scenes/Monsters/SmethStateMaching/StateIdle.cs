@@ -27,10 +27,7 @@ public partial class StateIdle : State
       }
     }
 
-    public override string GetStateAnimation()
-    {
-        return "Idle";
-    }
+    public override string GetStateAnimation() => "Idle";
 
     public override void OnEnterState(StateData data)
     {

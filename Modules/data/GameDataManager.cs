@@ -128,22 +128,15 @@ public partial class GameDataManager : Node
 		}
 	}
 
-	private bool CheckPhaseGenerators()
-	{
-		return game_data.active_generators >= game_data.required_generators;
-	}
+    private bool CheckPhaseGenerators() => 
+		game_data.active_generators >= game_data.required_generators;
 
-	private bool CheckPhasePuzzle()
-	{
-		return game_data.puzzle_solved;
-	}
+    private bool CheckPhasePuzzle() => game_data.puzzle_solved;
 
-	private bool CheckPhaseKeys()
-	{
-		return game_data.found_keys >= game_data.required_keys;
-	}
+    private bool CheckPhaseKeys() => 
+		game_data.found_keys >= game_data.required_keys;
 
-	public void Reset()
+    public void Reset()
 	{
 		game_data.active_generators = 0;
 		game_data.puzzle_solved = false;
