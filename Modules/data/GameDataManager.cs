@@ -10,7 +10,7 @@ public partial class GameDataManager : Node
 	[Signal] public delegate void OnPuzzleSolvedEventHandler();
 
 
-	public static GameDataManager instance = null;
+	public static GameDataManager instance { get; set; } = null;
 	private GameData game_data = new();
 
 
