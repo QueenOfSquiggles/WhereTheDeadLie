@@ -41,12 +41,12 @@ public class GameData
 
 public class GamePreset
 {
-    public static GamePreset DEFAULT = new(3, 5, 3);
-    public static GamePreset MAX_UTILIZATION = new(10, 5, 10); // uses all available chests & generators
-    public static GamePreset RNG_HELL = new(1, 5, 1); // only one each of generators and chests will be needed. RNG determines which
-    public static GamePreset MAX_DIFFICULTY = new(10, 10, 10);
-    public static GamePreset INCREDIBLY_EASY = new(1, 1, 1);
-    public static GamePreset FRUSTRATION_STATION = new(1, 10, 1);
+    public static GamePreset DEFAULT { get; } = new(3, 5, 3);
+    public static GamePreset MAX_UTILIZATION { get; } = new(10, 5, 10); // uses all available chests & generators
+    public static GamePreset RNG_HELL { get; } = new(1, 5, 1); // only one each of generators and chests will be needed. RNG determines which
+    public static GamePreset MAX_DIFFICULTY { get; } = new(10, 10, 10);
+    public static GamePreset INCREDIBLY_EASY { get; } = new(1, 1, 1);
+    public static GamePreset FRUSTRATION_STATION { get; } = new(1, 10, 1);
 
     public int required_generators;
     public int aggression_level;
