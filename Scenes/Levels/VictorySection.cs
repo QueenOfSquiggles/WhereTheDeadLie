@@ -1,8 +1,6 @@
 using bridge;
 using data;
 using events;
-using Godot;
-using System;
 
 public partial class VictorySection : Node3D
 {

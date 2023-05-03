@@ -1,6 +1,4 @@
 using events;
-using Godot;
-using System;
 
 public partial class JumpscareManager : Node3D
 {

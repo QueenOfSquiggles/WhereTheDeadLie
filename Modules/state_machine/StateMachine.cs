@@ -3,7 +3,6 @@ namespace state_machine;
 using bridge;
 using data;
 using Godot;
-using System;
 using System.Collections.Generic;
 
 public partial class StateMachine : Node

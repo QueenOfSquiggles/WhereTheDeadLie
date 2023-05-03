@@ -1,6 +1,5 @@
 namespace data;
 
-
 public class GameData
 {
     // phases

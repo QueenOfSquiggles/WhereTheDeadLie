@@ -1,7 +1,5 @@
 namespace bridge;
 
-using Godot;
-
 public static class NodeExtensions {
 
     public static T GetNodeCustom<T>(this Node node, NodePath path) where T : class

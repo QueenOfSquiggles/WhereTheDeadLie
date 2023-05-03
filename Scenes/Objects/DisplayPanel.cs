@@ -1,5 +1,3 @@
-using Godot;
-using System;
 using bridge;
 using data;
 

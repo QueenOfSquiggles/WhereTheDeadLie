@@ -1,5 +1,3 @@
-using Godot;
-using System;
 using bridge;
 public partial class puzzle_slot : VBoxContainer
 {

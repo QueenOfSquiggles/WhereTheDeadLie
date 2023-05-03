@@ -1,7 +1,4 @@
 using bridge;
-using data;
-using Godot;
-using System;
 
 public partial class PuzzleControlPanel : Node3D
 {

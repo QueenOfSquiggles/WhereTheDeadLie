@@ -1,5 +1,3 @@
-using Godot;
-
 namespace state_machine;
 
 public abstract partial class State : Node

@@ -1,5 +1,4 @@
 namespace events;
-using System;
 
 public class EventBus
 {
