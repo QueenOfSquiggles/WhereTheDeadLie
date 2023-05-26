@@ -19,8 +19,9 @@ public partial class InteractionTrigger : Area3D, IInteractable
 		}
 	}
 
-    public bool IsActive() => 
-		(active_phase == PHASE_ALL) || 
-		(GameDataManager.instance.GamePhase == active_phase);
+    public bool IsActive()
+    {
+        return (active_phase == PHASE_ALL) || (GameDataManager.instance.GamePhase == active_phase);
+    }
 
 }

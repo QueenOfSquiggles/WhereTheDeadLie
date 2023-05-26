@@ -6,7 +6,10 @@ public partial class StateChasePlayer : State
 	[Export] private float min_distance_for_reevaluation;
 	private bool target_reached = false;
 	private Node3D player = null;
-    public override string GetStateAnimation() => "WalkCycle";
+	public override string GetStateAnimation()
+    {
+        return "WalkCycle";
+    }
 
     public override void OnEnterState(StateData data)
     {
@@ -16,8 +19,10 @@ public partial class StateChasePlayer : State
 		data.nav_agent.TargetPosition = player.GlobalPosition;
     }
 
-    public override void OnExitState(StateData data) => 
+    public override void OnExitState(StateData data)
+    {
 		data.nav_agent.NavigationFinished -= OnReachedTarget;
+    }
 
     public override int StateMachineTick(StateData data, float delta)
     {

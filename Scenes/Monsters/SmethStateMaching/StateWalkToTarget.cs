@@ -20,9 +20,12 @@ public partial class StateWalkToTarget : State
       var sample_pos = GameDataManager.instance.GameAggression / 10.0f;
       chance_use_closest_position = chance_exact_targeting_curve.SampleBaked(sample_pos);
   }
-    public override string GetStateAnimation() => "WalkCycle";
+  public override string GetStateAnimation()
+  {
+      return "WalkCycle";
+  }
 
-    public override void OnEnterState(StateData data)
+  public override void OnEnterState(StateData data)
   {
     target_reached = false;
 
@@ -51,10 +54,12 @@ public partial class StateWalkToTarget : State
     data.nav_agent.NavigationFinished += OnReachedTarget;
   }
 
-    public override void OnExitState(StateData data) => 
-        data.nav_agent.NavigationFinished -= OnReachedTarget;
+  public override void OnExitState(StateData data)
+  {
+    data.nav_agent.NavigationFinished -= OnReachedTarget;
+  }
 
-    public override int StateMachineTick(StateData data, float delta)
+  public override int StateMachineTick(StateData data, float delta)
   {
     if (target_reached) 
     {

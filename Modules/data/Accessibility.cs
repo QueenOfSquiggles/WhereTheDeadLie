@@ -29,7 +29,10 @@ public partial class Accessibility : Node
         GD.Print("Loading -> Accessibility: Completed");
     }
 
-    public override void _ExitTree() => Serialize();
+    public override void _ExitTree()
+    {
+        Serialize();
+    }
 
     public static bool NoFlashingLights
     {

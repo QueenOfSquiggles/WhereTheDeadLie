@@ -29,11 +29,15 @@ public partial class main_hud : Control
 		
 	}
 
-    public void OnInteractionStart() => interaction_prompt.Visible = true;
+	public void OnInteractionStart() {
+		interaction_prompt.Visible = true;
+	}
 
-    public void OnInteractionEnd() => interaction_prompt.Visible = false;
+	public void OnInteractionEnd() {
+		interaction_prompt.Visible = false;
+	}
 
-    public void DisplayPuzzlePanel()
+	public void DisplayPuzzlePanel()
 	{
 		puzzle_panel.Visible = true;
 		Input.MouseMode = Input.MouseModeEnum.Visible;
@@ -50,7 +54,9 @@ public partial class main_hud : Control
 		subtitles_panel.Visible = sub_text != "";
 	}
 
-    public override void _ExitTree() =>
-        // Cleanup references
-        EventBus.Instance.RequestSubtitle -= SetSubtitlesValue;
+    public override void _ExitTree()
+    {
+		// Cleanup references
+		EventBus.Instance.RequestSubtitle -= SetSubtitlesValue;
+    }
 }

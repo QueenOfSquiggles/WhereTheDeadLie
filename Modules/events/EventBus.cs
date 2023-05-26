@@ -25,13 +25,26 @@ public class EventBus
 
 	public event Action<string> RequestSubtitle;
 
-    public void TriggerSetPlayerCanMove(bool can_move) => 
+	public void TriggerSetPlayerCanMove(bool can_move)
+	{
 		SetPlayerCanMove?.Invoke(can_move);
-    public void TriggerOnPlayerDie() => OnPlayerDie?.Invoke();
-    public void TriggerOnPlayerWin() => OnPlayerWin?.Invoke();
+	}
+	public void TriggerOnPlayerDie()
+	{
+		OnPlayerDie?.Invoke();
+	}
+	public void TriggerOnPlayerWin()
+	{
+		OnPlayerWin?.Invoke();
+	}
 
-    public void TriggerOnGameStart() => OnGameStart?.Invoke();
+	public void TriggerOnGameStart()
+	{
+		OnGameStart?.Invoke();
+	}
 
-    public void TriggerRequestSubtitle(string sub_text) => 
+	public void TriggerRequestSubtitle(string sub_text)
+	{
 		RequestSubtitle?.Invoke(sub_text);
+	}
 }

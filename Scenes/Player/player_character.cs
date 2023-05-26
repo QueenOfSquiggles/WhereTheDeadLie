@@ -45,11 +45,12 @@ public partial class player_character : CharacterBody3D
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 
-    public override void _ExitTree() => 
+    public override void _ExitTree()
+    {
 		EventBus.Instance.SetPlayerCanMove -= HandleEventPlayerCanMove;
+    }
 
-    private void HandleEventPlayerCanMove(bool can_move) => 
-		SetPhysicsProcess(can_move);
+	private void HandleEventPlayerCanMove(bool can_move) => SetPhysicsProcess(can_move);
 
     public override void _PhysicsProcess(double delta)
     {

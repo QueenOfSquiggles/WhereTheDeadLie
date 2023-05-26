@@ -25,10 +25,12 @@ public partial class TheSmeth : CharacterBody3D
 	}
 
 
-    public void LoadPatrolPoints(List<Marker3D> markers) => 
+	public void LoadPatrolPoints(List<Marker3D> markers)
+	{
 		state_machine.patrol_points.AddRange(markers);
+	}
 
-    private void OnKillBoxHitBody(Node3D body)
+	private void OnKillBoxHitBody(Node3D body)
 	{
 		if (body.IsInGroup("Player"))
 		{

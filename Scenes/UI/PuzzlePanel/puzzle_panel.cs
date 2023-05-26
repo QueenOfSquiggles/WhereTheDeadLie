@@ -76,6 +76,9 @@ public partial class puzzle_panel : PanelContainer
 		}
 	}
 
-    private void ExitPanel() => EmitSignal(nameof(PanelCloseRequest));
+	private void ExitPanel()
+	{
+		EmitSignal(nameof(PanelCloseRequest));
+	}
 
 }
