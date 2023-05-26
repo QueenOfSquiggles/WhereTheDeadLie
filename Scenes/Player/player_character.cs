@@ -1,6 +1,3 @@
-global using Godot;
-global using System;
-
 using bridge;
 using data;
 using interaction;
