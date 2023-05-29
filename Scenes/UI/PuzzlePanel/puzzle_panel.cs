@@ -1,8 +1,5 @@
 using bridge;
 using data;
-using Godot;
-using System;
-using System.Threading.Tasks;
 
 public partial class puzzle_panel : PanelContainer
 {

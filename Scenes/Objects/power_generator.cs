@@ -1,6 +1,3 @@
-using Godot;
-using interaction;
-using System;
 using bridge;
 using data;
 using objects;

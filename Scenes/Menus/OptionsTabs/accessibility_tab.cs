@@ -1,6 +1,4 @@
 using data;
-using Godot;
-using System;
 using bridge;
 
 public partial class accessibility_tab : PanelContainer

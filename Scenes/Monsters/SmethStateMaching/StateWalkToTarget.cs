@@ -1,8 +1,5 @@
-using bridge;
 using data;
-using Godot;
 using state_machine;
-using System;
 
 public partial class StateWalkToTarget : State
 {

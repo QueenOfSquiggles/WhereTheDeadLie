@@ -1,8 +1,5 @@
 namespace data;
 
-using events;
-using Godot;
-using System;
 using System.Text.Json;
 
 public partial class GameDataManager : Node
@@ -13,7 +10,7 @@ public partial class GameDataManager : Node
 	[Signal] public delegate void OnPuzzleSolvedEventHandler();
 
 
-	public static GameDataManager instance = null;
+	public static GameDataManager instance { get; set; } = null;
 	private GameData game_data = new();
 
 

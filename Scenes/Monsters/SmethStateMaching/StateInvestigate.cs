@@ -1,6 +1,4 @@
-using Godot;
 using state_machine;
-using System;
 
 public partial class StateInvestigate : State
 {

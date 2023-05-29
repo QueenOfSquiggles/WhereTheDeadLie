@@ -1,9 +1,7 @@
 using bridge;
 using data;
-using Godot;
 using Godot.Collections;
 using objects;
-using System;
 using System.Collections.Generic;
 
 public partial class catacombs_level : Node3D

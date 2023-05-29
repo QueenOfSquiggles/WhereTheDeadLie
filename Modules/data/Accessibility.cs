@@ -1,8 +1,6 @@
 namespace data;
 
-using System;
 using System.Text.Json;
-using Godot;
 
 public class AccessSettings // Apparently we have to use a class and properties to serialize json
 {

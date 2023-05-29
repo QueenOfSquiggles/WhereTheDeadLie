@@ -1,7 +1,5 @@
 using bridge;
-using Godot;
 using objects;
-using System;
 
 public partial class Chest : Node3D, IHasViability
 {

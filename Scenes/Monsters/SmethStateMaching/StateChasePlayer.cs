@@ -1,7 +1,4 @@
-using bridge;
-using Godot;
 using state_machine;
-using System;
 
 public partial class StateChasePlayer : State
 {

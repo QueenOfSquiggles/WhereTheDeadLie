@@ -1,8 +1,6 @@
 namespace interaction;
 
 using data;
-using Godot;
-using System;
 
 public partial class InteractionTrigger : Area3D, IInteractable
 {

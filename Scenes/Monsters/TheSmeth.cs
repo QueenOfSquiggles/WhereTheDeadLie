@@ -1,8 +1,6 @@
 using bridge;
 using events;
-using Godot;
 using state_machine;
-using System;
 using System.Collections.Generic;
 
 public partial class TheSmeth : CharacterBody3D
