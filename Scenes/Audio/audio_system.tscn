@@ -24,6 +24,7 @@ tracks/0/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/0/use_blend = true
 tracks/1/type = "method"
 tracks/1/imported = false
 tracks/1/enabled = true

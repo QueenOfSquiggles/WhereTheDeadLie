@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://0vaax8f2xec2"
 path.s3tc="res://.godot/imported/hand_made_blood_splatter_albedo.png-890b6189b32fac3deb98bf04ba6be3a8.s3tc.ctex"
+path.etc2="res://.godot/imported/hand_made_blood_splatter_albedo.png-890b6189b32fac3deb98bf04ba6be3a8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/Particles/hand_made_blood_splatter_albedo.png"
-dest_files=["res://.godot/imported/hand_made_blood_splatter_albedo.png-890b6189b32fac3deb98bf04ba6be3a8.s3tc.ctex"]
+dest_files=["res://.godot/imported/hand_made_blood_splatter_albedo.png-890b6189b32fac3deb98bf04ba6be3a8.s3tc.ctex", "res://.godot/imported/hand_made_blood_splatter_albedo.png-890b6189b32fac3deb98bf04ba6be3a8.etc2.ctex"]
 
 [params]
 

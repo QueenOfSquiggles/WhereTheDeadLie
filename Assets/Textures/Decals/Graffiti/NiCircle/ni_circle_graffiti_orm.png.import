@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cssr0se1fkwvp"
 path.s3tc="res://.godot/imported/ni_circle_graffiti_orm.png-994186d395eee2f1e847d534e59148b8.s3tc.ctex"
+path.etc2="res://.godot/imported/ni_circle_graffiti_orm.png-994186d395eee2f1e847d534e59148b8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/Decals/Graffiti/NiCircle/ni_circle_graffiti_orm.png"
-dest_files=["res://.godot/imported/ni_circle_graffiti_orm.png-994186d395eee2f1e847d534e59148b8.s3tc.ctex"]
+dest_files=["res://.godot/imported/ni_circle_graffiti_orm.png-994186d395eee2f1e847d534e59148b8.s3tc.ctex", "res://.godot/imported/ni_circle_graffiti_orm.png-994186d395eee2f1e847d534e59148b8.etc2.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://bnbada14yndcl" path="res://Assets/Textures/Particles/KenneyParticlePack/PNG (Transparent)/smoke_01.png" id="1_o32mw"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wp3cl"]
+angle_max = 720.0
 direction = Vector3(-1, 0, 0)
 spread = 25.38
-gravity = Vector3(0, 4, 0)
 initial_velocity_min = 0.1
 initial_velocity_max = 1.5
-angle_max = 720.0
+gravity = Vector3(0, 4, 0)
 scale_max = 2.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxxig"]

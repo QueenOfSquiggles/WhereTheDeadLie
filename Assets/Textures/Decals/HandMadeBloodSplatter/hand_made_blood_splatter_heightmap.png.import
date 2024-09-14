@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://kietk7fw6iq0"
 path.s3tc="res://.godot/imported/hand_made_blood_splatter_heightmap.png-8471a8f993e3a11de56fceb6820974b3.s3tc.ctex"
+path.etc2="res://.godot/imported/hand_made_blood_splatter_heightmap.png-8471a8f993e3a11de56fceb6820974b3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/Decals/HandMadeBloodSplatter/hand_made_blood_splatter_heightmap.png"
-dest_files=["res://.godot/imported/hand_made_blood_splatter_heightmap.png-8471a8f993e3a11de56fceb6820974b3.s3tc.ctex"]
+dest_files=["res://.godot/imported/hand_made_blood_splatter_heightmap.png-8471a8f993e3a11de56fceb6820974b3.s3tc.ctex", "res://.godot/imported/hand_made_blood_splatter_heightmap.png-8471a8f993e3a11de56fceb6820974b3.etc2.ctex"]
 
 [params]
 

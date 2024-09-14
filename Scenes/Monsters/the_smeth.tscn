@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://c41c4u6tohw0l"]
+[gd_scene load_steps=31 format=3 uid="uid://c41c4u6tohw0l"]
 
 [ext_resource type="PackedScene" uid="uid://b44w2wptlw4r7" path="res://Assets/Models/MyModels/the_smeth.glb" id="1_24vo1"]
 [ext_resource type="Script" path="res://Scenes/Monsters/TheSmeth.cs" id="1_mbkiw"]
@@ -51,8 +51,6 @@ states/WalkCycle/node = SubResource("AnimationNodeAnimation_maefu")
 states/WalkCycle/position = Vector2(377.6, 55.6)
 transitions = ["Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_lklhl"), "Idle", "WalkCycle", SubResource("AnimationNodeStateMachineTransition_guwgv"), "WalkCycle", "Idle", SubResource("AnimationNodeStateMachineTransition_unphg"), "WalkCycle", "Attack", SubResource("AnimationNodeStateMachineTransition_h7shy"), "Attack", "WalkCycle", SubResource("AnimationNodeStateMachineTransition_4usc1"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_nn31r")]
 graph_offset = Vector2(55, -66)
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_frem2"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dneoy"]
 height = 0.254281
@@ -111,7 +109,7 @@ path_state_machine = NodePath("StateMachine")
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/0/position = Vector3(-0.0770886, 0.349605, 0.990629)
 bones/1/rotation = Quaternion(0.0528009, -0.181964, 0.441129, 0.877215)
-bones/2/rotation = Quaternion(-0.338358, 0.00697935, 0.124327, 0.932742)
+bones/2/rotation = Quaternion(-0.338358, 0.00697936, 0.124327, 0.932742)
 bones/3/rotation = Quaternion(-0.26145, -0.0691485, 0.0296344, 0.962281)
 bones/4/rotation = Quaternion(-0.237812, 0.0167638, 0.923213, 0.301402)
 bones/5/rotation = Quaternion(-0.274786, -0.0121982, -0.194024, 0.941647)
@@ -124,14 +122,14 @@ bones/11/rotation = Quaternion(-0.175516, 0.16439, -0.189402, 0.951997)
 bones/12/rotation = Quaternion(0.0414765, 0.407046, -0.385445, 0.827058)
 bones/14/rotation = Quaternion(-0.246555, 0.918791, -0.0513942, 0.30396)
 bones/15/rotation = Quaternion(0.0894597, 0.988848, -0.0211293, 0.117178)
-bones/16/rotation = Quaternion(0.137572, 0.0523869, 0.34101, 0.928462)
-bones/17/rotation = Quaternion(0.340373, -0.348161, 0.369313, 0.791541)
-bones/18/rotation = Quaternion(0.238783, -0.629874, -0.393337, 0.625722)
-bones/19/rotation = Quaternion(0.045877, -0.0102954, -0.547103, 0.835743)
-bones/20/rotation = Quaternion(-0.116612, 0.504716, 0.847269, -0.117471)
-bones/21/rotation = Quaternion(0.0977115, 0.114832, -0.583117, 0.798273)
-bones/22/rotation = Quaternion(-0.593602, -0.0599728, 0.607878, 0.523951)
-bones/23/rotation = Quaternion(0.414229, 0.162037, 0.558864, 0.699878)
+bones/16/rotation = Quaternion(0.184765, 0.071371, 0.390687, 0.898961)
+bones/17/rotation = Quaternion(0.366622, -0.338671, 0.377649, 0.779918)
+bones/18/rotation = Quaternion(0.21501, -0.645613, -0.370725, 0.632074)
+bones/19/rotation = Quaternion(0.0511441, -0.0159948, -0.513167, 0.856614)
+bones/20/rotation = Quaternion(-0.161809, 0.399951, 0.895273, -0.111102)
+bones/21/rotation = Quaternion(0.0421043, 0.1491, -0.471334, 0.86824)
+bones/22/rotation = Quaternion(-0.598677, -0.0693711, 0.625106, 0.496)
+bones/23/rotation = Quaternion(0.381198, 0.161296, 0.530912, 0.739462)
 
 [node name="Cube" parent="Armature/Skeleton3D" index="0"]
 layers = 2
@@ -141,16 +139,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0242126, 0.0684548, 0)
 shape = SubResource("CylinderShape3D_uu5jq")
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="3"]
+root_motion_track = NodePath("Armature/Skeleton3D:Root")
+callback_mode_process = 0
 tree_root = SubResource("AnimationNodeStateMachine_eu12t")
 anim_player = NodePath("../AnimationPlayer")
-active = true
-process_callback = 0
-root_motion_track = NodePath("Armature/Skeleton3D:Root")
-parameters/playback = SubResource("AnimationNodeStateMachinePlayback_frem2")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="4"]
 target_desired_distance = 2.0
-path_metadata_flags = 0
 
 [node name="KillBox" type="Area3D" parent="." index="5"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
