@@ -234,14 +234,14 @@ namespace data
         }
 
         // Should only be available in Debug builds (in editor and exports with debug enabled). Not accessible in release
-        public override void _Input(InputEvent e)
+        public override void _Input(InputEvent @event)
         {
             if (Engine.IsEditorHint())
             {
                 return;
             }
 
-            if (e is InputEventKey key_event && e.IsPressed())
+            if (@event is InputEventKey key_event && @event.IsPressed())
             {
                 string text = key_event.AsText();
                 if (text.StartsWith("Kp"))

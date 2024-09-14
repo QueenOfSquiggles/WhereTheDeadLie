@@ -85,6 +85,10 @@ interact={
 3d_physics/layer_1="Standard"
 3d_physics/layer_2="VisibilityCheck"
 
+[navigation]
+
+3d/merge_rasterizer_cell_scale=0.001
+
 [rendering]
 
 occlusion_culling/use_occlusion_culling=true
