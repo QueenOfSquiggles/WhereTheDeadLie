@@ -30,14 +30,16 @@ public partial class catacombsLevel : Node3D
     {
         List<IHasViability> viable_objs = GetViableObjects(this.GetNodeCustom<Node3D>(generators_root_path).GetChildren());
         gdm.LevelGenerators = viable_objs.Count;
-        SelectViableObjects(viable_objs, gdm.RequiredGenerators);
+        int num = SelectViableObjects(viable_objs, gdm.RequiredGenerators);
+        GD.Print($"Active Generators = {num} / {gdm.LevelGenerators}");
     }
 
     private void SelectChests()
     {
         List<IHasViability> viable_objs = GetViableObjects(this.GetNodeCustom<Node3D>(chest_root_path).GetChildren());
         gdm.LevelChests = viable_objs.Count;
-        SelectViableObjects(viable_objs, gdm.RequiredKeys);
+        int num = SelectViableObjects(viable_objs, gdm.RequiredKeys);
+        GD.Print($"Active Chests = {num} / {gdm.LevelChests}");
     }
 
     private static List<IHasViability> GetViableObjects(Array<Node> nodes)
@@ -53,7 +55,7 @@ public partial class catacombsLevel : Node3D
         return target_objects;
     }
 
-    private static void SelectViableObjects(List<IHasViability> target_objects, int allowed_count)
+    private static int SelectViableObjects(List<IHasViability> target_objects, int allowed_count)
     {
         Random rand = new();
         int amount = Math.Min(allowed_count + 1, target_objects.Count); // try to create one more that is needed if there are enough objects available.
@@ -63,6 +65,7 @@ public partial class catacombsLevel : Node3D
             target_objects[index].SetViability(true);
             target_objects.RemoveAt(index);
         }
+        return amount;
 
     }
 

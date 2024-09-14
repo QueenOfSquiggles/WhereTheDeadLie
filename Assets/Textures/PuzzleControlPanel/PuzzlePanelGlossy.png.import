@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://hvusajih2qfp"
 path.s3tc="res://.godot/imported/PuzzlePanelGlossy.png-55fe4134768ed4d6143bf54fcd53f5fe.s3tc.ctex"
+path.etc2="res://.godot/imported/PuzzlePanelGlossy.png-55fe4134768ed4d6143bf54fcd53f5fe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/PuzzleControlPanel/PuzzlePanelGlossy.png"
-dest_files=["res://.godot/imported/PuzzlePanelGlossy.png-55fe4134768ed4d6143bf54fcd53f5fe.s3tc.ctex"]
+dest_files=["res://.godot/imported/PuzzlePanelGlossy.png-55fe4134768ed4d6143bf54fcd53f5fe.s3tc.ctex", "res://.godot/imported/PuzzlePanelGlossy.png-55fe4134768ed4d6143bf54fcd53f5fe.etc2.ctex"]
 
 [params]
 

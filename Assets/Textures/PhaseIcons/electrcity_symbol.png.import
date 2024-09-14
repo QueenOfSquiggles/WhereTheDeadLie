@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://coisgd7dfdmyj"
 path.s3tc="res://.godot/imported/electrcity_symbol.png-a47e0efb6bb2417b3f3e504b1b333a9b.s3tc.ctex"
+path.etc2="res://.godot/imported/electrcity_symbol.png-a47e0efb6bb2417b3f3e504b1b333a9b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/PhaseIcons/electrcity_symbol.png"
-dest_files=["res://.godot/imported/electrcity_symbol.png-a47e0efb6bb2417b3f3e504b1b333a9b.s3tc.ctex"]
+dest_files=["res://.godot/imported/electrcity_symbol.png-a47e0efb6bb2417b3f3e504b1b333a9b.s3tc.ctex", "res://.godot/imported/electrcity_symbol.png-a47e0efb6bb2417b3f3e504b1b333a9b.etc2.ctex"]
 
 [params]
 

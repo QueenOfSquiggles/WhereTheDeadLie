@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://r8sphd1jrn3h"
 path.s3tc="res://.godot/imported/tin_graffiti_orm.png-65cc7558ad1ac3de4fd32f8b213a0c4d.s3tc.ctex"
+path.etc2="res://.godot/imported/tin_graffiti_orm.png-65cc7558ad1ac3de4fd32f8b213a0c4d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/Decals/Graffiti/Tin/tin_graffiti_orm.png"
-dest_files=["res://.godot/imported/tin_graffiti_orm.png-65cc7558ad1ac3de4fd32f8b213a0c4d.s3tc.ctex"]
+dest_files=["res://.godot/imported/tin_graffiti_orm.png-65cc7558ad1ac3de4fd32f8b213a0c4d.s3tc.ctex", "res://.godot/imported/tin_graffiti_orm.png-65cc7558ad1ac3de4fd32f8b213a0c4d.etc2.ctex"]
 
 [params]
 
