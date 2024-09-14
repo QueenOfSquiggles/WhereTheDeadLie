@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://j2s7mebwb4u"]
+[gd_scene load_steps=19 format=3 uid="uid://j2s7mebwb4u"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player_character.cs" id="1_frnes"]
 [ext_resource type="PackedScene" uid="uid://cc2rm25l14tf3" path="res://Scenes/Deaths/jumpscare_manager.tscn" id="2_ojesa"]
@@ -200,6 +200,7 @@ tracks/2/keys = {
 }],
 "times": PackedFloat32Array(0.5, 1.5)
 }
+tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_idfv3"]
 _data = {
@@ -246,8 +247,6 @@ states/Start/position = Vector2(166.4, 94.4)
 transitions = ["Start", "MovementCycle", SubResource("AnimationNodeStateMachineTransition_fyqs0"), "MovementCycle", "Shoot", SubResource("AnimationNodeStateMachineTransition_ldvud"), "Shoot", "MovementCycle", SubResource("AnimationNodeStateMachineTransition_a2whc")]
 graph_offset = Vector2(-29, 94.574)
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_ik63x"]
-
 [node name="PlayerCharacter" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_frnes")
 speed = 3.0
@@ -291,12 +290,11 @@ omni_attenuation = 1e-05
 [node name="SpotLight3D" type="SpotLight3D" parent="CamSwivel/Hand/DSLR_Camera"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0206271, 0.229127, 0.100851)
 light_color = Color(1, 0, 0, 1)
-light_energy = 0.1
+light_energy = 0.3
 spot_angle = 10.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.806142, 0)
-stream = ExtResource("3_mqak5")
 volume_db = -45.8893
 bus = &"SoundEffects"
 
@@ -308,7 +306,5 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_nj0eq")
 anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/playback = SubResource("AnimationNodeStateMachinePlayback_ik63x")
 parameters/conditions/shoot = false
 parameters/MovementCycle/blend_position = 0.00507617

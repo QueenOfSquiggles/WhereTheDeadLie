@@ -92,6 +92,7 @@ tracks/5/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
+tracks/5/use_blend = true
 
 [sub_resource type="Animation" id="Animation_0rdvm"]
 resource_name = "OpenNonViable"

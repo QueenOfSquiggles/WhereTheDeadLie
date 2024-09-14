@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=3 uid="uid://c47i0ba4ed1ec"]
+[gd_scene load_steps=9 format=3 uid="uid://c47i0ba4ed1ec"]
 
-[ext_resource type="Script" path="res://addons/dynamic-web-content/elements/dynamic_image_button.gd" id="1_0l81w"]
 [ext_resource type="Theme" uid="uid://c405edsef4bx1" path="res://Assets/UITheme/main_theme.tres" id="1_fhuib"]
 [ext_resource type="PackedScene" uid="uid://dqen8ad8833i3" path="res://Scenes/Menus/credits_scene.tscn" id="2_7ag1a"]
 [ext_resource type="PackedScene" uid="uid://kdrivdayaapr" path="res://Scenes/Levels/main_level.tscn" id="2_d8ep8"]
@@ -35,35 +34,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_aanrg")
 expand_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -516.0
-offset_top = -256.0
-grow_horizontal = 0
-grow_vertical = 0
-
-[node name="DynamicSocialContent" type="HBoxContainer" parent="CenterContainer"]
-layout_mode = 2
-
-[node name="SocialButton_Video" type="PanelContainer" parent="CenterContainer/DynamicSocialContent"]
-custom_minimum_size = Vector2(256, 256)
-layout_mode = 2
-size_flags_horizontal = 3
-script = ExtResource("1_0l81w")
-element_id = "special-video"
-
-[node name="SocialButton_Social" type="PanelContainer" parent="CenterContainer/DynamicSocialContent"]
-custom_minimum_size = Vector2(256, 256)
-layout_mode = 2
-size_flags_horizontal = 3
-script = ExtResource("1_0l81w")
-element_id = "social-button"
 
 [node name="ControlButtons" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -110,8 +80,8 @@ texture = ExtResource("8_wbwmi")
 expand_mode = 2
 
 [node name="PirateDialog" type="ConfirmationDialog" parent="."]
-initial_position = 1
 title = "Pirate Edition"
+initial_position = 1
 dialog_text = "Hello! It appears you are using the \"Pirate Edition\" of this game. I completely understand if you are unable to pay right now, but if you are enjoying the game and/or would like to support me so I can keep making more games, I would really appreciate a donation or whatever you can give!"
 dialog_autowrap = true
 
